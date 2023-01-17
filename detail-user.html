@@ -1,0 +1,1152 @@
+<!doctype html>
+<html lang="en" class="color-sidebar sidebarcolor3">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--favicon-->
+	<link rel="icon" href="assets/images/logo-myplanet-2.png" type="image/png" />
+	<!--plugins-->
+	<link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+	<link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
+	<link href="assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
+	<link href="assets/plugins/highcharts/css/highcharts.css" rel="stylesheet" />
+	<link href="assets/plugins/datatable/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+	<link href="assets/plugins/select2/css/select2.min.css" rel="stylesheet" />
+	<link href="assets/plugins/select2/css/select2-bootstrap4.css" rel="stylesheet" />
+	<!-- loader-->
+	<link href="assets/css/pace.min.css" rel="stylesheet" />
+	<script src="assets/js/pace.min.js"></script>
+	<!-- Bootstrap CSS -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/css/bootstrap-extended.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+	<link href="assets/css/app.css" rel="stylesheet">
+	<link href="assets/css/icons.css" rel="stylesheet">
+	<!-- Theme Style CSS -->
+	<link rel="stylesheet" href="assets/css/dark-theme.css" />
+	<link rel="stylesheet" href="assets/css/semi-dark.css" />
+	<link rel="stylesheet" href="assets/css/header-colors.css" />
+	<title>My Planet Admin</title>
+</head>
+
+<body>
+	<!--wrapper-->
+	<div class="wrapper">
+		<!--sidebar wrapper -->
+		<div class="sidebar-wrapper" data-simplebar="true">
+			<div class="sidebar-header">
+				<div>
+					<img src="assets/images/logo-myplanet-2.png" class="logo-icon" alt="logo icon">
+				</div>
+				<div>
+					<h4 class="logo-text">My Planet Admin</h4>
+				</div>
+				<div class="toggle-icon ms-auto"><i class='bx bx-first-page'></i>
+				</div>
+			</div>
+			<!--navigation-->
+			<ul class="metismenu" id="menu">
+				<li class="menu-label">Menu</li>
+				<li>
+					<a href="dashboard-admin.html" class="">
+						<div class="parent-icon"><i class='bx bx-home'></i>
+						</div>
+						<div class="menu-title">Dashboard</div>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="has-arrow">
+						<div class="parent-icon"><i class='bx bx-pie-chart'></i>
+						</div>
+						<div class="menu-title">Report E-Learning</div>
+					</a>
+					<ul>
+						<li> <a href="data-post-test.html"><i class="bx bx-right-arrow-alt"></i>Report 29-08-2022</a>
+						</li>
+						<li> <a href="javascript:;"><i class="bx bx-right-arrow-alt"></i>Report 22-06-2002 s/d
+								29-08-2022</a>
+						</li>
+						<li> <a href="javascript:;"><i class="bx bx-right-arrow-alt"></i>Report Attempt</a>
+						</li>
+						<li> <a href="javascript:;"><i class="bx bx-right-arrow-alt"></i>Report Course User</a>
+						</li>
+						<!-- <li> <a href="CDOB.html"><i class="bx bx-right-arrow-alt"></i>CDOB 2020</a>
+						</li> -->
+						<li> <a class="has-arrow" href="javascript:;"><i class="bx bx-right-arrow-alt"></i>QA &
+								Security</a>
+							<ul>
+								<li> <a href="CDOB.html"><i class="bx bx-right-arrow-alt"></i>CDOB 2020</a></li>
+								<li> <a href="javascript:;"><i class="bx bx-right-arrow-alt"></i>CDAKB 2020</a></li>
+								<li> <a href="javascript:;"><i class="bx bx-right-arrow-alt"></i>Sertifikasi Halal</a>
+								</li>
+								<li> <a href="javascript:;"><i class="bx bx-right-arrow-alt"></i>Safety Security
+										2019</a></li>
+								<li> <a href="javascript:;"><i class="bx bx-right-arrow-alt"></i>IT Security 2021</a>
+								</li>
+								<li> <a href="javascript:;"><i class="bx bx-right-arrow-alt"></i>Sosialisasi SOP &
+										IK</a></li>
+								<li> <a href="javascript:;"><i class="bx bx-right-arrow-alt"></i>IT Security Email
+										Phising</a></li>
+								<li> <a href="javascript:;"><i class="bx bx-right-arrow-alt"></i>Penanganan Produk
+										Sitostatika</a></li>
+								<li> <a href="javascript:;"><i class="bx bx-right-arrow-alt"></i>General IT Security
+										Awareness</a></li>
+								<li> <a href="javascript:;"><i class="bx bx-right-arrow-alt"></i>Penggunaan APAR</a>
+								</li>
+							</ul>
+						</li>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="javascript:;" class="has-arrow">
+					<div class="parent-icon"><i class='bx bx-video'></i>
+					</div>
+					<div class="menu-title">Management Podtret</div>
+				</a>
+				<ul>
+					<li> <a href="upload-podtret.html"><i class="bx bx-right-arrow-alt"></i>Upload Podtret</a>
+					</li>
+					<li> <a href="javascript:;"><i class="bx bx-right-arrow-alt"></i>Podtret Hits</a>
+					</li>
+					<li> <a href="javascript:;"><i class="bx bx-right-arrow-alt"></i>Podtret Hits
+							All</a>
+					</li>
+					<li> <a href="javascript:;"><i class="bx bx-right-arrow-alt"></i>Podtret Comment</a>
+					</li>
+				</ul>
+			</li>
+			<li class="mm-active">
+				<a href="management-user.html">
+					<div class="parent-icon"><i class='bx bx-user'></i>
+					</div>
+					<div class="menu-title">Management User</div>
+				</a>
+			</li>
+			<li>
+				<a class="has-arrow" href="javascript:;">
+					<div class="parent-icon"><i class='bx bx-book'></i>
+					</div>
+					<div class="menu-title">Management E-learning</div>
+				</a>
+				<ul>
+					<li> <a href="javascript:;"><i class="bx bx-right-arrow-alt"></i>Course Category</a>
+					</li>
+					<li> <a href="javascript:;"><i class="bx bx-right-arrow-alt"></i>Courses</a>
+					</li>
+					<li> <a href="javascript:;"><i class="bx bx-right-arrow-alt"></i>Attempt Management</a>
+					</li>
+				</ul>
+			</li>
+			</ul>
+			<!--end navigation-->
+		</div>
+		<!--end sidebar wrapper -->
+		<!--start header -->
+		<header>
+			<div class="topbar d-flex align-items-center">
+				<nav class="navbar navbar-expand">
+					<div class="mobile-toggle-menu"><i class='bx bx-menu'></i>
+					</div>
+					<!-- <div class="search-bar flex-grow-1">
+						<div class="position-relative search-bar-box">
+							<input type="text" class="form-control search-control" placeholder="Type to search...">
+							<span class="position-absolute top-50 search-show translate-middle-y"><i
+									class='bx bx-search'></i></span>
+							<span class="position-absolute top-50 search-close translate-middle-y"><i
+									class='bx bx-x'></i></span>
+						</div>
+					</div> -->
+					<div class="top-menu ms-auto">
+						<ul class="navbar-nav align-items-center">
+							<!-- <li class="nav-item mobile-search-icon">
+								<a class="nav-link" href="#"> <i class='bx bx-search'></i>
+								</a>
+							</li> -->
+							<li class="nav-item dropdown dropdown-large">
+								<a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#"
+									role="button" data-bs-toggle="dropdown" aria-expanded="false"> <span
+										class="alert-count">7</span>
+									<i class='bx bx-bell'></i>
+								</a>
+								<div class="dropdown-menu dropdown-menu-end">
+									<a href="javascript:;">
+										<div class="msg-header">
+											<p class="msg-header-title">Notifications</p>
+											<p class="msg-header-clear ms-auto">Marks all as read</p>
+										</div>
+									</a>
+									<div class="header-notifications-list">
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="notify bg-light-primary text-primary"><i
+														class="bx bx-group"></i>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">New Customers<span
+															class="msg-time float-end">14 Sec
+															ago</span></h6>
+													<p class="msg-info">5 new user registered</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="notify bg-light-danger text-danger"><i
+														class="bx bx-cart-alt"></i>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">New Orders <span class="msg-time float-end">2
+															min
+															ago</span></h6>
+													<p class="msg-info">You have recived new orders</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="notify bg-light-success text-success"><i
+														class="bx bx-file"></i>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">24 PDF File<span class="msg-time float-end">19
+															min
+															ago</span></h6>
+													<p class="msg-info">The pdf files generated</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="notify bg-light-warning text-warning"><i
+														class="bx bx-send"></i>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">Time Response <span
+															class="msg-time float-end">28 min
+															ago</span></h6>
+													<p class="msg-info">5.1 min avarage time response</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="notify bg-light-info text-info"><i
+														class="bx bx-home-circle"></i>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">New Product Approved <span
+															class="msg-time float-end">2 hrs ago</span></h6>
+													<p class="msg-info">Your new product has approved</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="notify bg-light-danger text-danger"><i
+														class="bx bx-message-detail"></i>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">New Comments <span class="msg-time float-end">4
+															hrs
+															ago</span></h6>
+													<p class="msg-info">New customer comments recived</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="notify bg-light-success text-success"><i
+														class='bx bx-check-square'></i>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">Your item is shipped <span
+															class="msg-time float-end">5 hrs
+															ago</span></h6>
+													<p class="msg-info">Successfully shipped your item</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="notify bg-light-primary text-primary"><i
+														class='bx bx-user-pin'></i>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">New 24 authors<span
+															class="msg-time float-end">1 day
+															ago</span></h6>
+													<p class="msg-info">24 new authors joined last week</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="notify bg-light-warning text-warning"><i
+														class='bx bx-door-open'></i>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">Defense Alerts <span
+															class="msg-time float-end">2 weeks
+															ago</span></h6>
+													<p class="msg-info">45% less alerts last 4 weeks</p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<a href="javascript:;">
+										<div class="text-center msg-footer">View All Notifications</div>
+									</a>
+								</div>
+							</li>
+							<li class="nav-item dropdown dropdown-large d-none">
+								<a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#"
+									role="button" data-bs-toggle="dropdown" aria-expanded="false"> <span
+										class="alert-count">8</span>
+									<i class='bx bx-comment'></i>
+								</a>
+								<div class="dropdown-menu dropdown-menu-end">
+									<a href="javascript:;">
+										<div class="msg-header">
+											<p class="msg-header-title">Messages</p>
+											<p class="msg-header-clear ms-auto">Marks all as read</p>
+										</div>
+									</a>
+									<div class="header-message-list">
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="user-online">
+													<img src="assets/images/avatars/avatar-1.png" class="msg-avatar"
+														alt="user avatar">
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">Daisy Anderson <span
+															class="msg-time float-end">5 sec
+															ago</span></h6>
+													<p class="msg-info">The standard chunk of lorem</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="user-online">
+													<img src="assets/images/avatars/avatar-2.png" class="msg-avatar"
+														alt="user avatar">
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">Althea Cabardo <span
+															class="msg-time float-end">14
+															sec ago</span></h6>
+													<p class="msg-info">Many desktop publishing packages</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="user-online">
+													<img src="assets/images/avatars/avatar-3.png" class="msg-avatar"
+														alt="user avatar">
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">Oscar Garner <span class="msg-time float-end">8
+															min
+															ago</span></h6>
+													<p class="msg-info">Various versions have evolved over</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="user-online">
+													<img src="assets/images/avatars/avatar-4.png" class="msg-avatar"
+														alt="user avatar">
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">Katherine Pechon <span
+															class="msg-time float-end">15
+															min ago</span></h6>
+													<p class="msg-info">Making this the first true generator</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="user-online">
+													<img src="assets/images/avatars/avatar-5.png" class="msg-avatar"
+														alt="user avatar">
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">Amelia Doe <span class="msg-time float-end">22
+															min
+															ago</span></h6>
+													<p class="msg-info">Duis aute irure dolor in reprehenderit</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="user-online">
+													<img src="assets/images/avatars/avatar-6.png" class="msg-avatar"
+														alt="user avatar">
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">Cristina Jhons <span
+															class="msg-time float-end">2 hrs
+															ago</span></h6>
+													<p class="msg-info">The passage is attributed to an unknown</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="user-online">
+													<img src="assets/images/avatars/avatar-7.png" class="msg-avatar"
+														alt="user avatar">
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">James Caviness <span
+															class="msg-time float-end">4 hrs
+															ago</span></h6>
+													<p class="msg-info">The point of using Lorem</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="user-online">
+													<img src="assets/images/avatars/avatar-8.png" class="msg-avatar"
+														alt="user avatar">
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">Peter Costanzo <span
+															class="msg-time float-end">6 hrs
+															ago</span></h6>
+													<p class="msg-info">It was popularised in the 1960s</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="user-online">
+													<img src="assets/images/avatars/avatar-9.png" class="msg-avatar"
+														alt="user avatar">
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">David Buckley <span
+															class="msg-time float-end">2 hrs
+															ago</span></h6>
+													<p class="msg-info">Various versions have evolved over</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="user-online">
+													<img src="assets/images/avatars/avatar-10.png" class="msg-avatar"
+														alt="user avatar">
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">Thomas Wheeler <span
+															class="msg-time float-end">2 days
+															ago</span></h6>
+													<p class="msg-info">If you are going to use a passage</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="user-online">
+													<img src="assets/images/avatars/avatar-11.png" class="msg-avatar"
+														alt="user avatar">
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">Johnny Seitz <span class="msg-time float-end">5
+															days
+															ago</span></h6>
+													<p class="msg-info">All the Lorem Ipsum generators</p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<a href="javascript:;">
+										<div class="text-center msg-footer">View All Messages</div>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="user-box dropdown">
+						<a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret" href="#"
+							role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							<img src="assets/images/avatars/analog.jpeg" class="user-img" alt="user avatar">
+							<div class="user-info ps-3">
+								<p class="user-name mb-0">Nanda Raditya</p>
+								<p class="designattion mb-0">UI/UX Designer</p>
+							</div>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-end">
+							<li><a class="dropdown-item" href="javascript:;"><i
+										class="bx bx-user"></i><span>Profile</span></a>
+							</li>
+							<li><a class="dropdown-item" href="javascript:;"><i
+										class="bx bx-cog"></i><span>Settings</span></a>
+							</li>
+							<li><a class="dropdown-item" href="javascript:;"><i
+										class='bx bx-home-circle'></i><span>Dashboard</span></a>
+							</li>
+							<li><a class="dropdown-item" href="javascript:;"><i
+										class='bx bx-dollar-circle'></i><span>Earnings</span></a>
+							</li>
+							<li><a class="dropdown-item" href="javascript:;"><i
+										class='bx bx-download'></i><span>Downloads</span></a>
+							</li>
+							<li>
+								<div class="dropdown-divider mb-0"></div>
+							</li>
+							<li><a class="dropdown-item" href="javascript:;"><i
+										class='bx bx-log-out-circle'></i><span>Logout</span></a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<!--end header -->
+		<!--start page wrapper -->
+		<div class="page-wrapper">
+			<div class="page-content">
+				<!--breadcrumb-->
+				<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+					<div class="breadcrumb-title pe-3">Detail User</div>
+					<div class="ps-3">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb mb-0 p-0">
+								<li class="breadcrumb-item"><a href="dashboard-admin.html"><i
+											class="bx bx-home-alt"></i></a>
+								</li>
+								<li class="breadcrumb-item" aria-current="page"><a href="management-user.html"
+										class="text-decoration-none">Management User</a></li>
+								<li class="breadcrumb-item active" aria-current="page">Detail User</li>
+							</ol>
+						</nav>
+					</div>
+				</div>
+				<!--end breadcrumb-->
+
+
+				<div class="row">
+					<div class="col-lg-4">
+						<div class="card">
+							<div class="card-body">
+								<div class="d-flex flex-column align-items-center text-center">
+									<img src="assets/images/avatars/avatar-18.png" alt="Admin"
+										class="rounded-circle p-1" width="110">
+									<div class="mt-3">
+										<h4>Teguh Widodo</h4>
+										<p class="text-secondary mb-1">Human Resource Development</p>
+										<p class="text-muted font-size-sm">EPM - Pusat</p>
+										<button class="btn btn-outline-primary" data-bs-toggle="modal"
+											data-bs-target="#modalEdit">Edit</button>
+									</div>
+								</div>
+								<hr class="my-4">
+								<ul class="list-group list-group-flush">
+									<li
+										class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+										<h6 class="mb-0"><i class="bx bx-news me-2"></i>342567281</h6>
+										<span class="text-secondary">NIK</span>
+									</li>
+									<li
+										class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+										<h6 class="mb-0"><i class="bx bx-user me-2"></i>Teguh Widodo</h6>
+										<span class="text-secondary">Name</span>
+									</li>
+									<li
+										class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+										<h6 class="mb-0"><i class="bx bx-envelope me-2"></i>teguhwidodo@gmail.com</h6>
+										<span class="text-secondary">Mail</span>
+									</li>
+									<li
+										class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+										<h6 class="mb-0"><i class="bx bx-phone me-2"></i>081265787629</h6>
+										<span class="text-secondary">Phone</span>
+									</li>
+									</li>
+									<li
+										class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+										<h6 class="mb-0"><i class="bx bx-sitemap me-2"></i>Human Resource Development
+										</h6>
+										<span class="text-secondary">Organization Name</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-8">
+						<div class="card">
+							<div class="card-body">
+								<div class="d-flex align-items-center mb-3">
+									<div>
+										<h5 class="font-weight-bold mb-0">Learning Assignment</h5>
+									</div>
+									<div class="ms-auto mt-2">
+										<button type="button" class="btn btn-primary radius-10" data-bs-toggle="modal"
+											data-bs-target="#modalAddNewAssignment"><i
+												class="bx bxs-plus-square"></i>Add
+											New</button>
+									</div>
+								</div>
+								<!-- <div class="d-lg-flex align-items-center mb-4 gap-3">
+									<div class="position-relative">
+										<input type="text" class="form-control ps-5 radius-30"
+											placeholder="Search Order"> <span
+											class="position-absolute top-50 product-show translate-middle-y"><i
+												class="bx bx-search"></i></span>
+									</div>
+									<div class="ms-auto"><a href="javascript:;"
+											class="btn btn-primary radius-30 mt-2 mt-lg-0"><i
+												class="bx bxs-plus-square"></i>Add Assignment</a></div>
+								</div> -->
+								<div class="table-responsive">
+									<table class="table mb-0" id="tableAssignment">
+										<thead class="table-light">
+											<tr>
+												<th>Course</th>
+												<th>Category</th>
+												<th>Status</th>
+												<th>View Details</th>
+												<th>Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<h6 class="mb-0 font-14">NEOP GENERAL</h6>
+												</td>
+												<td>General</td>
+												<td>
+													<div
+														class="badge rounded-pill text-success bg-light-success p-2 text-uppercase px-3">
+														Completed
+													</div>
+												</td>
+												<td><a href="detail-course-user.html" type="button"
+														class="btn btn-primary btn-sm radius-30 px-4">View
+														Details</a></td>
+												<td>
+													<div class="d-flex order-actions">
+														<a href="javascript:;" class=""><i class='bx bxs-trash'></i></a>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<h6 class="mb-0 font-14">CDOB 2020</h6>
+												</td>
+												<td>QA & Security</td>
+												<td>
+													<div
+														class="badge rounded-pill text-warning bg-light-warning p-2 text-uppercase px-3">
+														On Progress
+													</div>
+												</td>
+												<td><button type="button"
+														class="btn btn-primary btn-sm radius-30 px-4">View
+														Details</button></td>
+												<td>
+													<div class="d-flex order-actions">
+														<a href="javascript:;" class=""><i class='bx bxs-trash'></i></a>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<h6 class="mb-0 font-14">Becoming Effective People : Catatan
+														Si Bejo</h6>
+												</td>
+												<td>Soft Skill</td>
+												<td>
+													<div
+														class="badge rounded-pill text-success bg-light-success p-2 text-uppercase px-3">
+														Completed
+													</div>
+												</td>
+												<td><button type="button"
+														class="btn btn-primary btn-sm radius-30 px-4">View
+														Details</button></td>
+												<td>
+													<div class="d-flex order-actions">
+														<a href="javascript:;" class=""><i class='bx bxs-trash'></i></a>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<h6 class="mb-0 font-14">NEOP WAREHOUSE</h6>
+												</td>
+												<td>General</td>
+												<td>
+													<div
+														class="badge rounded-pill text-success bg-light-success p-2 text-uppercase px-3">
+														Completed
+													</div>
+												</td>
+												<td><button type="button"
+														class="btn btn-primary btn-sm radius-30 px-4">View
+														Details</button></td>
+												<td>
+													<div class="d-flex order-actions">
+														<a href="javascript:;" class=""><i class='bx bxs-trash'></i></a>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<h6 class="mb-0 font-14">NEOP Transportation</h6>
+												</td>
+												<td>General</td>
+												<td>
+													<div
+														class="badge rounded-pill text-success bg-light-success p-2 text-uppercase px-3">
+														Completed
+													</div>
+												</td>
+												<td><button type="button"
+														class="btn btn-primary btn-sm radius-30 px-4">View
+														Details</button></td>
+												<td>
+													<div class="d-flex order-actions">
+														<a href="javascript:;" class=""><i class='bx bxs-trash'></i></a>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<h6 class="mb-0 font-14">Etika Bisnis 2022</h6>
+												</td>
+												<td>General</td>
+												<td>
+													<div
+														class="badge rounded-pill text-success bg-light-success p-2 text-uppercase px-3">
+														Completed
+													</div>
+												</td>
+												<td><button type="button"
+														class="btn btn-primary btn-sm radius-30 px-4">View
+														Details</button></td>
+												<td>
+													<div class="d-flex order-actions">
+														<a href="javascript:;" class=""><i class='bx bxs-trash'></i></a>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<h6 class="mb-0 font-14">Modul Fatigue</h6>
+												</td>
+												<td>General</td>
+												<td>
+													<div
+														class="badge rounded-pill text-warning bg-light-warning p-2 text-uppercase px-3">
+														On Progress
+													</div>
+												</td>
+												<td><button type="button"
+														class="btn btn-primary btn-sm radius-30 px-4">View
+														Details</button></td>
+												<td>
+													<div class="d-flex order-actions">
+														<a href="javascript:;" class=""><i class='bx bxs-trash'></i></a>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<h6 class="mb-0 font-14">Penggunaan APAR</h6>
+												</td>
+												<td>QA & Security</td>
+												<td>
+													<div
+														class="badge rounded-pill text-success bg-light-success p-2 text-uppercase px-3">
+														Completed
+													</div>
+												</td>
+												<td><button type="button"
+														class="btn btn-primary btn-sm radius-30 px-4">View
+														Details</button></td>
+												<td>
+													<div class="d-flex order-actions">
+														<a href="javascript:;" class=""><i class='bx bxs-trash'></i></a>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<h6 class="mb-0 font-14">General IT Security Awareness</h6>
+												</td>
+												<td>QA & Security</td>
+												<td>
+													<div
+														class="badge rounded-pill text-warning bg-light-warning p-2 text-uppercase px-3">
+														On Progress
+													</div>
+												</td>
+												<td><button type="button"
+														class="btn btn-primary btn-sm radius-30 px-4">View
+														Details</button></td>
+												<td>
+													<div class="d-flex order-actions">
+														<a href="javascript:;" class=""><i class='bx bxs-trash'></i></a>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<h6 class="mb-0 font-14">IT Security 2021</h6>
+												</td>
+												<td>QA & Security</td>
+												<td>
+													<div
+														class="badge rounded-pill text-success bg-light-success p-2 text-uppercase px-3">
+														Completed
+													</div>
+												</td>
+												<td><button type="button"
+														class="btn btn-primary btn-sm radius-30 px-4">View
+														Details</button></td>
+												<td>
+													<div class="d-flex order-actions">
+														<a href="javascript:;" class=""><i class='bx bxs-trash'></i></a>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<h6 class="mb-0 font-14">CDAKB 2020</h6>
+												</td>
+												<td>QA & Security</td>
+												<td>
+													<div
+														class="badge rounded-pill text-success bg-light-success p-2 text-uppercase px-3">
+														Completed
+													</div>
+												</td>
+												<td><button type="button"
+														class="btn btn-primary btn-sm radius-30 px-4">View
+														Details</button></td>
+												<td>
+													<div class="d-flex order-actions">
+														<a href="javascript:;" class=""><i class='bx bxs-trash'></i></a>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+						<!-- MODAL ADD NEW ASSIGNMENT -->
+						<div class="modal fade" id="modalAddNewAssignment" tabindex="-1"
+							aria-labelledby="modalAddNewAssignmentLabel" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="modalAddNewAssignmentLabel">Add New Assignment</h5>
+										<button type="button" class="btn-close" data-bs-dismiss="modal"
+											aria-label="Close"></button>
+									</div>
+									<div class="modal-body">
+										<div class="col-12 mb-3">
+											<label class="form-label">Category</label>
+											<select class="form-select" id="selectCategory">
+												<option value="" selected>Select Category</option>
+												<option value="general">General</option>
+												<option value="qasecurity">QA & Security</option>
+												<option value="technical">Technical</option>
+												<option value="softskill">Soft Skill</option>
+											</select>
+										</div>
+										<div class="col-12 mb-3">
+											<label class="form-label">Course</label>
+											<select class="form-select" id="selectAssignment">
+												<option value="" selected>Select Course</option>
+												<option value="cdob">CDOB 2020</option>
+												<option value="cdakb">CDAKB 2020</option>
+												<option value="sertifikasihalal">Sertifikasi Halal</option>
+												<option value="safetysecurity2019">Sosialisasi</option>
+												<option value="safetysecurity2019">Safety Security 2019</option>
+												<option value="itsecurity2021">IT Security 2021</option>
+												<option value="sosialisasisop">Sosialisasi SOP & IK</option>
+												<option value="itsecurityemailphising">IT Security Email Phising
+												</option>
+												<option value="sitostatika">Penanganan Produk Sitostatika</option>
+												<option value="itsecurityawareness">General IT Security Awareness
+												</option>
+												<option value="penggunaanapar">Penggunaan APAR</option>
+											</select>
+										</div>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary"
+											data-bs-dismiss="modal">Close</button>
+										<button type="button" class="btn btn-primary">Confirm</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Modal BOX Edit Data -->
+				<div class="modal fade" id="modalEdit" tabindex="-1" aria-labelledby="modalEditLabel"
+					aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="modalEditLabel">Edit User</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal"
+									aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<div class="col-12 mb-3">
+									<label for="inputNIK" class="form-label">NIK</label>
+									<input type="number" class="form-control" id="inputNIK" placeholder="Input NIK...">
+								</div>
+								<div class="col-12 mb-3">
+									<label for="inputName" class="form-label">Name</label>
+									<input type="text" class="form-control" id="inputName" placeholder="Input name...">
+								</div>
+								<div class="col-12 mb-3">
+									<label for="inputEmail" class="form-label">Email</label>
+									<input type="email" class="form-control" id="inputEmail"
+										placeholder="Input email...">
+								</div>
+								<div class="col-12 mb-3">
+									<label for="inputPassword" class="form-label">Password</label>
+									<input type="password" class="form-control" id="inputPassword"
+										placeholder="Input password...">
+								</div>
+								<div class="col-12 mb-3">
+									<label class="form-label">Role</label>
+									<select class="form-select">
+										<option value="" selected>User Employee</option>
+										<option value="admin">User Admin</option>
+									</select>
+								</div>
+								<div class="col-12 mb-3">
+									<label class="form-label">Location</label>
+									<select class="form-select" id="selectLocationEdit">
+										<option value="" selected>Select Location</option>
+										<option value="EPM - Pusat">EPM - Pusat</option>
+										<option value="EPM - Denpasar">EPM - Denpasar</option>
+										<option value="EPM - Malang">EPM - Malang</option>
+										<option value="EPM - Surabaya">EPM - Surabaya</option>
+										<option value="EPM - Kudus">EPM - Kudus</option>
+										<option value="EPM - Samarinda">EPM - Samarinda</option>
+										<option value="EPM - Bandung 2">EPM - Bandung 2</option>
+										<option value="EPM - Kudus">EPM - Kudus</option>
+										<option value="EPM - Pontianak">EPM - Pontianak</option>
+										<option value="EPM - Semarang">EPM - Semarang</option>
+										<option value="EPM - Jakarta 3">EPM - Jakarta 3</option>
+										<option value="EPM - Depok">EPM - Depok</option>
+										<option value="EPM - Surabaya">EPM - Surabaya</option>
+										<option value="EPM - Banjarmasin">EPM - Banjarmasin</option>
+										<option value="EPM - Semarang">EPM - Semarang</option>
+										<option value="EPM - Aceh">EPM - Aceh</option>
+									</select>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-primary">Save changes</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+		<!--end page wrapper -->
+		<!--start overlay-->
+		<div class="overlay toggle-icon"></div>
+		<!--end overlay-->
+		<!--Start Back To Top Button--> <a href="javaScript:;" class="back-to-top"><i
+				class='bx bxs-up-arrow-alt'></i></a>
+		<!--End Back To Top Button-->
+		<footer class="page-footer">
+			<p class="mb-0">Copyright © 2023. All right reserved.</p>
+		</footer>
+	</div>
+	<!--end wrapper-->
+	<!--start switcher-->
+	<div class="switcher-wrapper">
+		<div class="switcher-btn"> <i class='bx bx-cog bx-spin'></i>
+		</div>
+		<div class="switcher-body">
+			<div class="d-flex align-items-center">
+				<h5 class="mb-0 text-uppercase">Theme Customizer</h5>
+				<button type="button" class="btn-close ms-auto close-switcher" aria-label="Close"></button>
+			</div>
+			<hr />
+			<h6 class="mb-0">Theme Styles</h6>
+			<hr />
+			<div class="d-flex align-items-center justify-content-between">
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="flexRadioDefault" id="lightmode" checked>
+					<label class="form-check-label" for="lightmode">Light</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="flexRadioDefault" id="darkmode">
+					<label class="form-check-label" for="darkmode">Dark</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="flexRadioDefault" id="semidark">
+					<label class="form-check-label" for="semidark">Semi Dark</label>
+				</div>
+			</div>
+			<hr />
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="minimaltheme" name="flexRadioDefault">
+				<label class="form-check-label" for="minimaltheme">Minimal Theme</label>
+			</div>
+			<hr />
+			<h6 class="mb-0">Header Colors</h6>
+			<hr />
+			<div class="header-colors-indigators">
+				<div class="row row-cols-auto g-3">
+					<div class="col">
+						<div class="indigator headercolor1" id="headercolor1"></div>
+					</div>
+					<div class="col">
+						<div class="indigator headercolor2" id="headercolor2"></div>
+					</div>
+					<div class="col">
+						<div class="indigator headercolor3" id="headercolor3"></div>
+					</div>
+					<div class="col">
+						<div class="indigator headercolor4" id="headercolor4"></div>
+					</div>
+					<div class="col">
+						<div class="indigator headercolor5" id="headercolor5"></div>
+					</div>
+					<div class="col">
+						<div class="indigator headercolor6" id="headercolor6"></div>
+					</div>
+					<div class="col">
+						<div class="indigator headercolor7" id="headercolor7"></div>
+					</div>
+					<div class="col">
+						<div class="indigator headercolor8" id="headercolor8"></div>
+					</div>
+				</div>
+			</div>
+			<hr />
+			<h6 class="mb-0">Sidebar Backgrounds</h6>
+			<hr />
+			<div class="header-colors-indigators">
+				<div class="row row-cols-auto g-3">
+					<div class="col">
+						<div class="indigator sidebarcolor1" id="sidebarcolor1"></div>
+					</div>
+					<div class="col">
+						<div class="indigator sidebarcolor2" id="sidebarcolor2"></div>
+					</div>
+					<div class="col">
+						<div class="indigator sidebarcolor3" id="sidebarcolor3"></div>
+					</div>
+					<div class="col">
+						<div class="indigator sidebarcolor4" id="sidebarcolor4"></div>
+					</div>
+					<div class="col">
+						<div class="indigator sidebarcolor5" id="sidebarcolor5"></div>
+					</div>
+					<div class="col">
+						<div class="indigator sidebarcolor6" id="sidebarcolor6"></div>
+					</div>
+					<div class="col">
+						<div class="indigator sidebarcolor7" id="sidebarcolor7"></div>
+					</div>
+					<div class="col">
+						<div class="indigator sidebarcolor8" id="sidebarcolor8"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--end switcher-->
+	<!-- Bootstrap JS -->
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+	<!--plugins-->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
+	<script src="assets/plugins/metismenu/js/metisMenu.min.js"></script>
+	<script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+	<script src="assets/plugins/apexcharts-bundle/js/apexcharts.min.js"></script>
+	<script src="assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
+	<script src="assets/plugins/datatable/js/dataTables.bootstrap5.min.js"></script>
+	<script src="assets/js/index3.js"></script>
+	<script src="assets/plugins/select2/js/select2.min.js"></script>
+	<!-- highcharts js -->
+	<script src="assets/plugins/highcharts/js/highcharts.js"></script>
+	<script src="assets/plugins/highcharts/js/highcharts-more.js"></script>
+	<script src="assets/plugins/highcharts/js/variable-pie.js"></script>
+	<script src="assets/plugins/highcharts/js/solid-gauge.js"></script>
+	<script src="assets/plugins/highcharts/js/highcharts-3d.js"></script>
+	<script src="assets/plugins/highcharts/js/cylinder.js"></script>
+	<script src="assets/plugins/highcharts/js/funnel3d.js"></script>
+	<script src="assets/plugins/highcharts/js/exporting.js"></script>
+	<script src="assets/plugins/highcharts/js/export-data.js"></script>
+	<script src="assets/plugins/highcharts/js/accessibility.js"></script>
+	<script src="assets/js/index3.js"></script>
+
+	<script>
+		new PerfectScrollbar('.best-selling-products');
+		new PerfectScrollbar('.recent-reviews');
+		new PerfectScrollbar('.support-list');
+	</script>
+	<script>
+		$('#selectLocationEdit').select2({
+			dropdownParent: $('#modalEdit'),
+			theme: 'bootstrap4',
+			width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
+			placeholder: $(this).data('placeholder'),
+			allowClear: Boolean($(this).data('allow-clear')),
+		});
+
+		$('#selectCategory').select2({
+			dropdownParent: $('#modalAddNewAssignment'),
+			theme: 'bootstrap4',
+			width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
+			placeholder: $(this).data('placeholder'),
+			allowClear: Boolean($(this).data('allow-clear')),
+		});
+
+		$('#selectAssignment').select2({
+			dropdownParent: $('#modalAddNewAssignment'),
+			theme: 'bootstrap4',
+			width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
+			placeholder: $(this).data('placeholder'),
+			allowClear: Boolean($(this).data('allow-clear')),
+		});
+	</script>
+	<script>
+		$(document).ready(function () {
+			$('#tableAssignment').DataTable({
+				dom: '<"row top"<"col-lg-6 col-md-6 col-sm-12 mb-2"l><"col-lg-6 col-md-6 col-sm-12 mb-2"f>>rtip'
+			});
+		});
+
+
+	</script>
+
+	<!--app JS-->
+	<script src="assets/js/app.js"></script>
+
+
+</body>
+
+</html>
