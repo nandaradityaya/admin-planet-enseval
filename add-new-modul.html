@@ -9,12 +9,10 @@
 	<link rel="icon" href="assets/images/logo-myplanet-2.png" type="image/png" />
 	<!--plugins-->
 	<link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+	<link href="assets/plugins/fancy-file-uploader/fancy_fileupload.css" rel="stylesheet" />
 	<link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
 	<link href="assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
-	<link href="assets/plugins/highcharts/css/highcharts.css" rel="stylesheet" />
 	<link href="assets/plugins/datatable/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
-	<link href="assets/plugins/select2/css/select2.min.css" rel="stylesheet" />
-	<link href="assets/plugins/select2/css/select2-bootstrap4.css" rel="stylesheet" />
 	<!-- loader-->
 	<link href="assets/css/pace.min.css" rel="stylesheet" />
 	<script src="assets/js/pace.min.js"></script>
@@ -28,6 +26,7 @@
 	<link rel="stylesheet" href="assets/css/dark-theme.css" />
 	<link rel="stylesheet" href="assets/css/semi-dark.css" />
 	<link rel="stylesheet" href="assets/css/header-colors.css" />
+	<link rel="stylesheet" href="assets/libraries/gijgo/css/gijgo.min.css">
 	<title>My Planet Admin</title>
 </head>
 
@@ -72,6 +71,7 @@
 						</li>
 						<li> <a href="javascript:;"><i class="bx bx-right-arrow-alt"></i>Report Course User</a>
 						</li>
+
 				</li>
 			</ul>
 			</li>
@@ -93,8 +93,8 @@
 					</li>
 				</ul>
 			</li>
-			<li class="mm-active">
-				<a href="management-user.html">
+			<li>
+				<a href="management-user.html" class="">
 					<div class="parent-icon"><i class='bx bx-user'></i>
 					</div>
 					<div class="menu-title">Management User</div>
@@ -109,7 +109,7 @@
 				<ul>
 					<li> <a href="category-learning.html"><i class="bx bx-right-arrow-alt"></i>Course Category</a>
 					</li>
-					<li> <a href="course.html"><i class="bx bx-right-arrow-alt"></i>Courses</a>
+					<li class="mm-active"> <a href="course.html"><i class="bx bx-right-arrow-alt"></i>Courses</a>
 					</li>
 					<li> <a href="javascript:;"><i class="bx bx-right-arrow-alt"></i>Attempt Management</a>
 					</li>
@@ -487,553 +487,128 @@
 			<div class="page-content">
 				<!--breadcrumb-->
 				<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-					<div class="breadcrumb-title pe-3">Detail User</div>
+					<div class="breadcrumb-title pe-3">Management E-learning</div>
 					<div class="ps-3">
 						<nav aria-label="breadcrumb">
 							<ol class="breadcrumb mb-0 p-0">
-								<li class="breadcrumb-item"><a href="dashboard-admin.html"><i
-											class="bx bx-home-alt"></i></a>
+								<li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
 								</li>
-								<li class="breadcrumb-item" aria-current="page"><a href="management-user.html"
-										class="text-decoration-none">Management User</a></li>
-								<li class="breadcrumb-item active" aria-current="page">Detail User</li>
+								<li class="breadcrumb-item active" aria-current="page">Courses</li>
 							</ol>
 						</nav>
 					</div>
+
 				</div>
 				<!--end breadcrumb-->
 
 
+				<hr />
 				<div class="row">
-					<div class="col-lg-4">
-						<div class="card">
-							<div class="card-body">
-								<div class="d-flex flex-column align-items-center text-center">
-									<img src="assets/images/avatars/avatar-18.png" alt="Admin"
-										class="rounded-circle p-1" width="110">
-									<div class="mt-3">
-										<h4>Teguh Widodo</h4>
-										<p class="text-secondary mb-1">Human Resource Development</p>
-										<p class="text-muted font-size-sm">EPM - Pusat</p>
-										<button class="btn btn-outline-primary" data-bs-toggle="modal"
-											data-bs-target="#modalEdit">Edit</button>
+					<div class="card">
+						<div class="card-body">
+							<h6 class="text-center mb-3">Penggunaan APAR</h6>
+							<div class="d-flex align-items-center mb-3">
+								<div>
+									<button type="button" class="btn btn-primary radius-10" data-bs-toggle="modal"
+										data-bs-target="#modalAddNewModul"><i class="bx bx-plus"></i>Add
+										Modul</button>
+								</div>
+								<div class="ms-auto mt-2">
+									<button type="button" class="btn btn-outline-success radius-10"
+										data-bs-toggle="modal" data-bs-target="#modalAddNewLesson"><i
+											class="bx bx-plus"></i>Add
+										Lesson</button>
+								</div>
+							</div>
+							<div class="card bg-light-primary">
+								<div class="card-body order-actions">
+									<h6 class="text-center">Safety Security K3</h6>
+									<a href="javascript:;" class="text-primary bg-light-primary border-0"
+										data-bs-toggle="modal" data-bs-target="#modalAddNewModul"
+										style="float: right; margin-top: -27px;"><i class="bx bxs-edit"></i></a>
+								</div>
+							</div>
+							<div class="container">
+								<div class="card bg-light-success">
+									<div class="card-body text-center order-actions">
+										<h6 class="text-center">Video Safety Security</h6>
+										<a href="javascript:;" class="text-primary bg-light-primary border-0"
+											style="float: right; margin-top: -27px;" data-bs-toggle="modal"
+											data-bs-target="#modalAddNewLesson"><i class="bx bxs-edit"></i></a>
 									</div>
 								</div>
-								<hr class="my-4">
-								<ul class="list-group list-group-flush">
-									<li
-										class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-										<h6 class="mb-0"><i class="bx bx-news me-2"></i>342567281</h6>
-										<span class="text-secondary">NIK</span>
-									</li>
-									<li
-										class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-										<h6 class="mb-0"><i class="bx bx-user me-2"></i>Teguh Widodo</h6>
-										<span class="text-secondary">Name</span>
-									</li>
-									<li
-										class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-										<h6 class="mb-0"><i class="bx bx-envelope me-2"></i>teguhwidodo@gmail.com</h6>
-										<span class="text-secondary">Mail</span>
-									</li>
-									</li>
-									<li
-										class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-										<h6 class="mb-0"><i class="bx bx-sitemap me-2"></i>Human Resource Development
-										</h6>
-										<span class="text-secondary">Organization Name</span>
-									</li>
-								</ul>
+								<div class="card bg-light-success">
+									<div class="card-body text-center order-actions">
+										<h6 class="text-center">Post Test Safety Security K3</h6>
+										<a href="javascript:;" class="text-primary bg-light-primary border-0"
+											style="float: right; margin-top: -27px;" data-bs-toggle="modal"
+											data-bs-target="#modalAddNewLesson"><i class="bx bxs-edit"></i></a>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-8">
-						<div class="card">
-							<div class="card-body">
-								<div class="d-flex align-items-center mb-3">
-									<div>
-										<h5 class="font-weight-bold mb-0">Learning Assignment</h5>
-									</div>
-									<div class="ms-auto mt-2">
-										<button type="button" class="btn btn-primary radius-10" data-bs-toggle="modal"
-											data-bs-target="#modalAddNewAssignment"><i
-												class="bx bxs-plus-square"></i>Add
-											New</button>
-									</div>
-								</div>
-								<!-- <div class="d-lg-flex align-items-center mb-4 gap-3">
-									<div class="position-relative">
-										<input type="text" class="form-control ps-5 radius-30"
-											placeholder="Search Order"> <span
-											class="position-absolute top-50 product-show translate-middle-y"><i
-												class="bx bx-search"></i></span>
-									</div>
-									<div class="ms-auto"><a href="javascript:;"
-											class="btn btn-primary radius-30 mt-2 mt-lg-0"><i
-												class="bx bxs-plus-square"></i>Add Assignment</a></div>
-								</div> -->
-								<div class="table-responsive">
-									<table class="table mb-0" id="tableAssignment">
-										<thead class="table-light">
-											<tr>
-												<th>Course</th>
-												<th>Category</th>
-												<th>Status</th>
-												<th>View Details</th>
-												<th>Actions</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>
-													<h6 class="mb-0 font-14">NEOP GENERAL</h6>
-												</td>
-												<td>General</td>
-												<td>
-													<div
-														class="badge rounded-pill text-success bg-light-success p-2 text-uppercase px-3">
-														Completed
-													</div>
-												</td>
-												<td><a href="detail-course-user.html" type="button"
-														class="btn btn-primary btn-sm radius-30 px-4"
-														data-bs-toggle="modal" data-bs-target="#modalViewDetail">View
-														Details</a></td>
-												<td>
-													<div class="d-flex order-actions">
-														<a href="javascript:;" class=""><i class='bx bxs-trash'
-																data-bs-toggle="modal"
-																data-bs-target="#modalDeleteCourse"></i></a>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<h6 class="mb-0 font-14">CDOB 2020</h6>
-												</td>
-												<td>QA & Security</td>
-												<td>
-													<div
-														class="badge rounded-pill text-warning bg-light-warning p-2 text-uppercase px-3">
-														On Progress
-													</div>
-												</td>
-												<td><button type="button" class="btn btn-primary btn-sm radius-30 px-4"
-														data-bs-toggle="modal" data-bs-target="#modalViewDetail">View
-														Details</button></td>
-												<td>
-													<div class="d-flex order-actions">
-														<a href="javascript:;" class=""><i class='bx bxs-trash'
-																data-bs-toggle="modal"
-																data-bs-target="#modalDeleteCourse"></i></a>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<h6 class="mb-0 font-14">Becoming Effective People : Catatan
-														Si Bejo</h6>
-												</td>
-												<td>Soft Skill</td>
-												<td>
-													<div
-														class="badge rounded-pill text-success bg-light-success p-2 text-uppercase px-3">
-														Completed
-													</div>
-												</td>
-												<td><button type="button" class="btn btn-primary btn-sm radius-30 px-4"
-														data-bs-toggle="modal" data-bs-target="#modalViewDetail">View
-														Details</button></td>
-												<td>
-													<div class="d-flex order-actions">
-														<a href="javascript:;" class=""><i class='bx bxs-trash'
-																data-bs-toggle="modal"
-																data-bs-target="#modalDeleteCourse"></i></a>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<h6 class="mb-0 font-14">NEOP WAREHOUSE</h6>
-												</td>
-												<td>General</td>
-												<td>
-													<div
-														class="badge rounded-pill text-success bg-light-success p-2 text-uppercase px-3">
-														Completed
-													</div>
-												</td>
-												<td><button type="button" class="btn btn-primary btn-sm radius-30 px-4"
-														data-bs-toggle="modal" data-bs-target="#modalViewDetail">View
-														Details</button></td>
-												<td>
-													<div class="d-flex order-actions">
-														<a href="javascript:;" class=""><i class='bx bxs-trash'
-																data-bs-toggle="modal"
-																data-bs-target="#modalDeleteCourse"></i></a>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<h6 class="mb-0 font-14">NEOP Transportation</h6>
-												</td>
-												<td>General</td>
-												<td>
-													<div
-														class="badge rounded-pill text-success bg-light-success p-2 text-uppercase px-3">
-														Completed
-													</div>
-												</td>
-												<td><button type="button" class="btn btn-primary btn-sm radius-30 px-4"
-														data-bs-toggle="modal" data-bs-target="#modalViewDetail">View
-														Details</button></td>
-												<td>
-													<div class="d-flex order-actions">
-														<a href="javascript:;" class=""><i class='bx bxs-trash'
-																data-bs-toggle="modal"
-																data-bs-target="#modalDeleteCourse"></i></a>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<h6 class="mb-0 font-14">Etika Bisnis 2022</h6>
-												</td>
-												<td>General</td>
-												<td>
-													<div
-														class="badge rounded-pill text-success bg-light-success p-2 text-uppercase px-3">
-														Completed
-													</div>
-												</td>
-												<td><button type="button" class="btn btn-primary btn-sm radius-30 px-4"
-														data-bs-toggle="modal" data-bs-target="#modalViewDetail">View
-														Details</button></td>
-												<td>
-													<div class="d-flex order-actions">
-														<a href="javascript:;" class=""><i class='bx bxs-trash'
-																data-bs-toggle="modal"
-																data-bs-target="#modalDeleteCourse"></i></a>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<h6 class="mb-0 font-14">Modul Fatigue</h6>
-												</td>
-												<td>General</td>
-												<td>
-													<div
-														class="badge rounded-pill text-warning bg-light-warning p-2 text-uppercase px-3">
-														On Progress
-													</div>
-												</td>
-												<td><button type="button" class="btn btn-primary btn-sm radius-30 px-4"
-														data-bs-toggle="modal" data-bs-target="#modalViewDetail">View
-														Details</button></td>
-												<td>
-													<div class="d-flex order-actions">
-														<a href="javascript:;" class=""><i class='bx bxs-trash'
-																data-bs-toggle="modal"
-																data-bs-target="#modalDeleteCourse"></i></a>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<h6 class="mb-0 font-14">Penggunaan APAR</h6>
-												</td>
-												<td>QA & Security</td>
-												<td>
-													<div
-														class="badge rounded-pill text-success bg-light-success p-2 text-uppercase px-3">
-														Completed
-													</div>
-												</td>
-												<td><button type="button" class="btn btn-primary btn-sm radius-30 px-4"
-														data-bs-toggle="modal" data-bs-target="#modalViewDetail">View
-														Details</button></td>
-												<td>
-													<div class="d-flex order-actions">
-														<a href="javascript:;" class=""><i class='bx bxs-trash'
-																data-bs-toggle="modal"
-																data-bs-target="#modalDeleteCourse"></i></a>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<h6 class="mb-0 font-14">General IT Security Awareness</h6>
-												</td>
-												<td>QA & Security</td>
-												<td>
-													<div
-														class="badge rounded-pill text-warning bg-light-warning p-2 text-uppercase px-3">
-														On Progress
-													</div>
-												</td>
-												<td><button type="button" class="btn btn-primary btn-sm radius-30 px-4"
-														data-bs-toggle="modal" data-bs-target="#modalViewDetail">View
-														Details</button></td>
-												<td>
-													<div class="d-flex order-actions">
-														<a href="javascript:;" class=""><i class='bx bxs-trash'
-																data-bs-toggle="modal"
-																data-bs-target="#modalDeleteCourse"></i></a>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<h6 class="mb-0 font-14">IT Security 2021</h6>
-												</td>
-												<td>QA & Security</td>
-												<td>
-													<div
-														class="badge rounded-pill text-success bg-light-success p-2 text-uppercase px-3">
-														Completed
-													</div>
-												</td>
-												<td><button type="button" class="btn btn-primary btn-sm radius-30 px-4"
-														data-bs-toggle="modal" data-bs-target="#modalViewDetail">View
-														Details</button></td>
-												<td>
-													<div class="d-flex order-actions">
-														<a href="javascript:;" class=""><i class='bx bxs-trash'
-																data-bs-toggle="modal"
-																data-bs-target="#modalDeleteCourse"></i></a>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<h6 class="mb-0 font-14">CDAKB 2020</h6>
-												</td>
-												<td>QA & Security</td>
-												<td>
-													<div
-														class="badge rounded-pill text-success bg-light-success p-2 text-uppercase px-3">
-														Completed
-													</div>
-												</td>
-												<td><button type="button" class="btn btn-primary btn-sm radius-30 px-4"
-														data-bs-toggle="modal" data-bs-target="#modalViewDetail">View
-														Details</button></td>
-												<td>
-													<div class="d-flex order-actions">
-														<a href="javascript:;" class=""><i class='bx bxs-trash'
-																data-bs-toggle="modal"
-																data-bs-target="#modalDeleteCourse"></i></a>
-													</div>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
-						</div>
 
-						<!-- MODAL ADD NEW ASSIGNMENT -->
-						<div class="modal fade" id="modalAddNewAssignment" tabindex="-1"
-							aria-labelledby="modalAddNewAssignmentLabel" aria-hidden="true">
-							<div class="modal-dialog">
-								<div class="modal-content">
-									<div class="modal-header">
-										<h5 class="modal-title" id="modalAddNewAssignmentLabel">Add New Assignment</h5>
-										<button type="button" class="btn-close" data-bs-dismiss="modal"
-											aria-label="Close"></button>
-									</div>
-									<div class="modal-body">
-										<div class="col-12 mb-3">
-											<label class="form-label">Category</label>
-											<select class="form-select" id="selectCategory">
-												<option value="" selected>Select Category</option>
-												<option value="general">General</option>
-												<option value="qasecurity">QA & Security</option>
-												<option value="technical">Technical</option>
-												<option value="softskill">Soft Skill</option>
-											</select>
-										</div>
-										<div class="col-12 mb-3">
-											<label class="form-label">Course</label>
-											<select class="form-select" id="selectAssignment">
-												<option value="" selected>Select Course</option>
-												<option value="cdob">CDOB 2020</option>
-												<option value="cdakb">CDAKB 2020</option>
-												<option value="sertifikasihalal">Sertifikasi Halal</option>
-												<option value="safetysecurity2019">Sosialisasi</option>
-												<option value="safetysecurity2019">Safety Security 2019</option>
-												<option value="itsecurity2021">IT Security 2021</option>
-												<option value="sosialisasisop">Sosialisasi SOP & IK</option>
-												<option value="itsecurityemailphising">IT Security Email Phising
-												</option>
-												<option value="sitostatika">Penanganan Produk Sitostatika</option>
-												<option value="itsecurityawareness">General IT Security Awareness
-												</option>
-												<option value="penggunaanapar">Penggunaan APAR</option>
-											</select>
-										</div>
-									</div>
-									<div class="modal-footer">
-										<button type="button" class="btn btn-secondary"
-											data-bs-dismiss="modal">Close</button>
-										<button type="button" class="btn btn-primary">Confirm</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
 				</div>
-
-				<!-- Modal View Detail Course -->
-				<div class="modal fade" id="modalViewDetail" tabindex="-1" aria-labelledby="modalViewDetailLabel"
-					aria-hidden="true">
-					<div class="modal-dialog" style="max-width: 735px;">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title" id="modalViewDetailLabel">Becoming Effective People : Catatan Si
-									Bejo</h5>
-								<button type="button" class="btn-close" data-bs-dismiss="modal"
-									aria-label="Close"></button>
-							</div>
-							<div class="modal-body">
-								<div class="table-responsive mt-3">
-									<table class="table align-middle mb-0">
-										<thead class="table-light">
-											<tr>
-												<th>Lesson</th>
-												<th>Total Attempt</th>
-												<th>Score</th>
-												<th>Status</th>
-												<th>Time</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>BEP Video</td>
-												<td>4</td>
-												<td></td>
-												<td class="">
-												</td>
-												<td>2020-10-11 11:36:06</td>
-											</tr>
-											<tr>
-												<td>BEP Post Test</td>
-												<td>4</td>
-												<td>90</td>
-												<td class=""><span
-														class="badge bg-light-success text-success w-100">Lulus</span>
-												</td>
-												<td>2020-10-11 11:36:06</td>
-											</tr>
-											<tr>
-												<td>Neop Video New</td>
-												<td>0</td>
-												<td></td>
-												<td></td>
-												<td></td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-								<button type="button" class="btn btn-primary">Save changes</button>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Modal BOX Edit Data -->
-				<div class="modal fade" id="modalEdit" tabindex="-1" aria-labelledby="modalEditLabel"
+				<!-- Modal Box Add Modul -->
+				<div class="modal fade" id="modalAddNewModul" tabindex="-1" aria-labelledby="modalAddNewModulLabel"
 					aria-hidden="true">
 					<div class="modal-dialog">
 						<div class="modal-content">
 							<div class="modal-header">
-								<h5 class="modal-title" id="modalEditLabel">Edit User</h5>
+								<h5 class="modal-title" id="modalAddNewModulLabel">Add New Course</h5>
 								<button type="button" class="btn-close" data-bs-dismiss="modal"
 									aria-label="Close"></button>
 							</div>
 							<div class="modal-body">
-								<div class="col-12 mb-3">
-									<label for="inputNIK" class="form-label">NIK</label>
-									<input type="number" class="form-control" id="inputNIK" placeholder="Input NIK...">
-								</div>
-								<div class="col-12 mb-3">
-									<label for="inputName" class="form-label">Name</label>
-									<input type="text" class="form-control" id="inputName" placeholder="Input name...">
-								</div>
-								<div class="col-12 mb-3">
-									<label for="inputEmail" class="form-label">Email</label>
-									<input type="email" class="form-control" id="inputEmail"
-										placeholder="Input email...">
-								</div>
-								<div class="col-12 mb-3">
-									<label for="inputPassword" class="form-label">Password</label>
-									<input type="password" class="form-control" id="inputPassword"
-										placeholder="Input password...">
-								</div>
-								<div class="col-12 mb-3">
-									<label class="form-label">Role</label>
-									<select class="form-select">
-										<option value="" selected>User Employee</option>
-										<option value="admin">User Admin</option>
-									</select>
-								</div>
-								<div class="col-12 mb-3">
-									<label class="form-label">Location</label>
-									<select class="form-select" id="selectLocationEdit">
-										<option value="" selected>Select Location</option>
-										<option value="EPM - Pusat">EPM - Pusat</option>
-										<option value="EPM - Denpasar">EPM - Denpasar</option>
-										<option value="EPM - Malang">EPM - Malang</option>
-										<option value="EPM - Surabaya">EPM - Surabaya</option>
-										<option value="EPM - Kudus">EPM - Kudus</option>
-										<option value="EPM - Samarinda">EPM - Samarinda</option>
-										<option value="EPM - Bandung 2">EPM - Bandung 2</option>
-										<option value="EPM - Kudus">EPM - Kudus</option>
-										<option value="EPM - Pontianak">EPM - Pontianak</option>
-										<option value="EPM - Semarang">EPM - Semarang</option>
-										<option value="EPM - Jakarta 3">EPM - Jakarta 3</option>
-										<option value="EPM - Depok">EPM - Depok</option>
-										<option value="EPM - Surabaya">EPM - Surabaya</option>
-										<option value="EPM - Banjarmasin">EPM - Banjarmasin</option>
-										<option value="EPM - Semarang">EPM - Semarang</option>
-										<option value="EPM - Aceh">EPM - Aceh</option>
-									</select>
+								<div class="mb-3">
+									<label for="modulName" class="form-label">Modul Name</label>
+									<input type="text" class="form-control" id="modulName" placeholder="Modul Name">
 								</div>
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-								<button type="button" class="btn btn-primary">Save changes</button>
+								<button type="button" onclick="CreateTodo();" class="btn btn-primary">Confirm</button>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<!-- Modal Delete -->
-				<div class="modal fade" id="modalDeleteCourse" tabindex="-1" aria-labelledby="modalDeleteCourseLabel"
+				<!-- Modal Box Add Lesson -->
+				<div class="modal fade" id="modalAddNewLesson" tabindex="-1" aria-labelledby="modalAddNewLessonLabel"
 					aria-hidden="true">
 					<div class="modal-dialog">
 						<div class="modal-content">
 							<div class="modal-header">
-								<h5 class="modal-title" id="modalDeleteCourseLabel">Delete Course</h5>
+								<h5 class="modal-title" id="modalAddNewLessonLabel">Add New Course</h5>
 								<button type="button" class="btn-close" data-bs-dismiss="modal"
 									aria-label="Close"></button>
 							</div>
 							<div class="modal-body">
-								<h6>Are you sure want to delete this course?</h6>
+								<div class="mb-3">
+									<label for="lessonName" class="form-label">Lesson Name</label>
+									<input type="text" class="form-control" id="lessonName" placeholder="Lesson Name">
+								</div>
+								<div class="mb-3">
+									<label for="lessonType" class="form-label">Lesson Type</label>
+									<select class="form-select" aria-label="Default select example">
+										<option selected>Open this select menu</option>
+										<option value="1">Video</option>
+										<option value="2">Post Test</option>
+									</select>
+								</div>
+								<div class="mb-3">
+									<label for="formFile" class="form-label">Lesson File</label>
+									<input class="form-control" type="file" id="formFile">
+								</div>
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-								<button type="button" class="btn btn-danger">Delete</button>
+								<button type="button" onclick="CreateTodo();" class="btn btn-primary">Confirm</button>
 							</div>
 						</div>
 					</div>
 				</div>
-
 
 			</div>
 		</div>
@@ -1045,7 +620,7 @@
 				class='bx bxs-up-arrow-alt'></i></a>
 		<!--End Back To Top Button-->
 		<footer class="page-footer">
-			<p class="mb-0">Copyright © 2023. All right reserved.</p>
+			<p class="mb-0">Copyright © 2021. All right reserved.</p>
 		</footer>
 	</div>
 	<!--end wrapper-->
@@ -1152,68 +727,68 @@
 	<script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
 	<script src="assets/plugins/metismenu/js/metisMenu.min.js"></script>
 	<script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
-	<script src="assets/plugins/apexcharts-bundle/js/apexcharts.min.js"></script>
 	<script src="assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
 	<script src="assets/plugins/datatable/js/dataTables.bootstrap5.min.js"></script>
 	<script src="assets/js/index3.js"></script>
-	<script src="assets/plugins/select2/js/select2.min.js"></script>
-	<!-- highcharts js -->
-	<script src="assets/plugins/highcharts/js/highcharts.js"></script>
-	<script src="assets/plugins/highcharts/js/highcharts-more.js"></script>
-	<script src="assets/plugins/highcharts/js/variable-pie.js"></script>
-	<script src="assets/plugins/highcharts/js/solid-gauge.js"></script>
-	<script src="assets/plugins/highcharts/js/highcharts-3d.js"></script>
-	<script src="assets/plugins/highcharts/js/cylinder.js"></script>
-	<script src="assets/plugins/highcharts/js/funnel3d.js"></script>
-	<script src="assets/plugins/highcharts/js/exporting.js"></script>
-	<script src="assets/plugins/highcharts/js/export-data.js"></script>
-	<script src="assets/plugins/highcharts/js/accessibility.js"></script>
-	<script src="assets/js/index3.js"></script>
-
+	<script src="assets/libraries/gijgo/js/gijgo.min.js"></script>
+	<script src="assets/plugins/fancy-file-uploader/jquery.ui.widget.js"></script>
+	<script src="assets/plugins/fancy-file-uploader/jquery.fileupload.js"></script>
+	<script src="assets/plugins/fancy-file-uploader/jquery.iframe-transport.js"></script>
+	<script src="assets/plugins/fancy-file-uploader/jquery.fancy-fileupload.js"></script>
+	<script src="assets/plugins/Drag-And-Drop/dist/imageuploadify.min.js"></script>
 	<script>
-		new PerfectScrollbar('.best-selling-products');
-		new PerfectScrollbar('.recent-reviews');
-		new PerfectScrollbar('.support-list');
-	</script>
-	<script>
-		$('#selectLocationEdit').select2({
-			dropdownParent: $('#modalEdit'),
-			theme: 'bootstrap4',
-			width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
-			placeholder: $(this).data('placeholder'),
-			allowClear: Boolean($(this).data('allow-clear')),
-		});
+		$(document).ready(function () {
+			$('#example').DataTable();
 
-		$('#selectCategory').select2({
-			dropdownParent: $('#modalAddNewAssignment'),
-			theme: 'bootstrap4',
-			width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
-			placeholder: $(this).data('placeholder'),
-			allowClear: Boolean($(this).data('allow-clear')),
-		});
+			$(".datepickerawal").datepicker({
+				uiLibrary: "bootstrap4",
+				icons: {
+					rightIcon: '<img src="assets/images/icons/calendar-days.svg" />'
+				}
+			})
 
-		$('#selectAssignment').select2({
-			dropdownParent: $('#modalAddNewAssignment'),
-			theme: 'bootstrap4',
-			width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
-			placeholder: $(this).data('placeholder'),
-			allowClear: Boolean($(this).data('allow-clear')),
+			$(".datepickerakhir").datepicker({
+				uiLibrary: "bootstrap4",
+				icons: {
+					rightIcon: '<img src="assets/images/icons/calendar-days.svg" />'
+				}
+			})
 		});
 	</script>
 	<script>
 		$(document).ready(function () {
-			$('#tableAssignment').DataTable({
-				dom: '<"row top"<"col-lg-6 col-md-6 col-sm-12 mb-2"l><"col-lg-6 col-md-6 col-sm-12 mb-2"f>>rtip'
+			var table = $('#example2').DataTable({
+				lengthChange: false,
+				buttons: ['csv', 'excel', 'pdf', 'print']
 			});
+
+			table.buttons().container()
+				.appendTo('#example2_wrapper .col-md-6:eq(0)');
 		});
-
-
 	</script>
-
-	<!--app JS-->
+	<script>
+		$('#selectCategoryAddNew').select2({
+			dropdownParent: $('#modalAddNewCourse'),
+			theme: 'bootstrap4',
+			width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
+			placeholder: $(this).data('placeholder'),
+			allowClear: Boolean($(this).data('allow-clear')),
+		});
+	</script>
+	<script>
+		$('#fancy-file-upload').FancyFileUpload({
+			params: {
+				action: 'fileuploader'
+			},
+			maxfilesize: 1000000
+		});
+	</script>
+	<script>
+		$(document).ready(function () {
+			$('#image-uploadify').imageuploadify();
+		})
+	</script>
 	<script src="assets/js/app.js"></script>
-
-
 </body>
 
 </html>
