@@ -9,6 +9,8 @@
 	<link rel="icon" href="assets/images/logo-myplanet-2.png" type="image/png" />
 	<!--plugins-->
 	<link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+	<link href="assets/plugins/fancy-file-uploader/fancy_fileupload.css" rel="stylesheet" />
+	<link href="assets/plugins/Drag-And-Drop/dist/imageuploadify.min.css" rel="stylesheet" />
 	<link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
 	<link href="assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
 	<link href="assets/plugins/datatable/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
@@ -80,7 +82,8 @@
 				<ul>
 					<li> <a href="upload-podtret.html"><i class="bx bx-right-arrow-alt"></i>Upload Podtret</a>
 					</li>
-					<li> <a href="podtret-visitor.html"><i class="bx bx-right-arrow-alt"></i>Podtret Visitors</a>
+					<li class="mm-active"> <a href="podtret-visitor.html"><i class="bx bx-right-arrow-alt"></i>Podtret
+							Visitors</a>
 					</li>
 					<li> <a href="podtret-comment.html"><i class="bx bx-right-arrow-alt"></i>Podtret Comment</a>
 					</li>
@@ -102,7 +105,9 @@
 				<ul>
 					<li> <a href="category-learning.html"><i class="bx bx-right-arrow-alt"></i>Course Category</a>
 					</li>
-					<li> <a href="course.html"><i class="bx bx-right-arrow-alt"></i>Courses</a>
+					<li> <a href="javascript:;"><i class="bx bx-right-arrow-alt"></i>Courses</a>
+					</li>
+					<li> <a href="javascript:;"><i class="bx bx-right-arrow-alt"></i>Attempt Management</a>
 					</li>
 				</ul>
 			</li>
@@ -463,223 +468,131 @@
 			<div class="page-content">
 				<!--breadcrumb-->
 				<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-					<div class="breadcrumb-title pe-3">Management E-learning</div>
+					<div class="breadcrumb-title pe-3">Manaegent Podtret</div>
 					<div class="ps-3">
 						<nav aria-label="breadcrumb">
 							<ol class="breadcrumb mb-0 p-0">
 								<li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
 								</li>
-								<li class="breadcrumb-item active" aria-current="page">Course Category</li>
+								<li class="breadcrumb-item" aria-current="page"><a href="podtret-visitor.html"
+										class="text-decoration-none">Podtret Visitors</a></li>
+								<li class="breadcrumb-item active" aria-current="page">Podtret Visitors All</li>
 							</ol>
 						</nav>
 					</div>
-
 				</div>
-				<!--end breadcrumb-->
-
-
-				<hr />
-
 				<div class="row">
-					<div class="col">
-						<div class="card radius-10 mb-0">
-							<div class="card-body">
-								<div class="d-flex align-items-center">
-									<div>
-										<h5 class="mb-1">Course Category</h5>
-									</div>
-									<div class="ms-auto">
-										<a href="#" class="btn btn-primary btn-sm radius-5" data-bs-toggle="modal"
-											data-bs-target="#modalAddNewCategory"><i class="bx bx-plus"></i>Add
-											New</a>
-									</div>
-								</div>
-
-								<div class="table-responsive mt-3">
-									<table class="table align-middle mb-0">
-										<thead class="table-light">
-											<tr>
-												<th>No</th>
-												<th>Category</th>
-												<th>Total Course</th>
-												<th>Status</th>
-												<th>Actions</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>1</td>
-												<td><a href="course-spesifik.html"
-														class="text-decoration-none text-black">General</a></td>
-												<td>9 Course</td>
-												<td class=""><span
-														class="badge bg-light-success text-success w-100">Active</span>
-												</td>
-												<td>
-													<div class="d-flex order-actions">
-														<a href="#" class="text-primary bg-light-primary border-0"
-															data-bs-toggle="modal"
-															data-bs-target="#modalEditCategory"><i
-																class='bx bxs-edit'></i></a>
-														<a href="javascript:;"
-															class="ms-4 text-danger bg-light-danger border-0"
-															data-bs-toggle="modal"
-															data-bs-target="#modalDeleteCategory"><i
-																class='bx bxs-trash'></i></a>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>2</td>
-												<td><a href="course-spesifik.html"
-														class="text-decoration-none text-black">QA &
-														Security</a></td>
-												<td>10 Course</td>
-												<td class=""><span
-														class="badge bg-light-success text-success w-100">Active</span>
-												</td>
-												<td>
-													<div class="d-flex order-actions">
-														<a href="#" class="text-primary bg-light-primary border-0"
-															data-bs-toggle="modal"
-															data-bs-target="#modalEditCategory"><i
-																class='bx bxs-edit'></i></a>
-														<a href="javascript:;"
-															class="ms-4 text-danger bg-light-danger border-0"
-															data-bs-toggle="modal"
-															data-bs-target="#modalDeleteCategory"><i
-																class='bx bxs-trash'></i></a>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>3</td>
-												<td><a href="course-spesifik.html"
-														class="text-decoration-none text-black">Technical</a>
-												</td>
-												<td>4 Course</td>
-												<td class=""><span
-														class="badge bg-light-success text-success w-100">Active</span>
-												</td>
-												<td>
-													<div class="d-flex order-actions">
-														<a href="#" class="text-primary bg-light-primary border-0"
-															data-bs-toggle="modal"
-															data-bs-target="#modalEditCategory"><i
-																class='bx bxs-edit'></i></a>
-
-														<a href="javascript:;"
-															class="ms-4 text-danger bg-light-danger border-0"
-															data-bs-toggle="modal"
-															data-bs-target="#modalDeleteCategory"><i
-																class='bx bxs-trash'></i></a>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>4</td>
-												<td><a href="course-spesifik.html"
-														class="text-decoration-none text-black">Soft Skill</a>
-												</td>
-												<td>7 Course</td>
-												<td class=""><span
-														class="badge bg-light-success text-success w-100">Active</span>
-												</td>
-												<td>
-													<div class="d-flex order-actions">
-														<a href="#" class="text-primary bg-light-primary border-0"
-															data-bs-toggle="modal"
-															data-bs-target="#modalEditCategory"><i
-																class='bx bxs-edit'></i></a>
-														<a href="javascript:;"
-															class="ms-4 text-danger bg-light-danger border-0"
-															data-bs-toggle="modal"
-															data-bs-target="#modalDeleteCategory"><i
-																class='bx bxs-trash'></i></a>
-													</div>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-
-							</div>
-						</div>
+					<div class="col-lg-4 mt-lg-4 mb-3">
+						<h6 class="mb-0 text-uppercase">Podtret</h6>
 					</div>
-				</div><!--end row-->
-
-				<!-- Modal Box Add New -->
-				<div class="modal fade" id="modalAddNewCategory" tabindex="-1"
-					aria-labelledby="modalAddNewCategoryLabel" aria-hidden="true">
-					<div class="modal-dialog">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title" id="modalAddNewCategoryLabel">Add New Category</h5>
-								<button type="button" class="btn-close" data-bs-dismiss="modal"
-									aria-label="Close"></button>
-							</div>
-							<div class="modal-body">
-								<div class="col-12 mb-3">
-									<label for="inputCategory" class="form-label">Judul Category</label>
-									<input type="text" class="form-control" id="inputCategory"
-										placeholder="Input Title Category">
+					<div class="col-lg-8 d-flex justify-content-end">
+						<!-- Date Picker -->
+						<div class="d-flex justify-content-center">
+							<div class="filter-awal me-2"><label for="filerDateAwal" class="sr-only">Start Date
+									Filter</label>
+								<div class="input-group mb-2 me-sm-2">
+									<input type="text" class="form-control datepickerawal" id="filterDateAwal"
+										placeholder="dd/mm/yyyy">
 								</div>
-
 							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-								<button type="button" class="btn btn-primary">Confirm</button>
+							<div class="filter-akhir me-3"><label for="filerDateAkhir" class="sr-only">End Date
+									Filters</label>
+								<div class="input-group mb-2 me-sm-2">
+									<input type="text" class="form-control datepickerakhir" id="filterDateAkhir"
+										placeholder="dd/mm/yyyy">
+								</div>
+							</div>
+							<div class="button-filter">
+								<label for="">Action</label> <br>
+								<button type="button" class="btn btn-primary radius-10">Pilih</button>
 							</div>
 						</div>
 					</div>
 				</div>
+				<hr />
+				<div class="card">
+					<div class="card-body">
+						<div class="d-flex justify-content-center">
+							<div>
+								<h5 class="font-weight-bold mb-0">Podtret Visitors</h5>
+							</div>
+						</div>
+						<div class="table-responsive">
+							<br>
+							<table id="tablePodtret" class="table align-middle" style="width:100%">
 
-				<!-- Modal Edit Category -->
-				<div class="modal fade" id="modalEditCategory" tabindex="-1" aria-labelledby="modalEditCategoryLabel"
-					aria-hidden="true">
-					<div class="modal-dialog">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title" id="modalEditCategoryLabel">Edit Category</h5>
-								<button type="button" class="btn-close" data-bs-dismiss="modal"
-									aria-label="Close"></button>
-							</div>
-							<div class="modal-body">
-								<div class="col-12 mb-3">
-									<label for="inputCategory" class="form-label">Judul Category</label>
-									<input type="text" class="form-control" id="inputCategory"
-										placeholder="Input Title Category">
-								</div>
-
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-								<button type="button" class="btn btn-primary">Confirm</button>
-							</div>
+								<thead class="table-light">
+									<tr>
+										<th>No</th>
+										<th>Judul</th>
+										<th>Thumbnail</th>
+										<th>Name</th>
+										<th>Visit</th>
+										<th>Timestamp</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>Episode 42: Final Piala Dunia</td>
+										<td><a href="#" data-bs-toggle="modal" data-bs-target="#modalPoster"><img
+													src="assets/images/poster/pildun.jpg"
+													style="width: 130px; display:block;" alt="edisi-pildun"></a>
+										</td>
+										<td>Nanda Raditya</td>
+										<td>2</td>
+										<td>2020-10-11 11:36:06</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>Episode 42: Final Piala Dunia</td>
+										<td><a href="#" data-bs-toggle="modal" data-bs-target="#modalPoster"><img
+													src="assets/images/poster/pildun.jpg"
+													style="width: 130px; display:block;" alt="edisi-pildun"></a>
+										</td>
+										<td>Noval Thaher</td>
+										<td>8</td>
+										<td>2020-10-11 11:36:06</td>
+									</tr>
+								</tbody>
+								<tfoot class="table-light">
+									<tr>
+										<th>No</th>
+										<th>Judul</th>
+										<th>Thumbnail</th>
+										<th>Name</th>
+										<th>Visit</th>
+										<th>Timestamp</th>
+									</tr>
+								</tfoot>
+							</table>
 						</div>
 					</div>
 				</div>
 
+			</div>
+		</div>
 
 
-				<!-- Modal Delete -->
-				<div class="modal fade" id="modalDeleteCategory" tabindex="-1"
-					aria-labelledby="modalDeleteCategoryLabel" aria-hidden="true">
-					<div class="modal-dialog">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title" id="modalDeleteCategoryLabel">Delete Category</h5>
-								<button type="button" class="btn-close" data-bs-dismiss="modal"
-									aria-label="Close"></button>
-							</div>
-							<div class="modal-body">
-								<h6>Are you sure want to delete this category?</h6>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-								<button type="button" class="btn btn-danger">Delete</button>
-							</div>
+		<!-- Modal Poster -->
+		<div class="modal fade" id="modalPoster" tabindex="-1" aria-labelledby="modalPosterLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="modalPosterLabel">Thumbnail Podtret</h1>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<div class="container">
+							<img src="assets/images/poster/Ibuck-ibuck.png"
+								style="max-width: 100%; display:block; height: auto;" alt="">
 						</div>
+
+
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
 					</div>
 				</div>
 			</div>
@@ -692,9 +605,10 @@
 				class='bx bxs-up-arrow-alt'></i></a>
 		<!--End Back To Top Button-->
 		<footer class="page-footer">
-			<p class="mb-0">Copyright © 2023. All right reserved.</p>
+			<p class="mb-0">Copyright © 2021. All right reserved.</p>
 		</footer>
 	</div>
+
 	<!--end wrapper-->
 	<!--start switcher-->
 	<div class="switcher-wrapper">
@@ -803,10 +717,28 @@
 	<script src="assets/plugins/datatable/js/dataTables.bootstrap5.min.js"></script>
 	<script src="assets/js/index3.js"></script>
 	<script src="assets/libraries/gijgo/js/gijgo.min.js"></script>
+	<script src="assets/plugins/fancy-file-uploader/jquery.ui.widget.js"></script>
+	<script src="assets/plugins/fancy-file-uploader/jquery.fileupload.js"></script>
+	<script src="assets/plugins/fancy-file-uploader/jquery.iframe-transport.js"></script>
+	<script src="assets/plugins/fancy-file-uploader/jquery.fancy-fileupload.js"></script>
+	<script src="assets/plugins/Drag-And-Drop/dist/imageuploadify.min.js"></script>
+	<script src="assets/libraries/gijgo/js/gijgo.min.js"></script>
 	<script>
 		$(document).ready(function () {
 			$('#example').DataTable();
 
+			$(".datepickerpremiere").datepicker({
+				uiLibrary: "bootstrap4",
+				icons: {
+					rightIcon: '<img src="assets/images/icons/calendar-days.svg" />'
+				}
+			})
+			$(".datepickerpremiereupload").datepicker({
+				uiLibrary: "bootstrap4",
+				icons: {
+					rightIcon: '<img src="assets/images/icons/calendar-days.svg" />'
+				}
+			})
 			$(".datepickerawal").datepicker({
 				uiLibrary: "bootstrap4",
 				icons: {
@@ -820,53 +752,25 @@
 					rightIcon: '<img src="assets/images/icons/calendar-days.svg" />'
 				}
 			})
+			$('#fancy-file-upload').FancyFileUpload({
+				params: {
+					action: 'fileuploader'
+				},
+				maxfilesize: 1000000
+			});
 		});
 	</script>
 	<script>
 		$(document).ready(function () {
-			var table = $('#example2').DataTable({
-				lengthChange: false,
-				buttons: ['csv', 'excel', 'pdf', 'print']
+			var table = $('#tablePodtret').DataTable({
+				dom: '<"row top"<"col-lg-6 col-md-6 col-sm-12 mb-2"l><"col-lg-6 col-md-6 col-sm-12 mb-2"f>>rtip'
 			});
 
 			table.buttons().container()
 				.appendTo('#example2_wrapper .col-md-6:eq(0)');
 		});
 	</script>
-	<!-- <script>
-		$(document).ready(function () {
-			var table = $('#example2').DataTable({
-				dom: 'lBfrtip',
-				buttons: [
 
-					{
-						extend: 'excelHtml5',
-						text: 'Excel',
-						titleAttr: 'Excel'
-					},
-					{
-						extend: 'csvHtml5',
-						text: 'CSV',
-						titleAttr: 'CSV'
-					},
-					{
-						extend: 'pdfHtml5',
-						text: 'PDF',
-						titleAttr: 'PDF'
-					},
-					{
-						extend: 'print',
-						text: 'Print',
-						titleAttr: 'Print'
-					}
-
-				]
-			});
-
-			table.buttons().container().appendTo($('#printbar'));
-
-		});
-	</script> -->
 
 	<!--app JS-->
 	<script src="assets/js/app.js"></script>

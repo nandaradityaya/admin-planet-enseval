@@ -61,12 +61,9 @@
 						<div class="menu-title">Report E-Learning</div>
 					</a>
 					<ul>
-						<li> <a href="data-post-test.html"><i class="bx bx-right-arrow-alt"></i>Report 29-08-2022</a>
+						<li> <a href="data-post-test.html"><i class="bx bx-right-arrow-alt"></i>Data Post Test</a>
 						</li>
-						<li> <a href="javascript:;"><i class="bx bx-right-arrow-alt"></i>Report 22-06-2002 s/d
-								29-08-2022</a>
-						</li>
-						<li> <a href="javascript:;"><i class="bx bx-right-arrow-alt"></i>Report Attempt</a>
+						<li> <a href="report-attempt.html"><i class="bx bx-right-arrow-alt"></i>Report Attempt</a>
 						</li>
 						<li> <a href="javascript:;"><i class="bx bx-right-arrow-alt"></i>Report Course User</a>
 						</li>
@@ -83,12 +80,9 @@
 				<ul>
 					<li> <a href="upload-podtret.html"><i class="bx bx-right-arrow-alt"></i>Upload Podtret</a>
 					</li>
-					<li> <a href="javascript:;"><i class="bx bx-right-arrow-alt"></i>Podtret Hits</a>
+					<li> <a href="podtret-visitor.html"><i class="bx bx-right-arrow-alt"></i>Podtret Visitors</a>
 					</li>
-					<li> <a href="javascript:;"><i class="bx bx-right-arrow-alt"></i>Podtret Hits
-							All</a>
-					</li>
-					<li> <a href="javascript:;"><i class="bx bx-right-arrow-alt"></i>Podtret Comment</a>
+					<li> <a href="podtret-comment.html"><i class="bx bx-right-arrow-alt"></i>Podtret Comment</a>
 					</li>
 				</ul>
 			</li>
@@ -108,9 +102,7 @@
 				<ul>
 					<li> <a href="category-learning.html"><i class="bx bx-right-arrow-alt"></i>Course Category</a>
 					</li>
-					<li> <a href="javascript:;"><i class="bx bx-right-arrow-alt"></i>Courses</a>
-					</li>
-					<li> <a href="javascript:;"><i class="bx bx-right-arrow-alt"></i>Attempt Management</a>
+					<li> <a href="course.html"><i class="bx bx-right-arrow-alt"></i>Courses</a>
 					</li>
 				</ul>
 			</li>
@@ -684,11 +676,11 @@
 								<div class="btn-group-round">
 									<div class="btn-group">
 										<button type="button" class="btn btn-white tablinks"
-											onclick="toggleBtn(event, 'profile')">Day</button>
+											onclick="toggleBtn(event, 'chartDay')">Day</button>
 										<button type="button" class="btn btn-white tablinks"
 											onclick="toggleBtn(event, 'chartWeek')">Week</button>
 										<button type="button" class="btn btn-white tablinks selected"
-											onclick="toggleBtn(event, 'chart1')">Month</button>
+											onclick="toggleBtn(event, 'chartMonth')">Month</button>
 									</div>
 								</div>
 							</div>
@@ -698,10 +690,13 @@
 						</div>
 					</div>
 					<div class="card-body">
-						<div class="chart-dashboard" id="chart1"></div>
+						<div class="chart-dashboard" id="chartMonth"></div>
 					</div>
 					<div class="card-body">
 						<div class="chart-dashboard" id="chartWeek"></div>
+					</div>
+					<div class="card-body">
+						<div class="chart-dashboard" id="chartDay"></div>
 					</div>
 				</div>
 
@@ -717,8 +712,45 @@
 					</div>
 					<div class="col-12 col-lg-12">
 						<div class="card radius-10">
+							<div class="card-header border-bottom-0 bg-transparent">
+								<div class="d-lg-flex align-items-center">
+									<div>
+										<h6 class="font-weight-bold mb-2 mb-lg-0">E-Learning</h6>
+									</div>
+									<div class="ms-lg-auto mb-2 mb-lg-0">
+										<div class="btn-group-round">
+											<div class="btn-group">
+												<button type="button" class="btn btn-white tablinks selected"
+													onclick="toggleBtn(event, 'chartGeneral')">General</button>
+												<button type="button" class="btn btn-white tablinks"
+													onclick="toggleBtn(event, 'chartQASecurity')">QA & Security</button>
+												<button type="button" class="btn btn-white tablinks"
+													onclick="toggleBtn(event, 'chartTechnical')">Technical</button>
+												<button type="button" class="btn btn-white tablinks"
+													onclick="toggleBtn(event, 'chartSoftSkill')">Soft Skill</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 							<div class="card-body">
-								<div id="verticalchart"></div>
+								<div class="chart-elearning" id="chartGeneral"></div>
+							</div>
+							<div class="card-body">
+								<div class="chart-elearning" id="chartQASecurity"></div>
+							</div>
+							<div class="card-body">
+								<div class="chart-elearning" id="chartTechnical"></div>
+							</div>
+							<div class="card-body">
+								<div class="chart-elearning" id="chartSoftSkill"></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-lg-12">
+						<div class="card radius-10">
+							<div class="card-body">
+								<div id="verticalchartPodtret"></div>
 							</div>
 						</div>
 					</div>
