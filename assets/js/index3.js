@@ -347,15 +347,10 @@ $(function () {
       text: "Podtret",
     },
     subtitle: {
-      text: "Ratio of podtret views by users",
+      text: "Total of podtret views by users",
     },
     tooltip: {
-      pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>",
-    },
-    accessibility: {
-      point: {
-        valueSuffix: "%",
-      },
+      pointFormat: "{series.name}: <b>{point.y}</b>",
     },
     plotOptions: {
       pie: {
@@ -364,7 +359,7 @@ $(function () {
         innerSize: 120,
         dataLabels: {
           enabled: true,
-          format: "<b>{point.name}</b>: {point.percentage:.1f} %",
+          format: "<b>{point.name}</b>: {point.y}",
         },
         showInLegend: true,
       },
@@ -377,15 +372,15 @@ $(function () {
         data: [
           {
             name: "Segment Ngobrol Santai",
-            y: 56,
+            y: 9.032,
           },
           {
             name: "Segment Kumis",
-            y: 30,
+            y: 7.423,
           },
           {
             name: "Segment Sapa Mantan",
-            y: 14,
+            y: 5.342,
           },
         ],
       },
