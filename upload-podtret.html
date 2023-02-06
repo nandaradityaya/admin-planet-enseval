@@ -651,23 +651,48 @@
 							</select>
 						</div>
 						<div class="form-group mb-3">
-							<label for="filterDatePremiere" class="sr-only">Tanggal Premiere</label>
+							<label for="filterDatePremiere" class="sr-only">Publish Date</label>
 							<div class="input-group mb-2 me-sm-2">
 								<input type="text" class="form-control datepickerpremiere" id="filterDatePremiere"
 									placeholder="dd/mm/yyyy">
 							</div>
 						</div>
 						<div class="form-group mb-3">
-							<label for="poster" class="form-label">Poster</label>
-							<input class="form-control" type="file" id="poster">
+							<label for="poster-upload" class="form-label">Poster</label>
+							<div class="card">
+								<div class="card-body">
+									<input id="poster-upload" type="file" name="files"
+										accept=".jpg, .png, image/jpeg, image/png">
+								</div>
+							</div>
 						</div>
 						<div class="form-group mb-3">
-							<label for="video" class="form-label">Video</label>
-							<input class="form-control" type="file" id="video">
+							<label for="video-upload" class="form-label">Video</label>
+							<div class="card">
+								<div class="card-body">
+									<input id="video-upload" type="file" name="files"
+										accept=".jpg, .png, image/jpeg, image/png, .mp4">
+								</div>
+							</div>
 						</div>
-						<div class="form-group mb-3">
+						<div class="form-group mb-4">
 							<label for="audio" class="form-label">Audio</label>
 							<input class="form-control" type="file" id="audio">
+						</div>
+						<div class="form-group mb-3">
+							<label for="" class="form-label">Publish</label>
+							<div class="d-flex">
+								<div class="form-check me-2">
+									<input class="form-check-input" type="radio" name="flexRadioDefault"
+										id="flexRadioDefault1">
+									<label class="form-check-label" for="flexRadioDefault1">Yes</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="radio" name="flexRadioDefault"
+										id="flexRadioDefault2" checked="">
+									<label class="form-check-label" for="flexRadioDefault2">No</label>
+								</div>
+							</div>
 						</div>
 
 					</div>
@@ -944,11 +969,17 @@
 					rightIcon: '<img src="assets/images/icons/calendar-days.svg" />'
 				}
 			})
-			$('#fancy-file-upload').FancyFileUpload({
+			$('#poster-upload').FancyFileUpload({
 				params: {
 					action: 'fileuploader'
 				},
-				maxfilesize: 1000000
+				maxfilesize: 10000000
+			});
+			$('#video-upload').FancyFileUpload({
+				params: {
+					action: 'fileuploader'
+				},
+				maxfilesize: 1000000000
 			});
 		});
 	</script>
