@@ -787,7 +787,7 @@ $(function () {
 
   // Podtret Chart Vertical
   // Create the chart
-  Highcharts.chart("verticalchartPodtret", {
+  Highcharts.chart("chartViewsPodtret", {
     chart: {
       height: 360,
       type: "column",
@@ -881,4 +881,118 @@ $(function () {
       },
     ],
   });
+
+  Highcharts.chart("chartPodtretLike", {
+    chart: {
+      height: 360,
+      type: "column",
+      styledMode: true,
+    },
+    credits: {
+      enabled: false,
+    },
+    title: {
+      text: "PODTRET Like",
+    },
+    subtitle: {
+      text: "Records of PODTRET Like",
+    },
+    accessibility: {
+      announceNewData: {
+        enabled: true,
+      },
+    },
+    xAxis: {
+      type: "category",
+    },
+    yAxis: {
+      title: {
+        text: "Total Like",
+      },
+    },
+    legend: {
+      enabled: false,
+    },
+    plotOptions: {
+      series: {
+        borderWidth: 0,
+        dataLabels: {
+          enabled: true,
+          format: "{point.y}",
+        },
+      },
+    },
+    tooltip: {
+      headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+      pointFormat:
+        '<span style="color:{point.color}">{point.name}</span>: <b>{point.y}</b> Like<br/>',
+    },
+    series: [
+      {
+        name: "PODTRET Like",
+        colorByPoint: true,
+        data: [
+          {
+            name: "Eps 39: Edisi Ibuck-Ibuck",
+            y: 231,
+            drilldown: "Eps 39: Edisi Ibuck-Ibuck",
+          },
+          {
+            name: "Eps 40: Edisi Piala Dunia",
+            y: 123,
+            drilldown: "Eps 40: Edisi Piala Dunia",
+          },
+          {
+            name: "Eps 41: Ritual Minta Darah",
+            y: 231,
+            drilldown: "Eps 41: Ritual Minta Darah",
+          },
+          {
+            name: "Eps 42: Final Piala Dunia",
+            y: 122,
+            drilldown: "Eps 42: Final Piala Dunia",
+          },
+          {
+            name: "Eps 43: Special Natal",
+            y: 123,
+            drilldown: "Eps 43: Special Natal",
+          },
+          {
+            name: "Eps 44: Kilas Balik 2022",
+            y: 145,
+            drilldown: "Eps 44: Kilas Balik 2022",
+          },
+          {
+            name: "Eps 45: Kuntilanak Numpang Mandi",
+            y: 341,
+            drilldown: "Eps 45: Kuntilanak Numpang Mandi",
+          },
+          {
+            name: "Eps 46: Rumpi Yuk! Ngejulid bareng sekretaris",
+            y: 321,
+            drilldown: "Eps 46: Rumpi Yuk! Ngejulid bareng sekretaris",
+          },
+        ],
+      },
+    ],
+  });
 });
+
+// JQUERY
+function showDiv(divId, element) {
+  document.getElementById(divId).style.display =
+    element.value == 1 ? "block" : "none";
+}
+
+document.getElementById("newsectionbtn").onclick = function () {
+  var container = document.getElementById("wrapperQuestion");
+  var section = document.getElementById("sectionQuestion");
+  container.appendChild(section.cloneNode(true));
+
+  // var newQuestion = document.getElementById("labelQuestion");
+  // var questionLabel = document.createTextNode(
+  //   "Question " + (label.children.length + 1)
+  // );
+  // newQuestion.appendChild(questionLabel);
+  // label.appendChild(newQuestion);
+};
