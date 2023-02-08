@@ -631,7 +631,7 @@
 									</select>
 								</div>
 								<div class="col-12 mb-3">
-									<label class="form-label" for="select">Choose:</label>
+									<label class="form-label" for="select">Choose Access</label>
 									<!-- <select class="form-select" id="test" name="form_select"
 										onchange="showDiv('hidden_spesific', this)">
 										<option value="0">All</option>
@@ -905,7 +905,7 @@
 	<script>
 		$(document).ready(function () {
 			var table = $('#tableCourse').DataTable({
-				lengthChange: false,
+				dom: '<"row top"<"col-lg-4 col-md-4 col-sm-12 mb-2"B><"col-lg-4 col-md-4 col-sm-12 mb-2"l><"col-lg-4 col-md-4 col-sm-12 mb-2"f>>rtip',
 				buttons: ['csv', 'excel', 'pdf', 'print']
 			});
 

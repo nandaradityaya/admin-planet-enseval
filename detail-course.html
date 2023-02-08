@@ -901,7 +901,7 @@
 	<script>
 		$(document).ready(function () {
 			var table = $('#detailCourse').DataTable({
-				lengthChange: false,
+				dom: '<"row top"<"col-lg-4 col-md-4 col-sm-12 mb-2"B><"col-lg-4 col-md-4 col-sm-12 mb-2"l><"col-lg-4 col-md-4 col-sm-12 mb-2"f>>rtip',
 				buttons: ['csv', 'excel', 'pdf', 'print']
 			});
 
@@ -909,40 +909,6 @@
 				.appendTo('#detailCourse_wrapper .col-md-6:eq(0)');
 		});
 	</script>
-	<!-- <script>
-		$(document).ready(function () {
-			var table = $('#example2').DataTable({
-				dom: 'lBfrtip',
-				buttons: [
-
-					{
-						extend: 'excelHtml5',
-						text: 'Excel',
-						titleAttr: 'Excel'
-					},
-					{
-						extend: 'csvHtml5',
-						text: 'CSV',
-						titleAttr: 'CSV'
-					},
-					{
-						extend: 'pdfHtml5',
-						text: 'PDF',
-						titleAttr: 'PDF'
-					},
-					{
-						extend: 'print',
-						text: 'Print',
-						titleAttr: 'Print'
-					}
-
-				]
-			});
-
-			table.buttons().container().appendTo($('#printbar'));
-
-		});
-	</script> -->
 
 	<!--app JS-->
 	<script src="assets/js/app.js"></script>

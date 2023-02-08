@@ -14,6 +14,8 @@
 	<link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
 	<link href="assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
 	<link href="assets/plugins/datatable/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+	<link href="assets/plugins/select2/css/select2.min.css" rel="stylesheet" />
+	<link href="assets/plugins/select2/css/select2-bootstrap4.css" rel="stylesheet" />
 	<!-- loader-->
 	<link href="assets/css/pace.min.css" rel="stylesheet" />
 	<script src="assets/js/pace.min.js"></script>
@@ -528,7 +530,7 @@
 							</div>
 							<div class="ms-auto mt-2">
 								<button type="button" class="btn btn-primary radius-10" data-bs-toggle="modal"
-									data-bs-target="#modalAddNewPodtret"><i class="bx bx-plus"></i>Add
+									data-bs-target="#modalAddNewNotification"><i class="bx bx-plus"></i>Add
 									New</button>
 							</div>
 						</div>
@@ -541,7 +543,7 @@
 										<th>No</th>
 										<th>Notification</th>
 										<th>Given To</th>
-										<th>Published At</th>
+										<th>Uploaded At</th>
 										<th>Action</th>
 									</tr>
 								</thead>
@@ -556,7 +558,7 @@
 											laudantium? Fuga voluptas assumenda nihil eos explicabo laboriosam!</td>
 										<td width="20%"><button type="button"
 												class="btn btn-primary btn-sm radius-30 px-4" data-bs-toggle="modal"
-												data-bs-target="#modalViewDetail">View
+												data-bs-target="#modalViewUserNotification">View
 												Details</button>
 										</td>
 										<td class="15%">2020-10-11 11:36:06</td>
@@ -577,7 +579,7 @@
 										<th>No</th>
 										<th>Notification</th>
 										<th>Given To</th>
-										<th>Published At</th>
+										<th>Uploaded At</th>
 										<th>Action</th>
 									</tr>
 								</tfoot>
@@ -589,78 +591,121 @@
 			</div>
 		</div>
 
-		<!-- Modal Add New -->
-		<div class="modal fade" id="modalAddNewPodtret" tabindex="-1" aria-labelledby="modalAddNewPodtretLabel"
-			aria-hidden="true">
+		<!-- Modal View Detail -->
+		<div class="modal fade" id="modalViewUserNotification" tabindex="-1"
+			aria-labelledby="modalViewUserNotificationLabel" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h1 class="modal-title fs-5" id="modalAddNewPodtretLabel">Upload Podtret</h1>
+						<h1 class="modal-title fs-5" id="modalViewUserNotificationLabel">List User</h1>
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
 					<div class="modal-body">
-						<div class="form-group mb-3">
-							<label for="juudlPodtret" class="form-label">Judul</label>
-							<input type="email" class="form-control" id="juudlPodtret" placeholder="Input title...">
-						</div>
-						<div class="form-group mb-3">
-							<label for="judulSegmen" class="form-label">Segmen</label>
-							<select class="form-select" aria-label="Default select example" id="judulSegmen">
-								<option selected>Select segmen...</option>
-								<option value="1">#ngobrolsantai</option>
-								<option value="2">#sapamantan</option>
-								<option value="3">#kumis</option>
-								<option value="4">#innotalk</option>
-							</select>
-						</div>
-						<div class="form-group mb-3">
-							<label for="filterDatePremiere" class="sr-only">Tanggal Premiere</label>
-							<div class="input-group mb-2 me-sm-2">
-								<input type="text" class="form-control datepickerpremiere" id="filterDatePremiere"
-									placeholder="dd/mm/yyyy">
-							</div>
-						</div>
-						<div class="form-group mb-3">
-							<label for="poster" class="form-label">Poster</label>
-							<input class="form-control" type="file" id="poster">
-						</div>
-						<div class="form-group mb-3">
-							<label for="video" class="form-label">Video</label>
-							<input class="form-control" type="file" id="video">
-						</div>
-						<div class="form-group mb-3">
-							<label for="audio" class="form-label">Audio</label>
-							<input class="form-control" type="file" id="audio">
-						</div>
+						<div class="table-responsive">
+							<div id="printbar" style="float:right"></div>
+							<br>
+							<table id="tableDetailUser" class="table align-middle" style="width:100%">
 
+								<thead class="table-light">
+									<tr>
+										<th>No</th>
+										<th>Name</th>
+										<th>Organization Name</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>Nanda Raditya</td>
+										<td>Human Resource Development</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>Alvin Wijaya</td>
+										<td>Information Technology</td>
+									</tr>
+
+
+								</tbody>
+								<tfoot class="table-light">
+									<tr>
+										<th>No</th>
+										<th>Name</th>
+										<th>Organization Name</th>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Submit</button>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<!-- Modal Poster -->
-		<div class="modal fade" id="modalPoster" tabindex="-1" aria-labelledby="modalPosterLabel" aria-hidden="true">
+		<!-- Modal Add New -->
+		<div class="modal fade" id="modalAddNewNotification" tabindex="-1"
+			aria-labelledby="modalAddNewNotificationLabel" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h1 class="modal-title fs-5" id="modalPosterLabel">Thumbnail Podtret</h1>
+						<h1 class="modal-title fs-5" id="modalAddNewNotificationLabel">Push Notification</h1>
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
 					<div class="modal-body">
-						<div class="container">
-							<img src="assets/images/poster/Ibuck-ibuck.png"
-								style="max-width: 100%; display:block; height: auto;" alt="">
+						<div class="form-group mb-3">
+							<label for="juudlPodtret" class="form-label">Notification</label>
+							<input type="email" class="form-control" id="juudlPodtret" placeholder="Input title...">
 						</div>
+						<div class="form-group mb-3">
+							<label for="selectSpesific" class="form-label">Given To</label>
+							<select class="form-select" aria-label="Default select example" id="selectSpesific">
+								<option value="all" selected>All</option>
+								<option value="byOrganization">Spesific by Organization</option>
+								<option value="byName">Spesific by User</option>
+							</select>
+						</div>
+						<div id="orgName" class="col-12 mb-3" style="display:none;">
+							<div class="mb-3">
+								<label class="form-label">Choose Organization</label>
+								<select class="checkbox-spesific" data-placeholder="Choose anything"
+									multiple="multiple">
+									<option value="hrd">Human Resource Development</option>
+									<option value="it">Information Technology</option>
+									<option value="finance">Finance</option>
+									<option value="marketing">Marketing</option>
+									<option value="operation">Operation</option>
+									<option value="production">Production</option>
+									<option value="quality">Quality</option>
+									<option value="sales">Sales</option>
+									<option value="supplychain">Supply Chain</option>
+								</select>
+							</div>
 
-
+						</div>
+						<div id="userName" class="col-12 mb-3" style="display:none;">
+							<div class="mb-3">
+								<label class="form-label">Choose User</label>
+								<select class="checkbox-spesific" data-placeholder="Choose anything"
+									multiple="multiple">
+									<option value="nanda">Nanda Raditya</option>
+									<option value="dwi">Dwi Prasetyo</option>
+									<option value="dewi">Dewi Sartika</option>
+									<option value="siti">Siti Nuraini</option>
+									<option value="susi">Susi Susanti</option>
+									<option value="sari">Sari Sari</option>
+									<option value="siti">Siti Nuraini</option>
+									<option value="susi">Susi Susanti</option>
+									<option value="sari">Sari Sari</option>
+									<option value="siti">Siti Nuraini</option>
+								</select>
+							</div>
+						</div>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-
+						<button type="button" class="btn btn-primary">Submit</button>
 					</div>
 				</div>
 			</div>
@@ -676,55 +721,53 @@
 					</div>
 					<div class="modal-body">
 						<div class="form-group mb-3">
-							<label for="judulPodtret" class="form-label">Judul</label>
-							<input type="email" class="form-control" id="judulPodtret"
-								value="Episode 39: Edisi Ibuck Ibuck">
+							<label for="juudlPodtret" class="form-label">Notification</label>
+							<input type="email" class="form-control" id="juudlPodtret" placeholder="Input title...">
 						</div>
 						<div class="form-group mb-3">
-							<label for="judulSegmen" class="form-label">Segmen</label>
-							<select class="form-select" aria-label="Default select example" id="judulSegmen">
-								<option selected>#innotalk</option>
-								<option value="1">#ngobrolsantai</option>
-								<option value="2">#sapamantan</option>
-								<option value="3">#kumis</option>
+							<label for="selectSpesific" class="form-label">Given To</label>
+							<select class="form-select" aria-label="Default select example" id="selectSpesific">
+								<option value="all" selected>All</option>
+								<option value="byOrganization">Spesific by Organization</option>
+								<option value="byName">Spesific by User</option>
 							</select>
 						</div>
-						<div class="form-group mb-3">
-							<label for="filterDatePremiere" class="sr-only">Tanggal Premiere</label>
-							<div class="input-group mb-2 me-sm-2">
-								<input type="text" class="form-control datepickerpremiereupload" id="filterDatePremiere"
-									value="2022-12-13">
+						<div id="orgName" class="col-12 mb-3" style="display:none;">
+							<div class="mb-3">
+								<label class="form-label">Choose Organization</label>
+								<select class="checkbox-spesific" data-placeholder="Choose anything"
+									multiple="multiple">
+									<option value="hrd">Human Resource Development</option>
+									<option value="it">Information Technology</option>
+									<option value="finance">Finance</option>
+									<option value="marketing">Marketing</option>
+									<option value="operation">Operation</option>
+									<option value="production">Production</option>
+									<option value="quality">Quality</option>
+									<option value="sales">Sales</option>
+									<option value="supplychain">Supply Chain</option>
+								</select>
 							</div>
-						</div>
-						<div class="form-group mb-3">
-							<label for="poster" class="form-label">Poster</label>
-							<input class="form-control" type="file" id="poster">
-						</div>
-						<div class="form-group mb-3">
-							<label for="video" class="form-label">Video</label>
-							<input class="form-control" type="file" id="video">
-						</div>
-						<div class="form-group mb-3">
-							<label for="audio" class="form-label">Audio</label>
-							<input class="form-control" type="file" id="audio">
-						</div>
-						<div class="form-group mb-3">
-							<label for="publish" class="form-label">Publish</label>
-							<select class="form-select" aria-label="Default select example" id="publish">
-								<option selected>Yes</option>
-								<option value="1">No</option>
 
-							</select>
 						</div>
-						<!-- <div class="form-group mb-3">
-							<label for="poster">Poster</label>
-							<div class="card">
-								<div class="card-body">
-									<input id="fancy-file-upload" type="file" name="files"
-										accept=".jpg, .png, image/jpeg, image/png" id="poster" multiple>
-								</div>
+						<div id="userName" class="col-12 mb-3" style="display:none;">
+							<div class="mb-3">
+								<label class="form-label">Choose User</label>
+								<select class="checkbox-spesific" data-placeholder="Choose anything"
+									multiple="multiple">
+									<option value="nanda">Nanda Raditya</option>
+									<option value="dwi">Dwi Prasetyo</option>
+									<option value="dewi">Dewi Sartika</option>
+									<option value="siti">Siti Nuraini</option>
+									<option value="susi">Susi Susanti</option>
+									<option value="sari">Sari Sari</option>
+									<option value="siti">Siti Nuraini</option>
+									<option value="susi">Susi Susanti</option>
+									<option value="sari">Sari Sari</option>
+									<option value="siti">Siti Nuraini</option>
+								</select>
 							</div>
-						</div> -->
+						</div>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -878,6 +921,7 @@
 	<script src="assets/plugins/fancy-file-uploader/jquery.fancy-fileupload.js"></script>
 	<script src="assets/plugins/Drag-And-Drop/dist/imageuploadify.min.js"></script>
 	<script src="assets/libraries/gijgo/js/gijgo.min.js"></script>
+	<script src="assets/plugins/select2/js/select2.min.js"></script>
 	<script>
 		$(document).ready(function () {
 			$('#example').DataTable();
@@ -914,6 +958,16 @@
 				maxfilesize: 1000000
 			});
 		});
+
+		$(document).ready(function () {
+			var table = $('#tableDetailUser').DataTable({
+				lengthChange: false,
+				buttons: ['csv', 'excel', 'pdf', 'print']
+			});
+
+			table.buttons().container()
+				.appendTo('#tableDetailUser_wrapper .col-md-6:eq(0)');
+		});
 	</script>
 	<script>
 		$(document).ready(function () {
@@ -923,6 +977,28 @@
 
 			table.buttons().container()
 				.appendTo('#example2_wrapper .col-md-6:eq(0)');
+		});
+		$('.checkbox-spesific').select2({
+			dropdownParent: $('#modalAddNewNotification'),
+			theme: 'bootstrap4',
+			width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
+			placeholder: $(this).data('placeholder'),
+			allowClear: Boolean($(this).data('allow-clear')),
+		});
+		const selectOption = document.getElementById("selectSpesific");
+		selectOption.addEventListener("change", function () {
+			const selectedOption = this.value;
+			if (selectedOption === "all") {
+				document.getElementById("orgName").style.display = "none";
+				document.getElementById("userName").style.display = "none";
+			}
+			else if (selectedOption === "byOrganization") {
+				document.getElementById("orgName").style.display = "block";
+				document.getElementById("userName").style.display = "none";
+			} else if (selectedOption === "byName") {
+				document.getElementById("orgName").style.display = "none";
+				document.getElementById("userName").style.display = "block";
+			}
 		});
 	</script>
 

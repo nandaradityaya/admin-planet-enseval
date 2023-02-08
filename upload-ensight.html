@@ -554,9 +554,9 @@
 										<th>No</th>
 										<th>Judul</th>
 										<th>Thumbnail</th>
-										<th>Premiere</th>
-										<th>Publish</th>
-										<th>Published At</th>
+										<th>Publish Date</th>
+										<th>Status</th>
+										<th>Uploaded At</th>
 										<th>Action</th>
 									</tr>
 								</thead>
@@ -570,7 +570,12 @@
 													alt="edisi-pildun"></a>
 										</td>
 										<td>2022-12-09</td>
-										<td>Published</td>
+										<td>
+											<div
+												class="badge rounded-pill text-success bg-light-success p-2 text-uppercase px-3">
+												Active
+											</div>
+										</td>
 										<td>2020-10-11 11:36:06</td>
 										<td>
 											<div class="d-flex order-actions">
@@ -592,7 +597,12 @@
 													alt="edisi-pildun"></a>
 										</td>
 										<td>2022-12-09</td>
-										<td>Published</td>
+										<td>
+											<div
+												class="badge rounded-pill text-white bg-secondary p-2 text-uppercase px-3">
+												Inactive
+											</div>
+										</td>
 										<td>2020-10-11 11:36:06</td>
 										<td>
 											<div class="d-flex order-actions">
@@ -613,9 +623,9 @@
 										<th>No</th>
 										<th>Judul</th>
 										<th>Thumbnail</th>
-										<th>Premiere</th>
-										<th>Publish</th>
-										<th>Published At</th>
+										<th>Publish Date</th>
+										<th>Status</th>
+										<th>Uploaded At</th>
 										<th>Action</th>
 									</tr>
 								</tfoot>
@@ -928,11 +938,12 @@
 	<script>
 		$(document).ready(function () {
 			var table = $('#tableEnsight').DataTable({
-				dom: '<"row top"<"col-lg-6 col-md-6 col-sm-12 mb-2"l><"col-lg-6 col-md-6 col-sm-12 mb-2"f>>rtip'
+				dom: '<"row top"<"col-lg-4 col-md-4 col-sm-12 mb-2"B><"col-lg-4 col-md-4 col-sm-12 mb-2"l><"col-lg-4 col-md-4 col-sm-12 mb-2"f>>rtip',
+				buttons: ['csv', 'excel', 'pdf', 'print']
 			});
 
 			table.buttons().container()
-				.appendTo('#example2_wrapper .col-md-6:eq(0)');
+				.appendTo('#tableEnsight_wrapper .col-md-6:eq(0)');
 		});
 	</script>
 

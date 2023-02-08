@@ -542,7 +542,7 @@
 						</div>
 						<div class="table-responsive">
 							<br>
-							<table id="tableVisitorPodtret" class="table align-middle" style="width:100%">
+							<table id="tableVisitorEnsight" class="table align-middle" style="width:100%">
 
 								<thead class="table-light">
 									<tr>
@@ -817,12 +817,13 @@
 	</script>
 	<script>
 		$(document).ready(function () {
-			var table = $('#tableVisitorPodtret').DataTable({
-				dom: '<"row top"<"col-lg-6 col-md-6 col-sm-12 mb-2"l><"col-lg-6 col-md-6 col-sm-12 mb-2"f>>rtip'
+			var table = $('#tableVisitorEnsight').DataTable({
+				dom: '<"row top"<"col-lg-4 col-md-4 col-sm-12 mb-2"B><"col-lg-4 col-md-4 col-sm-12 mb-2"l><"col-lg-4 col-md-4 col-sm-12 mb-2"f>>rtip',
+				buttons: ['csv', 'excel', 'pdf', 'print']
 			});
 
 			table.buttons().container()
-				.appendTo('#tableVisitorPodtret_wrapper .col-md-6:eq(0)');
+				.appendTo('#tableVisitorEnsight_wrapper .col-md-6:eq(0)');
 		});
 	</script>
 

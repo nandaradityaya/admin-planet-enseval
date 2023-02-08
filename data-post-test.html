@@ -966,9 +966,13 @@
 	</script>
 	<script>
 		$(document).ready(function () {
-			$('#dataPostTest').DataTable({
-				dom: '<"row top"<"col-lg-6 col-md-6 col-sm-12 mb-2"B><"col-lg-6 col-md-6 col-sm-12 mb-2"f>>rtip'
+			var table = $('#dataPostTest').DataTable({
+				dom: '<"row top"<"col-lg-4 col-md-4 col-sm-12 mb-2"B><"col-lg-4 col-md-4 col-sm-12 mb-2"l><"col-lg-4 col-md-4 col-sm-12 mb-2"f>>rtip',
+				buttons: ['csv', 'excel', 'pdf', 'print']
 			});
+
+			table.buttons().container()
+				.appendTo('#dataPostTest_wrapper .col-md-6:eq(0)');
 		});
 	</script>
 

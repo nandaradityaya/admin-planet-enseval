@@ -978,11 +978,11 @@ $(function () {
   });
 });
 
-// JQUERY
-function showDiv(divId, element) {
-  document.getElementById(divId).style.display =
-    element.value == 1 ? "block" : "none";
-}
+// // JQUERY
+// function showDiv(divId, element) {
+//   document.getElementById(divId).style.display =
+//     element.value == 1 ? "block" : "none";
+// }
 
 document.getElementById("newsectionbtn").onclick = function () {
   var container = document.getElementById("wrapperQuestion");

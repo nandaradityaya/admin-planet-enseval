@@ -844,8 +844,8 @@
 	<script>
 		$(document).ready(function () {
 			var table = $('#tableCourseSpesifik').DataTable({
-				lengthChange: false,
-				buttons: ['csv', 'excel', 'pdf', 'print'],
+				dom: '<"row top"<"col-lg-4 col-md-4 col-sm-12 mb-2"B><"col-lg-4 col-md-4 col-sm-12 mb-2"l><"col-lg-4 col-md-4 col-sm-12 mb-2"f>>rtip',
+				buttons: ['csv', 'excel', 'pdf', 'print']
 			});
 
 			table.buttons().container()
