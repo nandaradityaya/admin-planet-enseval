@@ -35,7 +35,7 @@ window.onload = (event) => {
 };
 
 // OnClick CHART E-LEARNING ---------------------------------------
-function toggleBtn(evt, menuName) {
+function triggerBtn(evt, menuName) {
   // Declare all variables
   var i, tabcontent, tablinks;
 
@@ -988,11 +988,4 @@ document.getElementById("newsectionbtn").onclick = function () {
   var container = document.getElementById("wrapperQuestion");
   var section = document.getElementById("sectionQuestion");
   container.appendChild(section.cloneNode(true));
-
-  // var newQuestion = document.getElementById("labelQuestion");
-  // var questionLabel = document.createTextNode(
-  //   "Question " + (label.children.length + 1)
-  // );
-  // newQuestion.appendChild(questionLabel);
-  // label.appendChild(newQuestion);
 };
