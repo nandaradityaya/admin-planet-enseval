@@ -3250,3 +3250,41 @@ input::placeholder {
 #showThree {
   border: 1px solid blue;
 }
+
+/* Fip Card */
+/* #wrapFlip {
+  width: 200px;
+  height: 100px;
+  position: relative;
+  perspective: 800px;
+}
+
+#cardFlip {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+#cardFlip .card-body {
+  margin: 0;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+#cardFlip .manual {
+  background: red;
+}
+
+#cardFlip .import {
+  background: blue;
+  transform: rotateY(180deg);
+}
+
+#cardFlip.flipped {
+  transform: rotateY(180deg);
+} */
