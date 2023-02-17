@@ -550,260 +550,296 @@
 											<input type="text" class="form-control" for="questionOne4"
 												placeholder="Answer here..">
 										</div>
+										<div class="mb-3" style="float: right; width: 11%;">
+											<label class="form-label">Score</label>
+											<input type="text" class="form-control bg-light-success"
+												placeholder="Input score...">
+										</div>
 									</div>
 								</div>
-							</div>
-							<div id="card-container"></div>
-							<button id="add-card-button">Add Card</button>
+								<div id="card-container"></div>
+
+								<div class="card mb-3" id="sectionEssay" style="display: none;">
+									<div class="card-body order-actions">
+										<div class="mb-3">
+											<label class="form-label">Essay</label>
+											<input type="text" class="form-control"
+												placeholder="Input question here...">
+										</div>
+									</div>
+								</div>
+								<div id="card-essay"></div>
 
 
-							<!-- <button type="button" class="btn btn-outline-primary radius-10" id="newsectionbtn"
-								style="float: right;"><i class="bx bx-plus"></i>Add More</button> -->
-							<div class="d-flex justify-content-center">
-								<button type="button" class="btn btn-primary ms-2 radius-10">Submit</button>
+								<div class="d-flex justify-content-end mb-3">
+									<button type="button" class="btn btn-outline-primary radius-10 ms-2"
+										id="newsectionbtn"><i class="bx bx-plus"></i>Add More</button>
+								</div>
+								<!-- <button type="button" class="btn btn-outline-warning radius-10" id="newEssayBtn"
+									style="float: right;"><i class="fadeIn animated bx bx-message-alt-detail"></i>Add
+									Essay</button> -->
+								<div class="card mb-3" id="sectionEssay">
+									<div class="card-body order-actions">
+										<div class="mb-3">
+											<label class="form-label">Essay</label>
+											<input type="text" class="form-control"
+												placeholder="Input question here...">
+										</div>
+									</div>
+								</div>
+								<button type="button" class="btn btn-outline-warning radius-10" id="newEssayBtn"
+									onclick="addNewEssay()" style="float: right;"><i
+										class="fadeIn animated bx bx-message-alt-detail"></i>Add Essay</button>
+
+
+
 							</div>
 
 						</div>
-
 					</div>
-
-
-				</div>
-				<!-- Modal Box Add By Import -->
-				<div class="modal fade" id="modalAddByImport" tabindex="-1" aria-labelledby="modalAddByImportLabel"
-					aria-hidden="true">
-					<div class="modal-dialog">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title" id="modalAddByImportLabel">Import Post Test</h5>
-								<button type="button" class="btn-close" data-bs-dismiss="modal"
-									aria-label="Close"></button>
-							</div>
-							<div class="modal-body">
-								<div class="mb-3">
-									<label for="modulName" class="form-label">Title Post Test</label>
-									<input type="text" class="form-control" id="modulName" placeholder="Modul Name">
+					<div class="d-flex justify-content-center">
+						<button type="button" class="btn btn-primary ms-2 radius-10">Submit</button>
+					</div>
+					<!-- Modal Box Add By Import -->
+					<div class="modal fade" id="modalAddByImport" tabindex="-1" aria-labelledby="modalAddByImportLabel"
+						aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="modalAddByImportLabel">Import Post Test</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal"
+										aria-label="Close"></button>
 								</div>
-								<div class="mb-3">
-									<label for="formFile" class="form-label">Attachment</label>
-									<input class="form-control" type="file" id="formFile">
+								<div class="modal-body">
+									<div class="mb-3">
+										<label for="modulName" class="form-label">Title Post Test</label>
+										<input type="text" class="form-control" id="modulName" placeholder="Modul Name">
+									</div>
+									<div class="mb-3">
+										<label for="formFile" class="form-label">Attachment</label>
+										<input class="form-control" type="file" id="formFile">
+									</div>
 								</div>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-								<button type="button" class="btn btn-primary">Submit</button>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary"
+										data-bs-dismiss="modal">Close</button>
+									<button type="button" class="btn btn-primary">Submit</button>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
 
-				<!-- Modal Box Add Lesson -->
-				<div class="modal fade" id="modalAddNewLesson" tabindex="-1" aria-labelledby="modalAddNewLessonLabel"
-					aria-hidden="true">
-					<div class="modal-dialog">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title" id="modalAddNewLessonLabel">Add New Course</h5>
-								<button type="button" class="btn-close" data-bs-dismiss="modal"
-									aria-label="Close"></button>
-							</div>
-							<div class="modal-body">
-								<div class="mb-3">
-									<label for="lessonName" class="form-label">Lesson Name</label>
-									<input type="text" class="form-control" id="lessonName" placeholder="Lesson Name">
+					<!-- Modal Box Add Lesson -->
+					<div class="modal fade" id="modalAddNewLesson" tabindex="-1"
+						aria-labelledby="modalAddNewLessonLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="modalAddNewLessonLabel">Add New Course</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal"
+										aria-label="Close"></button>
 								</div>
-								<div class="mb-3">
-									<label for="lessonType" class="form-label">Lesson Type</label>
-									<select class="form-select" aria-label="Default select example">
-										<option selected>Open this select menu</option>
-										<option value="1">Video</option>
-										<option value="2">PDF</option>
-									</select>
+								<div class="modal-body">
+									<div class="mb-3">
+										<label for="lessonName" class="form-label">Lesson Name</label>
+										<input type="text" class="form-control" id="lessonName"
+											placeholder="Lesson Name">
+									</div>
+									<div class="mb-3">
+										<label for="lessonType" class="form-label">Lesson Type</label>
+										<select class="form-select" aria-label="Default select example">
+											<option selected>Open this select menu</option>
+											<option value="1">Video</option>
+											<option value="2">PDF</option>
+										</select>
+									</div>
+									<div class="mb-3">
+										<label for="formFile" class="form-label">Lesson File</label>
+										<input class="form-control" type="file" id="formFile">
+									</div>
 								</div>
-								<div class="mb-3">
-									<label for="formFile" class="form-label">Lesson File</label>
-									<input class="form-control" type="file" id="formFile">
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary"
+										data-bs-dismiss="modal">Close</button>
+									<button type="button" onclick="CreateTodo();"
+										class="btn btn-primary">Confirm</button>
 								</div>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-								<button type="button" onclick="CreateTodo();" class="btn btn-primary">Confirm</button>
 							</div>
 						</div>
 					</div>
+
+
+
 				</div>
-
-
-
+			</div>
+			<!--end page wrapper -->
+			<!--start overlay-->
+			<div class="overlay toggle-icon"></div>
+			<!--end overlay-->
+			<!--Start Back To Top Button--> <a href="javaScript:;" class="back-to-top"><i
+					class='bx bxs-up-arrow-alt'></i></a>
+			<!--End Back To Top Button-->
+			<footer class="page-footer">
+				<p class="mb-0">Copyright © 2023. All right reserved.</p>
+			</footer>
+		</div>
+		<!--end wrapper-->
+		<!--start switcher-->
+		<div class="switcher-wrapper">
+			<div class="switcher-btn"> <i class='bx bx-cog bx-spin'></i>
+			</div>
+			<div class="switcher-body">
+				<div class="d-flex align-items-center">
+					<h5 class="mb-0 text-uppercase">Theme Customizer</h5>
+					<button type="button" class="btn-close ms-auto close-switcher" aria-label="Close"></button>
+				</div>
+				<hr />
+				<h6 class="mb-0">Theme Styles</h6>
+				<hr />
+				<div class="d-flex align-items-center justify-content-between">
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="flexRadioDefault" id="lightmode" checked>
+						<label class="form-check-label" for="lightmode">Light</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="flexRadioDefault" id="darkmode">
+						<label class="form-check-label" for="darkmode">Dark</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="flexRadioDefault" id="semidark">
+						<label class="form-check-label" for="semidark">Semi Dark</label>
+					</div>
+				</div>
+				<hr />
+				<div class="form-check">
+					<input class="form-check-input" type="radio" id="minimaltheme" name="flexRadioDefault">
+					<label class="form-check-label" for="minimaltheme">Minimal Theme</label>
+				</div>
+				<hr />
+				<h6 class="mb-0">Header Colors</h6>
+				<hr />
+				<div class="header-colors-indigators">
+					<div class="row row-cols-auto g-3">
+						<div class="col">
+							<div class="indigator headercolor1" id="headercolor1"></div>
+						</div>
+						<div class="col">
+							<div class="indigator headercolor2" id="headercolor2"></div>
+						</div>
+						<div class="col">
+							<div class="indigator headercolor3" id="headercolor3"></div>
+						</div>
+						<div class="col">
+							<div class="indigator headercolor4" id="headercolor4"></div>
+						</div>
+						<div class="col">
+							<div class="indigator headercolor5" id="headercolor5"></div>
+						</div>
+						<div class="col">
+							<div class="indigator headercolor6" id="headercolor6"></div>
+						</div>
+						<div class="col">
+							<div class="indigator headercolor7" id="headercolor7"></div>
+						</div>
+						<div class="col">
+							<div class="indigator headercolor8" id="headercolor8"></div>
+						</div>
+					</div>
+				</div>
+				<hr />
+				<h6 class="mb-0">Sidebar Backgrounds</h6>
+				<hr />
+				<div class="header-colors-indigators">
+					<div class="row row-cols-auto g-3">
+						<div class="col">
+							<div class="indigator sidebarcolor1" id="sidebarcolor1"></div>
+						</div>
+						<div class="col">
+							<div class="indigator sidebarcolor2" id="sidebarcolor2"></div>
+						</div>
+						<div class="col">
+							<div class="indigator sidebarcolor3" id="sidebarcolor3"></div>
+						</div>
+						<div class="col">
+							<div class="indigator sidebarcolor4" id="sidebarcolor4"></div>
+						</div>
+						<div class="col">
+							<div class="indigator sidebarcolor5" id="sidebarcolor5"></div>
+						</div>
+						<div class="col">
+							<div class="indigator sidebarcolor6" id="sidebarcolor6"></div>
+						</div>
+						<div class="col">
+							<div class="indigator sidebarcolor7" id="sidebarcolor7"></div>
+						</div>
+						<div class="col">
+							<div class="indigator sidebarcolor8" id="sidebarcolor8"></div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-		<!--end page wrapper -->
-		<!--start overlay-->
-		<div class="overlay toggle-icon"></div>
-		<!--end overlay-->
-		<!--Start Back To Top Button--> <a href="javaScript:;" class="back-to-top"><i
-				class='bx bxs-up-arrow-alt'></i></a>
-		<!--End Back To Top Button-->
-		<footer class="page-footer">
-			<p class="mb-0">Copyright © 2023. All right reserved.</p>
-		</footer>
-	</div>
-	<!--end wrapper-->
-	<!--start switcher-->
-	<div class="switcher-wrapper">
-		<div class="switcher-btn"> <i class='bx bx-cog bx-spin'></i>
-		</div>
-		<div class="switcher-body">
-			<div class="d-flex align-items-center">
-				<h5 class="mb-0 text-uppercase">Theme Customizer</h5>
-				<button type="button" class="btn-close ms-auto close-switcher" aria-label="Close"></button>
-			</div>
-			<hr />
-			<h6 class="mb-0">Theme Styles</h6>
-			<hr />
-			<div class="d-flex align-items-center justify-content-between">
-				<div class="form-check">
-					<input class="form-check-input" type="radio" name="flexRadioDefault" id="lightmode" checked>
-					<label class="form-check-label" for="lightmode">Light</label>
-				</div>
-				<div class="form-check">
-					<input class="form-check-input" type="radio" name="flexRadioDefault" id="darkmode">
-					<label class="form-check-label" for="darkmode">Dark</label>
-				</div>
-				<div class="form-check">
-					<input class="form-check-input" type="radio" name="flexRadioDefault" id="semidark">
-					<label class="form-check-label" for="semidark">Semi Dark</label>
-				</div>
-			</div>
-			<hr />
-			<div class="form-check">
-				<input class="form-check-input" type="radio" id="minimaltheme" name="flexRadioDefault">
-				<label class="form-check-label" for="minimaltheme">Minimal Theme</label>
-			</div>
-			<hr />
-			<h6 class="mb-0">Header Colors</h6>
-			<hr />
-			<div class="header-colors-indigators">
-				<div class="row row-cols-auto g-3">
-					<div class="col">
-						<div class="indigator headercolor1" id="headercolor1"></div>
-					</div>
-					<div class="col">
-						<div class="indigator headercolor2" id="headercolor2"></div>
-					</div>
-					<div class="col">
-						<div class="indigator headercolor3" id="headercolor3"></div>
-					</div>
-					<div class="col">
-						<div class="indigator headercolor4" id="headercolor4"></div>
-					</div>
-					<div class="col">
-						<div class="indigator headercolor5" id="headercolor5"></div>
-					</div>
-					<div class="col">
-						<div class="indigator headercolor6" id="headercolor6"></div>
-					</div>
-					<div class="col">
-						<div class="indigator headercolor7" id="headercolor7"></div>
-					</div>
-					<div class="col">
-						<div class="indigator headercolor8" id="headercolor8"></div>
-					</div>
-				</div>
-			</div>
-			<hr />
-			<h6 class="mb-0">Sidebar Backgrounds</h6>
-			<hr />
-			<div class="header-colors-indigators">
-				<div class="row row-cols-auto g-3">
-					<div class="col">
-						<div class="indigator sidebarcolor1" id="sidebarcolor1"></div>
-					</div>
-					<div class="col">
-						<div class="indigator sidebarcolor2" id="sidebarcolor2"></div>
-					</div>
-					<div class="col">
-						<div class="indigator sidebarcolor3" id="sidebarcolor3"></div>
-					</div>
-					<div class="col">
-						<div class="indigator sidebarcolor4" id="sidebarcolor4"></div>
-					</div>
-					<div class="col">
-						<div class="indigator sidebarcolor5" id="sidebarcolor5"></div>
-					</div>
-					<div class="col">
-						<div class="indigator sidebarcolor6" id="sidebarcolor6"></div>
-					</div>
-					<div class="col">
-						<div class="indigator sidebarcolor7" id="sidebarcolor7"></div>
-					</div>
-					<div class="col">
-						<div class="indigator sidebarcolor8" id="sidebarcolor8"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--end switcher-->
-	<!-- Bootstrap JS -->
-	<script src="assets/js/bootstrap.bundle.min.js"></script>
-	<!--plugins-->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
-	<script src="assets/plugins/metismenu/js/metisMenu.min.js"></script>
-	<script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
-	<script src="assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
-	<script src="assets/plugins/datatable/js/dataTables.bootstrap5.min.js"></script>
-	<script src="assets/js/index3.js"></script>
-	<script src="assets/libraries/gijgo/js/gijgo.min.js"></script>
-	<script src="assets/plugins/fancy-file-uploader/jquery.ui.widget.js"></script>
-	<script src="assets/plugins/fancy-file-uploader/jquery.fileupload.js"></script>
-	<script src="assets/plugins/fancy-file-uploader/jquery.iframe-transport.js"></script>
-	<script src="assets/plugins/fancy-file-uploader/jquery.fancy-fileupload.js"></script>
-	<script src="assets/plugins/Drag-And-Drop/dist/imageuploadify.min.js"></script>
-	<script>
-		$(document).ready(function () {
-			$('#example').DataTable();
+		<!--end switcher-->
+		<!-- Bootstrap JS -->
+		<script src="assets/js/bootstrap.bundle.min.js"></script>
+		<!--plugins-->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
+		<script src="assets/plugins/metismenu/js/metisMenu.min.js"></script>
+		<script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+		<script src="assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
+		<script src="assets/plugins/datatable/js/dataTables.bootstrap5.min.js"></script>
+		<script src="assets/js/index3.js"></script>
+		<script src="assets/js/addMore.js"></script>
+		<script src="assets/libraries/gijgo/js/gijgo.min.js"></script>
+		<script src="assets/plugins/fancy-file-uploader/jquery.ui.widget.js"></script>
+		<script src="assets/plugins/fancy-file-uploader/jquery.fileupload.js"></script>
+		<script src="assets/plugins/fancy-file-uploader/jquery.iframe-transport.js"></script>
+		<script src="assets/plugins/fancy-file-uploader/jquery.fancy-fileupload.js"></script>
+		<script src="assets/plugins/Drag-And-Drop/dist/imageuploadify.min.js"></script>
+		<script>
+			$(document).ready(function () {
+				$('#example').DataTable();
 
-			$(".datepickerawal").datepicker({
-				uiLibrary: "bootstrap4",
-				icons: {
-					rightIcon: '<img src="assets/images/icons/calendar-days.svg" />'
-				}
+				$(".datepickerawal").datepicker({
+					uiLibrary: "bootstrap4",
+					icons: {
+						rightIcon: '<img src="assets/images/icons/calendar-days.svg" />'
+					}
+				})
+
+				$(".datepickerakhir").datepicker({
+					uiLibrary: "bootstrap4",
+					icons: {
+						rightIcon: '<img src="assets/images/icons/calendar-days.svg" />'
+					}
+				})
+			});
+		</script>
+
+		<script>
+			$('#selectCategoryAddNew').select2({
+				dropdownParent: $('#modalAddNewCourse'),
+				theme: 'bootstrap4',
+				width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
+				placeholder: $(this).data('placeholder'),
+				allowClear: Boolean($(this).data('allow-clear')),
+			});
+		</script>
+		<script>
+			$('#fancy-file-upload').FancyFileUpload({
+				params: {
+					action: 'fileuploader'
+				},
+				maxfilesize: 1000000
+			});
+		</script>
+		<script>
+			$(document).ready(function () {
+				$('#image-uploadify').imageuploadify();
 			})
-
-			$(".datepickerakhir").datepicker({
-				uiLibrary: "bootstrap4",
-				icons: {
-					rightIcon: '<img src="assets/images/icons/calendar-days.svg" />'
-				}
-			})
-		});
-	</script>
-
-	<script>
-		$('#selectCategoryAddNew').select2({
-			dropdownParent: $('#modalAddNewCourse'),
-			theme: 'bootstrap4',
-			width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
-			placeholder: $(this).data('placeholder'),
-			allowClear: Boolean($(this).data('allow-clear')),
-		});
-	</script>
-	<script>
-		$('#fancy-file-upload').FancyFileUpload({
-			params: {
-				action: 'fileuploader'
-			},
-			maxfilesize: 1000000
-		});
-	</script>
-	<script>
-		$(document).ready(function () {
-			$('#image-uploadify').imageuploadify();
-		})
-	</script>
-	<script src="assets/js/app.js"></script>
+		</script>
+		<script src="assets/js/app.js"></script>
 </body>
 
 </html>

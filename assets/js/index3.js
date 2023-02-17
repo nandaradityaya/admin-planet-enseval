@@ -1002,28 +1002,3 @@ $(function () {
 //   document.getElementById(divId).style.display =
 //     element.value == 1 ? "block" : "none";
 // }
-
-document.getElementById("newsectionbtn").onclick = function () {
-  var container = document.getElementById("wrapperQuestion");
-  var section = document.getElementById("sectionQuestion");
-  container.appendChild(section.cloneNode(true));
-};
-
-// Step 1
-const cardContainer = document.getElementById("#card-container");
-const addCardButton = document.getElementById("#add-card-button");
-
-// Step 2
-function createCard() {
-  const newCard = document.createElement("div");
-  newCard.classList.add("card");
-  newCard.innerHTML = "<h3>New Card</h3><p>This is some new content.</p>";
-  return newCard;
-}
-
-// Step 3
-addCardButton.addEventListener("click", function () {
-  // Step 4
-  const newCard = createCard();
-  cardContainer.appendChild(newCard);
-});
