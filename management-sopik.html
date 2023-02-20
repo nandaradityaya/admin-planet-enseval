@@ -13,6 +13,8 @@
 	<link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
 	<link href="assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
 	<link href="assets/plugins/datatable/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+	<link href="assets/plugins/select2/css/select2.min.css" rel="stylesheet" />
+	<link href="assets/plugins/select2/css/select2-bootstrap4.css" rel="stylesheet" />
 	<!-- loader-->
 	<link href="assets/css/pace.min.css" rel="stylesheet" />
 	<script src="assets/js/pace.min.js"></script>
@@ -103,9 +105,37 @@
 				<ul>
 					<li> <a href="category-learning.html"><i class="bx bx-right-arrow-alt"></i>Course Category</a>
 					</li>
-					<li class="mm-active"> <a href="course.html"><i class="bx bx-right-arrow-alt"></i>Courses</a>
+					<li> <a href="course.html"><i class="bx bx-right-arrow-alt"></i>Courses</a>
 					</li>
 				</ul>
+			</li>
+
+			<li>
+				<a href="javascript:;" class="has-arrow">
+					<div class="parent-icon"><i class='lni lni-video'></i>
+					</div>
+					<div class="menu-title">Management Ensight</div>
+				</a>
+				<ul>
+					<li> <a href="upload-ensight.html"><i class="bx bx-right-arrow-alt"></i>Upload Ensight</a>
+					</li>
+					<li> <a href="ensight-visitor.html"><i class="bx bx-right-arrow-alt"></i>Ensight Visitors</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="management-notification.html" class="">
+					<div class="parent-icon"><i class='bx bx-bell'></i>
+					</div>
+					<div class="menu-title">Manage Notifications</div>
+				</a>
+			</li>
+			<li>
+				<a href="management-sopik.html" class="">
+					<div class="parent-icon"><i class='lni lni-book'></i>
+					</div>
+					<div class="menu-title">Manage SOP IK</div>
+				</a>
 			</li>
 			</ul>
 			<!--end navigation-->
@@ -479,208 +509,271 @@
 			<div class="page-content">
 				<!--breadcrumb-->
 				<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-					<div class="breadcrumb-title pe-3">Management E-learning</div>
+					<div class="breadcrumb-title pe-3">Management SOP IK</div>
 					<div class="ps-3">
 						<nav aria-label="breadcrumb">
 							<ol class="breadcrumb mb-0 p-0">
 								<li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
 								</li>
-								<li class="breadcrumb-item"><a href="course.html">Course</a>
-								</li>
-								<li class="breadcrumb-item"><a href="add-new-modul.html">Add Course</a>
-								</li>
-								<li class="breadcrumb-item active" aria-current="page">Add Post Test</li>
+								<li class="breadcrumb-item active" aria-current="page">Courses</li>
 							</ol>
 						</nav>
 					</div>
-
 				</div>
 				<!--end breadcrumb-->
 
-
 				<hr />
-
-				<div class="d-flex align-items-center">
-					<div class="">
-						<h6 class="mb-0 text-uppercase">Add Post Test</h6>
-					</div>
-					<div class="ms-auto mt-2 mb-3">
-						<button type="button" class="btn btn-primary radius-10" data-bs-toggle="modal"
-							data-bs-target="#modalAddByImport"><i
-								class="fadeIn animated bx bx-import"></i>Import</button>
-					</div>
-				</div>
-				<div class="row">
-					<div class="card">
-						<div class="card-body">
-							<div class="mb-4">
-								<label class="form-label">Title Post Test</label>
-								<input type="text" class="form-control is-invalid" placeholder="Title here...">
-								<div class="invalid-feedback">Please enter a title.</div>
+				<div class="card">
+					<div class="card-body">
+						<div class="d-flex align-items-center">
+							<div>
+								<h5 class="font-weight-bold mb-0">SOP IK</h5>
 							</div>
-							<div class="question-one" id="wrapperQuestion">
-								<div class="card mb-3" id="sectionQuestion">
-									<div class="card-body order-actions">
-										<div class="mb-3">
-											<label class="form-label">Question 1</label>
-											<input type="text" class="form-control bg-light-secondary"
-												placeholder="Input question here...">
-										</div>
-										<div class="form-check d-flex align-items-center mb-2">
-											<input class="form-check-input me-2" type="radio" name="questionOne"
-												id="questionOne1">
-											<input type="text" class="form-control" for="questionOne1"
-												placeholder="Answer here..">
-										</div>
-										<div class="form-check d-flex align-items-center mb-2">
-											<input class="form-check-input me-2" type="radio" name="questionOne"
-												id="questionOne2">
-											<input type="text" class="form-control" for="questionOne2"
-												placeholder="Answer here..">
-										</div>
-										<div class="form-check d-flex align-items-center mb-2">
-											<input class="form-check-input me-2" type="radio" name="questionOne"
-												id="questionOne3">
-											<input type="text" class="form-control" for="questionOne3"
-												placeholder="Answer here..">
-										</div>
-										<div class="form-check d-flex align-items-center mb-2">
-											<input class="form-check-input me-2" type="radio" name="questionOne"
-												id="questionOne4">
-											<input type="text" class="form-control" for="questionOne4"
-												placeholder="Answer here..">
-										</div>
-										<div class="d-flex order-actions">
-											<div class=" mb-3" style="width: 11%;">
-												<label class="form-label">Score</label>
-												<input type="text" class="form-control bg-light-success"
-													placeholder="score...">
-											</div>
-											<div class="mb-3 ms-auto">
-												<label class="form-label" for="">Delete</label>
-												<a href="javascript:;"
-													class="text-danger bg-light-danger border-0 ms-2"><i
-														class="bx bxs-trash"></i></a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div id="card-container"></div>
-
-								<!-- <div class="card mb-3" id="sectionEssay" style="display: none;">
-									<div class="card-body order-actions">
-										<div class="mb-3">
-											<label class="form-label">Essay</label>
-											<input type="text" class="form-control"
-												placeholder="Input question here...">
-										</div>
-									</div>
-								</div>
-								<div id="card-essay"></div> -->
-
-
-								<div class="d-flex justify-content-end mb-3">
-									<button type="button" class="btn btn-outline-primary radius-10 ms-2"
-										id="newsectionbtn"><i class="bx bx-plus"></i>Add More</button>
-								</div>
-								<!-- <button type="button" class="btn btn-outline-warning radius-10" id="newEssayBtn"
-									style="float: right;"><i class="fadeIn animated bx bx-message-alt-detail"></i>Add
-									Essay</button> -->
-								<div class="card mb-3" id="sectionEssay">
-									<div class="card-body order-actions">
-										<div class="mb-3">
-											<label class="form-label">Essay</label>
-											<input type="text" class="form-control"
-												placeholder="Input question here...">
-										</div>
-										<!-- <div class="mb-3" style="float: right;">
-											<label class="form-label" for="">Delete</label>
-											<a href="javascript:;" class="text-danger bg-light-danger border-0 ms-2"><i
-													class="bx bxs-trash"></i></a>
-										</div> -->
-									</div>
-								</div>
-								<button type="button" class="btn btn-outline-warning radius-10" id="newEssayBtn"
-									onclick="addNewEssay()" style="float: right;"><i
-										class="fadeIn animated bx bx-message-alt-detail"></i>Add Essay</button>
-
-
-
+							<div class="ms-auto mt-2">
+								<button type="button" class="btn btn-primary radius-10" data-bs-toggle="modal"
+									data-bs-target="#modalAddNewCourse"><i class="bx bx-plus"></i>Add
+									New</button>
 							</div>
+						</div>
+						<div class="table-responsive">
+							<div id="printbar" style="float:right"></div>
+							<br>
+							<table id="tableCourse" class="table align-middle" style="width:100%">
 
+								<thead class="table-light">
+									<tr>
+										<th>No</th>
+										<th>Course Title</th>
+										<th>Total User</th>
+										<th>Total Lesson</th>
+										<th>Time Uploaded</th>
+										<th>Status</th>
+										<th>Action</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td><a href="detail-sopik.html" class="text-black">Title Course SOP IK</a></td>
+										<td>492</td>
+										<td>2</td>
+										<td>2022-01-12 16:49:46</td>
+										<td class="">
+											<div
+												class="badge rounded-pill text-success bg-light-success p-2 text-uppercase px-3">
+												Active</div>
+										</td>
+										<td>
+											<div class="d-flex order-actions">
+												<a href="add-new-sopik.html"
+													class="text-primary bg-light-primary border-0"><i
+														class='bx bxs-edit'></i></a>
+												<a href="detail-sopik.html"
+													class="ms-4 text-success bg-light-success border-0"><svg
+														xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+														viewBox="0 0 24 24" fill="none" stroke="currentColor"
+														stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+														class="feather feather-eye text-success">
+														<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+														<circle cx="12" cy="12" r="3"></circle>
+													</svg></a>
+												<a href="javascript:;" class="ms-4 text-danger bg-light-danger border-0"
+													data-bs-toggle="modal" data-bs-target="#modalDeleteCourse"><i
+														class='bx bxs-trash'></i></a>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td><a href="detail-sopik.html" class="text-black">Title Course SOP IK</a></td>
+										<td>284</td>
+										<td>2</td>
+										<td>2022-12-22 14:49:46</td>
+										<td class="">
+											<div
+												class="badge rounded-pill text-success bg-light-success p-2 text-uppercase px-3">
+												Active</div>
+										</td>
+										<td>
+											<div class="d-flex order-actions">
+												<a href="add-new-sopik.html"
+													class="text-primary bg-light-primary border-0"><i
+														class='bx bxs-edit'></i></a>
+												<a href="detail-sopik.html"
+													class="ms-4 text-success bg-light-success border-0"><svg
+														xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+														viewBox="0 0 24 24" fill="none" stroke="currentColor"
+														stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+														class="feather feather-eye text-success">
+														<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+														<circle cx="12" cy="12" r="3"></circle>
+													</svg></a>
+												<a href="javascript:;" class="ms-4 text-danger bg-light-danger border-0"
+													data-bs-toggle="modal" data-bs-target="#modalDeleteCourse"><i
+														class='bx bxs-trash'></i></a>
+											</div>
+										</td>
+									</tr>
+
+
+								</tbody>
+								<tfoot class="table-light">
+									<tr>
+										<th>No</th>
+										<th>Course Title</th>
+										<th>Total User</th>
+										<th>Total Lesson</th>
+										<th>Time Uploaded</th>
+										<th>Status</th>
+										<th>Action</th>
+									</tr>
+								</tfoot>
+							</table>
 						</div>
 					</div>
-					<div class="d-flex justify-content-center">
-						<button type="button" class="btn btn-primary ms-2 radius-10">Submit</button>
-					</div>
-
-
 				</div>
-				<!-- Modal Box Add By Import -->
-				<div class="modal fade" id="modalAddByImport" tabindex="-1" aria-labelledby="modalAddByImportLabel"
+				<!-- Modal Box Add New -->
+				<div class="modal fade" id="modalAddNewCourse" tabindex="-1" aria-labelledby="modalAddNewCourseLabel"
 					aria-hidden="true">
 					<div class="modal-dialog">
 						<div class="modal-content">
 							<div class="modal-header">
-								<h5 class="modal-title" id="modalAddByImportLabel">Import Post Test</h5>
+								<h5 class="modal-title" id="modalAddNewCourseLabel">Add New Course</h5>
 								<button type="button" class="btn-close" data-bs-dismiss="modal"
 									aria-label="Close"></button>
 							</div>
 							<div class="modal-body">
-								<div class="mb-3">
-									<label for="modulName" class="form-label">Title Post Test</label>
-									<input type="text" class="form-control" id="modulName" placeholder="Modul Name">
+								<div class="col-12 mb-3">
+									<label for="inputCourse" class="form-label">Judul Course</label>
+									<input type="text" class="form-control" id="inputCourse"
+										placeholder="Input Title Course">
 								</div>
-								<div class="mb-3">
-									<label for="formFile" class="form-label">Attachment</label>
-									<input class="form-control" type="file" id="formFile">
-								</div>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-								<button type="button" class="btn btn-primary">Submit</button>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Modal Box Add Lesson -->
-				<div class="modal fade" id="modalAddNewLesson" tabindex="-1" aria-labelledby="modalAddNewLessonLabel"
-					aria-hidden="true">
-					<div class="modal-dialog">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title" id="modalAddNewLessonLabel">Add New Course</h5>
-								<button type="button" class="btn-close" data-bs-dismiss="modal"
-									aria-label="Close"></button>
-							</div>
-							<div class="modal-body">
-								<div class="mb-3">
-									<label for="lessonName" class="form-label">Lesson Name</label>
-									<input type="text" class="form-control" id="lessonName" placeholder="Lesson Name">
-								</div>
-								<div class="mb-3">
-									<label for="lessonType" class="form-label">Lesson Type</label>
-									<select class="form-select" aria-label="Default select example">
-										<option selected>Open this select menu</option>
-										<option value="1">Video</option>
-										<option value="2">PDF</option>
+								<div class="col-12 mb-3">
+									<label class="form-label" for="select">Choose Access</label>
+									<!-- <select class="form-select" id="test" name="form_select"
+										onchange="showDiv('hidden_spesific', this)">
+										<option value="0">All</option>
+										<option value="1">Spesific</option>
+									</select> -->
+									<select class="form-select" id="selectSpesific" name="form_select">
+										<option value="all">All</option>
+										<option value="byOrganization">Spesific by Organization</option>
+										<option value="byName">Spesific by User</option>
 									</select>
 								</div>
-								<div class="mb-3">
-									<label for="formFile" class="form-label">Lesson File</label>
-									<input class="form-control" type="file" id="formFile">
+								<div id="orgName" class="col-12 mb-3" style="display:none;">
+									<div class="mb-3">
+										<label class="form-label">Choose Organization</label>
+										<select class="checkbox-spesific" data-placeholder="Choose anything"
+											multiple="multiple">
+											<option value="hrd">Human Resource Development</option>
+											<option value="it">Information Technology</option>
+											<option value="finance">Finance</option>
+											<option value="marketing">Marketing</option>
+											<option value="operation">Operation</option>
+											<option value="production">Production</option>
+											<option value="quality">Quality</option>
+											<option value="sales">Sales</option>
+											<option value="supplychain">Supply Chain</option>
+										</select>
+									</div>
+
 								</div>
+								<div id="userName" class="col-12 mb-3" style="display:none;">
+									<div class="mb-3">
+										<label class="form-label">Choose User</label>
+										<select class="checkbox-spesific" data-placeholder="Choose anything"
+											multiple="multiple">
+											<option value="nanda">Nanda Raditya</option>
+											<option value="dwi">Dwi Prasetyo</option>
+											<option value="dewi">Dewi Sartika</option>
+											<option value="siti">Siti Nuraini</option>
+											<option value="susi">Susi Susanti</option>
+											<option value="sari">Sari Sari</option>
+											<option value="siti">Siti Nuraini</option>
+											<option value="susi">Susi Susanti</option>
+											<option value="sari">Sari Sari</option>
+											<option value="siti">Siti Nuraini</option>
+										</select>
+									</div>
+								</div>
+								<!-- <div class="col-12 mb-3" id="hidden_spesific">
+									<div class="card store-metrics p-3">
+										<div class="mb-3">
+											<label class="form-label">Choose Organization</label>
+											<select class="checkbox-spesific" data-placeholder="Choose anything"
+												multiple="multiple">
+												<option value="hrd">Human Resource Development</option>
+												<option value="it">Information Technology</option>
+												<option value="finance">Finance</option>
+												<option value="marketing">Marketing</option>
+												<option value="operation">Operation</option>
+												<option value="production">Production</option>
+												<option value="quality">Quality</option>
+												<option value="sales">Sales</option>
+												<option value="supplychain">Supply Chain</option>
+											</select>
+										</div>
+									</div>
+								</div> -->
+								<div class="col-12 mb-3">
+									<label for="" class="form-label">Image Poster</label>
+									<div class="card">
+										<div class="card-body">
+											<input id="fancy-file-upload" type="file" name="files"
+												accept=".jpg, .png, image/jpeg, image/png" multiple>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 mb-3">
+									<label for="formDescription" class="form-label">Description</label>
+									<textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+								</div>
+								<div class="col-12 mb-3">
+									<label for="inputPublis" class="form-label">Publish</label>
+									<div class="d-flex align-items-center">
+										<div class="form-check me-2">
+											<input class="form-check-input" type="radio" name="flexRadioDefault"
+												id="flexRadioDefault1">
+											<label class="form-check-label" for="flexRadioDefault1">Yes</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="radio" name="flexRadioDefault"
+												id="flexRadioDefault2" checked="">
+											<label class="form-check-label" for="flexRadioDefault2">No</label>
+										</div>
+									</div>
+								</div>
+
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-								<button type="button" onclick="CreateTodo();" class="btn btn-primary">Confirm</button>
+								<button type="button" class="btn btn-primary">Confirm</button>
 							</div>
 						</div>
 					</div>
 				</div>
 
-
+				<!-- Modal Delete -->
+				<div class="modal fade" id="modalDeleteCourse" tabindex="-1" aria-labelledby="modalDeleteCourseLabel"
+					aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="modalDeleteCourseLabel">Delete Course</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal"
+									aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<h6>Are you sure want to delete this course?</h6>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-danger">Delete</button>
+							</div>
+						</div>
+					</div>
+				</div>
 
 			</div>
 		</div>
@@ -692,7 +785,7 @@
 				class='bx bxs-up-arrow-alt'></i></a>
 		<!--End Back To Top Button-->
 		<footer class="page-footer">
-			<p class="mb-0">Copyright © 2023. All right reserved.</p>
+			<p class="mb-0">Copyright © 2021. All right reserved.</p>
 		</footer>
 	</div>
 	<!--end wrapper-->
@@ -802,17 +895,15 @@
 	<script src="assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
 	<script src="assets/plugins/datatable/js/dataTables.bootstrap5.min.js"></script>
 	<script src="assets/js/index3.js"></script>
-	<script src="assets/js/addMore.js"></script>
 	<script src="assets/libraries/gijgo/js/gijgo.min.js"></script>
 	<script src="assets/plugins/fancy-file-uploader/jquery.ui.widget.js"></script>
 	<script src="assets/plugins/fancy-file-uploader/jquery.fileupload.js"></script>
 	<script src="assets/plugins/fancy-file-uploader/jquery.iframe-transport.js"></script>
 	<script src="assets/plugins/fancy-file-uploader/jquery.fancy-fileupload.js"></script>
 	<script src="assets/plugins/Drag-And-Drop/dist/imageuploadify.min.js"></script>
+	<script src="assets/plugins/select2/js/select2.min.js"></script>
 	<script>
 		$(document).ready(function () {
-			$('#example').DataTable();
-
 			$(".datepickerawal").datepicker({
 				uiLibrary: "bootstrap4",
 				icons: {
@@ -827,10 +918,28 @@
 				}
 			})
 		});
+		new PerfectScrollbar('.store-metrics');
 	</script>
+	<script>
+		$(document).ready(function () {
+			var table = $('#tableCourse').DataTable({
+				dom: '<"row top"<"col-lg-4 col-md-4 col-sm-12 mb-2"B><"col-lg-4 col-md-4 col-sm-12 mb-2"l><"col-lg-4 col-md-4 col-sm-12 mb-2"f>>rtip',
+				buttons: ['csv', 'excel', 'pdf', 'print']
+			});
 
+			table.buttons().container()
+				.appendTo('#tableCourse_wrapper .col-md-6:eq(0)');
+		});
+	</script>
 	<script>
 		$('#selectCategoryAddNew').select2({
+			dropdownParent: $('#modalAddNewCourse'),
+			theme: 'bootstrap4',
+			width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
+			placeholder: $(this).data('placeholder'),
+			allowClear: Boolean($(this).data('allow-clear')),
+		});
+		$('.checkbox-spesific').select2({
 			dropdownParent: $('#modalAddNewCourse'),
 			theme: 'bootstrap4',
 			width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
@@ -850,6 +959,21 @@
 		$(document).ready(function () {
 			$('#image-uploadify').imageuploadify();
 		})
+		const selectOption = document.getElementById("selectSpesific");
+		selectOption.addEventListener("change", function () {
+			const selectedOption = this.value;
+			if (selectedOption === "all") {
+				document.getElementById("orgName").style.display = "none";
+				document.getElementById("userName").style.display = "none";
+			}
+			else if (selectedOption === "byOrganization") {
+				document.getElementById("orgName").style.display = "block";
+				document.getElementById("userName").style.display = "none";
+			} else if (selectedOption === "byName") {
+				document.getElementById("orgName").style.display = "none";
+				document.getElementById("userName").style.display = "block";
+			}
+		});
 	</script>
 	<script src="assets/js/app.js"></script>
 </body>

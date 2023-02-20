@@ -479,17 +479,15 @@
 			<div class="page-content">
 				<!--breadcrumb-->
 				<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-					<div class="breadcrumb-title pe-3">Management E-learning</div>
+					<div class="breadcrumb-title pe-3">Management SOP IK</div>
 					<div class="ps-3">
 						<nav aria-label="breadcrumb">
 							<ol class="breadcrumb mb-0 p-0">
 								<li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
 								</li>
-								<li class="breadcrumb-item"><a href="course.html">Course</a>
+								<li class="breadcrumb-item"><a href="management-sopik.html">Course</a>
 								</li>
-								<li class="breadcrumb-item"><a href="add-new-modul.html">Add Course</a>
-								</li>
-								<li class="breadcrumb-item active" aria-current="page">Add Post Test</li>
+								<li class="breadcrumb-item active" aria-current="page">Add Course</li>
 							</ol>
 						</nav>
 					</div>
@@ -499,146 +497,114 @@
 
 
 				<hr />
-
-				<div class="d-flex align-items-center">
-					<div class="">
-						<h6 class="mb-0 text-uppercase">Add Post Test</h6>
-					</div>
-					<div class="ms-auto mt-2 mb-3">
-						<button type="button" class="btn btn-primary radius-10" data-bs-toggle="modal"
-							data-bs-target="#modalAddByImport"><i
-								class="fadeIn animated bx bx-import"></i>Import</button>
-					</div>
-				</div>
 				<div class="row">
 					<div class="card">
 						<div class="card-body">
-							<div class="mb-4">
-								<label class="form-label">Title Post Test</label>
-								<input type="text" class="form-control is-invalid" placeholder="Title here...">
-								<div class="invalid-feedback">Please enter a title.</div>
+							<h6 class="text-center mb-3">Title Course SOP IK</h6>
+							<div class="d-flex justify-content-end mb-3">
+								<div>
+									<button type="button" class="btn btn-primary radius-10" data-bs-toggle="modal"
+										data-bs-target="#modalAddNewModul"><i class="bx bx-plus"></i>Add
+										Modul</button>
+								</div>
 							</div>
-							<div class="question-one" id="wrapperQuestion">
-								<div class="card mb-3" id="sectionQuestion">
-									<div class="card-body order-actions">
-										<div class="mb-3">
-											<label class="form-label">Question 1</label>
-											<input type="text" class="form-control bg-light-secondary"
-												placeholder="Input question here...">
-										</div>
-										<div class="form-check d-flex align-items-center mb-2">
-											<input class="form-check-input me-2" type="radio" name="questionOne"
-												id="questionOne1">
-											<input type="text" class="form-control" for="questionOne1"
-												placeholder="Answer here..">
-										</div>
-										<div class="form-check d-flex align-items-center mb-2">
-											<input class="form-check-input me-2" type="radio" name="questionOne"
-												id="questionOne2">
-											<input type="text" class="form-control" for="questionOne2"
-												placeholder="Answer here..">
-										</div>
-										<div class="form-check d-flex align-items-center mb-2">
-											<input class="form-check-input me-2" type="radio" name="questionOne"
-												id="questionOne3">
-											<input type="text" class="form-control" for="questionOne3"
-												placeholder="Answer here..">
-										</div>
-										<div class="form-check d-flex align-items-center mb-2">
-											<input class="form-check-input me-2" type="radio" name="questionOne"
-												id="questionOne4">
-											<input type="text" class="form-control" for="questionOne4"
-												placeholder="Answer here..">
-										</div>
-										<div class="d-flex order-actions">
-											<div class=" mb-3" style="width: 11%;">
-												<label class="form-label">Score</label>
-												<input type="text" class="form-control bg-light-success"
-													placeholder="score...">
-											</div>
-											<div class="mb-3 ms-auto">
-												<label class="form-label" for="">Delete</label>
-												<a href="javascript:;"
-													class="text-danger bg-light-danger border-0 ms-2"><i
-														class="bx bxs-trash"></i></a>
-											</div>
-										</div>
-									</div>
+							<div class="card bg-light-primary">
+								<div class="card-body order-actions">
+									<h6 class="text-center">Judul Modul</h6>
+									<a href="javascript:;" class="text-danger bg-light-danger border-0 ms-2"
+										data-bs-toggle="modal" data-bs-target="#modalDeleteModul"
+										style="float: right; margin-top: -27px;"><i class="bx bxs-trash"></i></a>
+									<a href="javascript:;" class="text-primary bg-light-primary border-0 "
+										data-bs-toggle="modal" data-bs-target="#modalEditModul"
+										style="float: right; margin-top: -27px;"><i class="bx bxs-edit"></i></a>
 								</div>
-								<div id="card-container"></div>
-
-								<!-- <div class="card mb-3" id="sectionEssay" style="display: none;">
-									<div class="card-body order-actions">
-										<div class="mb-3">
-											<label class="form-label">Essay</label>
-											<input type="text" class="form-control"
-												placeholder="Input question here...">
-										</div>
-									</div>
-								</div>
-								<div id="card-essay"></div> -->
-
-
-								<div class="d-flex justify-content-end mb-3">
-									<button type="button" class="btn btn-outline-primary radius-10 ms-2"
-										id="newsectionbtn"><i class="bx bx-plus"></i>Add More</button>
-								</div>
-								<!-- <button type="button" class="btn btn-outline-warning radius-10" id="newEssayBtn"
-									style="float: right;"><i class="fadeIn animated bx bx-message-alt-detail"></i>Add
-									Essay</button> -->
-								<div class="card mb-3" id="sectionEssay">
-									<div class="card-body order-actions">
-										<div class="mb-3">
-											<label class="form-label">Essay</label>
-											<input type="text" class="form-control"
-												placeholder="Input question here...">
-										</div>
-										<!-- <div class="mb-3" style="float: right;">
-											<label class="form-label" for="">Delete</label>
-											<a href="javascript:;" class="text-danger bg-light-danger border-0 ms-2"><i
-													class="bx bxs-trash"></i></a>
-										</div> -->
-									</div>
-								</div>
-								<button type="button" class="btn btn-outline-warning radius-10" id="newEssayBtn"
-									onclick="addNewEssay()" style="float: right;"><i
-										class="fadeIn animated bx bx-message-alt-detail"></i>Add Essay</button>
-
-
-
 							</div>
-
+							<div class="container">
+								<div class="card bg-light-success">
+									<div class="card-body text-center order-actions">
+										<h6 class="text-center">Judul Lesson</h6>
+										<a href="javascript:;" class="text-danger bg-light-danger border-0 ms-2"
+											data-bs-toggle="modal" data-bs-target="#modalDeleteLesson"
+											style="float: right; margin-top: -27px;"><i class="bx bxs-trash"></i></a>
+										<a href="javascript:;" class="text-primary bg-light-primary border-0 ms-2"
+											style="float: right; margin-top: -27px;" data-bs-toggle="modal"
+											data-bs-target="#modalEditLesson"><i class="bx bxs-edit"></i></a>
+										<a href="javascript:;" class="text-success bg-light-success border-0"
+											style="float: right; margin-top: -27px;"><i
+												class="lni lni-download"></i></a>
+									</div>
+								</div>
+								<div class="card bg-light-success">
+									<div class="card-body text-center order-actions">
+										<h6 class="text-center">Post Test SOP IK</h6>
+										<a href="javascript:;" class="text-danger bg-light-danger border-0 ms-2"
+											data-bs-toggle="modal" data-bs-target="#modalDeleteLesson"
+											style="float: right; margin-top: -27px;"><i class="bx bxs-trash"></i></a>
+										<a href="javascript:;" class="text-primary bg-light-primary border-0 ms-2"
+											style="float: right; margin-top: -27px;" data-bs-toggle="modal"
+											data-bs-target="#modalEditByImport"><i class="bx bxs-edit"></i></a>
+										<a href="javascript:;" class="text-success bg-light-success border-0"
+											style="float: right; margin-top: -27px;"><i
+												class="lni lni-download"></i></a>
+									</div>
+								</div>
+								<div class="d-flex justify-content-end">
+									<a href="add-post-test.html" type="button"
+										class="btn btn-outline-danger radius-10 me-2"><i class="bx bx-plus"></i>Add
+										Post Test</a>
+									<button type="button" class="btn btn-outline-success radius-10"
+										data-bs-toggle="modal" data-bs-target="#modalAddNewLesson"><i
+											class="bx bx-plus"></i>Add
+										Lesson</button>
+								</div>
+							</div>
 						</div>
 					</div>
-					<div class="d-flex justify-content-center">
-						<button type="button" class="btn btn-primary ms-2 radius-10">Submit</button>
-					</div>
-
 
 				</div>
-				<!-- Modal Box Add By Import -->
-				<div class="modal fade" id="modalAddByImport" tabindex="-1" aria-labelledby="modalAddByImportLabel"
+				<!-- Modal Box Add Modul -->
+				<div class="modal fade" id="modalAddNewModul" tabindex="-1" aria-labelledby="modalAddNewModulLabel"
 					aria-hidden="true">
 					<div class="modal-dialog">
 						<div class="modal-content">
 							<div class="modal-header">
-								<h5 class="modal-title" id="modalAddByImportLabel">Import Post Test</h5>
+								<h5 class="modal-title" id="modalAddNewModulLabel">Add New Modul</h5>
 								<button type="button" class="btn-close" data-bs-dismiss="modal"
 									aria-label="Close"></button>
 							</div>
 							<div class="modal-body">
 								<div class="mb-3">
-									<label for="modulName" class="form-label">Title Post Test</label>
+									<label for="modulName" class="form-label">Modul Name</label>
 									<input type="text" class="form-control" id="modulName" placeholder="Modul Name">
-								</div>
-								<div class="mb-3">
-									<label for="formFile" class="form-label">Attachment</label>
-									<input class="form-control" type="file" id="formFile">
 								</div>
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-								<button type="button" class="btn btn-primary">Submit</button>
+								<button type="button" onclick="CreateTodo();" class="btn btn-primary">Confirm</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Modal Box Edit Modul -->
+				<div class="modal fade" id="modalEditModul" tabindex="-1" aria-labelledby="modalEditModulLabel"
+					aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="modalEditModulLabel">Edit Modul</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal"
+									aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<div class="mb-3">
+									<label for="modulName" class="form-label">Modul Name</label>
+									<input type="text" class="form-control" id="modulName" value="Judul Modul">
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+								<button type="button" onclick="CreateTodo();" class="btn btn-primary">Confirm</button>
 							</div>
 						</div>
 					</div>
@@ -650,7 +616,7 @@
 					<div class="modal-dialog">
 						<div class="modal-content">
 							<div class="modal-header">
-								<h5 class="modal-title" id="modalAddNewLessonLabel">Add New Course</h5>
+								<h5 class="modal-title" id="modalAddNewLessonLabel">Add New Lesson</h5>
 								<button type="button" class="btn-close" data-bs-dismiss="modal"
 									aria-label="Close"></button>
 							</div>
@@ -675,6 +641,112 @@
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
 								<button type="button" onclick="CreateTodo();" class="btn btn-primary">Confirm</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Modal Box Edit Lesson -->
+				<div class="modal fade" id="modalEditLesson" tabindex="-1" aria-labelledby="modalEditLessonLabel"
+					aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="modalEditLessonLabel">Edit Lesson</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal"
+									aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<div class="mb-3">
+									<label for="lessonName" class="form-label">Lesson Name</label>
+									<input type="text" class="form-control" id="lessonName" value="Judul Lesson">
+								</div>
+								<div class="mb-3">
+									<label for="lessonType" class="form-label">Lesson Type</label>
+									<select class="form-select" aria-label="Default select example">
+										<option selected>Open this select menu</option>
+										<option value="1">Video</option>
+										<option value="2">PDF</option>
+									</select>
+								</div>
+								<div class="mb-3">
+									<label for="formFile" class="form-label">Lesson File</label>
+									<input class="form-control" type="file" id="formFile">
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+								<button type="button" onclick="CreateTodo();" class="btn btn-primary">Confirm</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Modal Box Edit By Import -->
+				<div class="modal fade" id="modalEditByImport" tabindex="-1" aria-labelledby="modalEditByImportLabel"
+					aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="modalEditByImportLabel">Import Post Test</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal"
+									aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<div class="mb-3">
+									<label for="modulName" class="form-label">Title Post Test</label>
+									<input type="text" class="form-control" id="modulName" value="Judul Post Test">
+								</div>
+								<div class="mb-3">
+									<label for="formFile" class="form-label">Attachment</label>
+									<input class="form-control" type="file" id="formFile">
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-primary">Submit</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Modal Delete Modul -->
+				<div class="modal fade" id="modalDeleteModul" tabindex="-1" aria-labelledby="modalDeleteModulLabel"
+					aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="modalDeleteModulLabel">Delete Modul</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal"
+									aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<h6>Are you sure want to delete this modul?</h6>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-danger">Delete</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Modal Delete Lesson-->
+				<div class="modal fade" id="modalDeleteLesson" tabindex="-1" aria-labelledby="modalDeleteLessonLabel"
+					aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="modalDeleteLessonLabel">Delete Lesson</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal"
+									aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<h6>Are you sure want to delete this lesson?</h6>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-danger">Delete</button>
 							</div>
 						</div>
 					</div>
@@ -802,7 +874,6 @@
 	<script src="assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
 	<script src="assets/plugins/datatable/js/dataTables.bootstrap5.min.js"></script>
 	<script src="assets/js/index3.js"></script>
-	<script src="assets/js/addMore.js"></script>
 	<script src="assets/libraries/gijgo/js/gijgo.min.js"></script>
 	<script src="assets/plugins/fancy-file-uploader/jquery.ui.widget.js"></script>
 	<script src="assets/plugins/fancy-file-uploader/jquery.fileupload.js"></script>
@@ -828,7 +899,17 @@
 			})
 		});
 	</script>
+	<script>
+		$(document).ready(function () {
+			var table = $('#example2').DataTable({
+				lengthChange: false,
+				buttons: ['csv', 'excel', 'pdf', 'print']
+			});
 
+			table.buttons().container()
+				.appendTo('#example2_wrapper .col-md-6:eq(0)');
+		});
+	</script>
 	<script>
 		$('#selectCategoryAddNew').select2({
 			dropdownParent: $('#modalAddNewCourse'),

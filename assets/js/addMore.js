@@ -47,11 +47,19 @@ addMoreBtn.addEventListener("click", function () {
           cardCount + 1
         }4" placeholder="Answer here..">
       </div>
-      <div class="mb-3" style="float: right; width: 11%;>
-		    <label class="form-label">Score</label>
-		    <input type="text" class="form-control bg-light-success"
-			    placeholder="Input score...">
-	    </div>
+      <div class="d-flex order-actions">
+				<div class=" mb-3" style="width: 11%;">
+					<label class="form-label">Score</label>
+					<input type="text" class="form-control bg-light-success"
+													placeholder="score...">
+				</div>
+				<div class="mb-3 ms-auto">
+					<label class="form-label" for="">Delete</label>
+					<a href="javascript:;"
+													class="text-danger bg-light-danger border-0 ms-2"><i
+														class="bx bxs-trash"></i></a>
+				</div>
+			</div>
     </div>
   `;
   cardContainer.appendChild(newCard);
