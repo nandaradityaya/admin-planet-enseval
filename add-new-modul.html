@@ -13,6 +13,8 @@
 	<link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
 	<link href="assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
 	<link href="assets/plugins/datatable/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+	<link href="assets/plugins/select2/css/select2.min.css" rel="stylesheet" />
+	<link href="assets/plugins/select2/css/select2-bootstrap4.css" rel="stylesheet" />
 	<!-- loader-->
 	<link href="assets/css/pace.min.css" rel="stylesheet" />
 	<script src="assets/js/pace.min.js"></script>
@@ -503,6 +505,9 @@
 							<h6 class="text-center mb-3">Penggunaan APAR</h6>
 							<div class="d-flex justify-content-end mb-3">
 								<div>
+									<button type="button" class="btn btn-warning radius-10" data-bs-toggle="modal"
+										data-bs-target="#modalEditCourse"><i class="bx bxs-edit"></i>Edit
+										Course</button>
 									<button type="button" class="btn btn-primary radius-10" data-bs-toggle="modal"
 										data-bs-target="#modalAddNewModul"><i class="bx bx-plus"></i>Add
 										Modul</button>
@@ -605,6 +610,138 @@
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
 								<button type="button" onclick="CreateTodo();" class="btn btn-primary">Confirm</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Modal Box Edit Course -->
+				<div class="modal fade" id="modalEditCourse" tabindex="-1" aria-labelledby="modalEditCourseLabel"
+					aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="modalEditCourseLabel">Edit Course</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal"
+									aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<div class="col-12 mb-3">
+									<label for="inputCourse" class="form-label">Judul Course</label>
+									<input type="text" class="form-control" id="inputCourse"
+										placeholder="Input Title Course">
+								</div>
+								<div class="col-12 mb-3">
+									<label class="form-label">Course Category</label>
+									<select class="form-select" id="selectCategoryAddNew">
+										<option value="" selected>Select Category</option>
+										<option value="general">General</option>
+										<option value="qasecurity">QA & Security</option>
+										<option value="technical">Technical</option>
+										<option value="softskill">Soft Skill</option>
+									</select>
+								</div>
+								<div class="col-12 mb-3">
+									<label class="form-label" for="select">Choose Access</label>
+									<!-- <select class="form-select" id="test" name="form_select"
+										onchange="showDiv('hidden_spesific', this)">
+										<option value="0">All</option>
+										<option value="1">Spesific</option>
+									</select> -->
+									<select class="form-select" id="selectSpesific" name="form_select">
+										<option value="all">All</option>
+										<option value="byOrganization">Spesific by Organization</option>
+										<option value="byName">Spesific by User</option>
+									</select>
+								</div>
+								<div id="orgName" class="col-12 mb-3" style="display:none;">
+									<div class="mb-3">
+										<label class="form-label">Choose Organization</label>
+										<select class="checkbox-spesific" data-placeholder="Choose anything"
+											multiple="multiple">
+											<option value="hrd">Human Resource Development</option>
+											<option value="it">Information Technology</option>
+											<option value="finance">Finance</option>
+											<option value="marketing">Marketing</option>
+											<option value="operation">Operation</option>
+											<option value="production">Production</option>
+											<option value="quality">Quality</option>
+											<option value="sales">Sales</option>
+											<option value="supplychain">Supply Chain</option>
+										</select>
+									</div>
+
+								</div>
+								<div id="userName" class="col-12 mb-3" style="display:none;">
+									<div class="mb-3">
+										<label class="form-label">Choose User</label>
+										<select class="checkbox-spesific" data-placeholder="Choose anything"
+											multiple="multiple">
+											<option value="nanda">Nanda Raditya</option>
+											<option value="dwi">Dwi Prasetyo</option>
+											<option value="dewi">Dewi Sartika</option>
+											<option value="siti">Siti Nuraini</option>
+											<option value="susi">Susi Susanti</option>
+											<option value="sari">Sari Sari</option>
+											<option value="siti">Siti Nuraini</option>
+											<option value="susi">Susi Susanti</option>
+											<option value="sari">Sari Sari</option>
+											<option value="siti">Siti Nuraini</option>
+										</select>
+									</div>
+								</div>
+								<!-- <div class="col-12 mb-3" id="hidden_spesific">
+									<div class="card store-metrics p-3">
+										<div class="mb-3">
+											<label class="form-label">Choose Organization</label>
+											<select class="checkbox-spesific" data-placeholder="Choose anything"
+												multiple="multiple">
+												<option value="hrd">Human Resource Development</option>
+												<option value="it">Information Technology</option>
+												<option value="finance">Finance</option>
+												<option value="marketing">Marketing</option>
+												<option value="operation">Operation</option>
+												<option value="production">Production</option>
+												<option value="quality">Quality</option>
+												<option value="sales">Sales</option>
+												<option value="supplychain">Supply Chain</option>
+											</select>
+										</div>
+									</div>
+								</div> -->
+								<div class="col-12 mb-3">
+									<label for="" class="form-label">Image Poster</label>
+									<div class="card">
+										<div class="card-body">
+											<input id="fancy-file-upload" type="file" name="files"
+												accept=".jpg, .png, image/jpeg, image/png" multiple>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 mb-3">
+									<label for="formDescription" class="form-label">Description</label>
+									<textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+								</div>
+								<div class="col-12 mb-3">
+									<label for="inputPublis" class="form-label">Publish</label>
+									<div class="d-flex align-items-center">
+										<div class="form-check me-2">
+											<input class="form-check-input" type="radio" name="flexRadioDefault"
+												id="flexRadioDefault1">
+											<label class="form-check-label" for="flexRadioDefault1">Yes</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="radio" name="flexRadioDefault"
+												id="flexRadioDefault2" checked="">
+											<label class="form-check-label" for="flexRadioDefault2">No</label>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-primary">Confirm</button>
 							</div>
 						</div>
 					</div>
@@ -898,6 +1035,7 @@
 	<script src="assets/plugins/fancy-file-uploader/jquery.iframe-transport.js"></script>
 	<script src="assets/plugins/fancy-file-uploader/jquery.fancy-fileupload.js"></script>
 	<script src="assets/plugins/Drag-And-Drop/dist/imageuploadify.min.js"></script>
+	<script src="assets/plugins/select2/js/select2.min.js"></script>
 	<script>
 		$(document).ready(function () {
 			$('#example').DataTable();
@@ -930,7 +1068,14 @@
 	</script>
 	<script>
 		$('#selectCategoryAddNew').select2({
-			dropdownParent: $('#modalAddNewCourse'),
+			dropdownParent: $('#modalEditCourse'),
+			theme: 'bootstrap4',
+			width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
+			placeholder: $(this).data('placeholder'),
+			allowClear: Boolean($(this).data('allow-clear')),
+		});
+		$('.checkbox-spesific').select2({
+			dropdownParent: $('#modalEditCourse'),
 			theme: 'bootstrap4',
 			width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
 			placeholder: $(this).data('placeholder'),

@@ -466,6 +466,12 @@ a {
   left: 15px;
 }
 
+.product-show-custom {
+  font-size: 18px;
+  left: 15px;
+  top: 21px;
+}
+
 .product-discount {
   width: 2.5rem;
   height: 2.5rem;
@@ -896,6 +902,18 @@ a {
 
   border-radius: 20%;
 
+  color: #2b2a2a;
+}
+
+.order-actions-single a {
+  font-size: 18px;
+  width: 34px;
+  height: 34px;
+  padding: 6px 6px 3px 6px;
+  background: #f1f1f1;
+  border: 1px solid #eeecec;
+  text-align: center;
+  border-radius: 20%;
   color: #2b2a2a;
 }
 
@@ -3212,6 +3230,11 @@ input::placeholder {
 }
 
 .tablinks.selected {
+  font-weight: 600;
+  background-color: rgba(136, 51, 255, 20%);
+}
+
+.selected {
   font-weight: 600;
   background-color: rgba(136, 51, 255, 20%);
 }

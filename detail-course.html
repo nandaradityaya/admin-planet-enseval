@@ -116,16 +116,6 @@
 				<nav class="navbar navbar-expand">
 					<div class="mobile-toggle-menu"><i class='bx bx-menu'></i>
 					</div>
-
-					<!-- <div class="search-bar flex-grow-1">
-						<div class="position-relative search-bar-box">
-							<input type="text" class="form-control search-control" placeholder="Type to search...">
-							<span class="position-absolute top-50 search-show translate-middle-y"><i
-									class='bx bx-search'></i></span>
-							<span class="position-absolute top-50 search-close translate-middle-y"><i
-									class='bx bx-x'></i></span>
-						</div>
-					</div> -->
 					<div class="top-menu ms-auto">
 						<ul class="navbar-nav align-items-center">
 							<!-- <li class="nav-item mobile-search-icon">
@@ -525,11 +515,48 @@
 				<hr />
 				<div class="card">
 					<div class="card-body">
-						<h5 class="font-weight-bold mb-0 text-center">Penggunaan APAR</h5>
+						<div class="card-header border-bottom-0 bg-transparent">
+							<div class="d-lg-flex align-items-center">
+								<div>
+									<h6 class="font-weight-bold mb-2 mb-lg-0">Safety Security 3</h6>
+								</div>
+								<div class="ms-lg-auto mb-2 mb-lg-0">
+									<div class="btn-group-round">
+										<!-- <div class="btn-group">
+											<button type="button" id="showUser" class="btn btn-white"
+												onclick="showTableUser()">User</button>
+											<button type="button" id="showCompany" class="btn btn-white"
+												onclick="showTableCompany()">Company</button>
+											<button type="button" id="showOrganization" class="btn btn-white"
+												onclick="showTableOrganization()">Organization</button>
+											<button type="button" id="showLocation" class="btn btn-white"
+												onclick="showTableLocation()">Location</button>
+											<button type="button" id="showJobtitle" class="btn btn-white"
+												onclick="showTableJobTitle()">Job Title</button>
+										</div> -->
+										<div class="btn-group">
+											<button type="button" class="btn btn-white tablinks selected"
+												onclick="toggleBtn(event, 'tableUser')">User</button>
+											<button type="button" class="btn btn-white tablinks"
+												onclick="toggleBtn(event, 'tableCompany')">Company</button>
+											<button type="button" class="btn btn-white tablinks"
+												onclick="toggleBtn(event, 'tableOrganization')">Organization</button>
+											<button type="button" class="btn btn-white tablinks"
+												onclick="toggleBtn(event, 'tableLocation')">Location</button>
+											<button type="button" class="btn btn-white tablinks"
+												onclick="toggleBtn(event, 'tableJobtitle')">Job Title</button>
+										</div>
+									</div>
+								</div>
+								<div>
+									<button type="button" class="btn btn-primary radius-10 ms-lg-3">Download
+										CSV</button>
+								</div>
+							</div>
+						</div>
 						<div class="table-responsive">
-							<div id="printbar" style="float:right"></div>
 							<br>
-							<table id="detailCourse" class="table align-middle" style="width:100%">
+							<table id="tableUser" class="table align-middle table-assign" style="width:100%">
 
 								<thead class="table-light">
 									<tr>
@@ -755,6 +782,379 @@
 									</tr>
 								</tfoot>
 							</table>
+							<table id="tableCompany" class="table align-middle table-assign" style="width:100%;">
+
+								<thead class="table-light">
+									<tr>
+										<th>No</th>
+										<th>NIK</th>
+										<th>Nama</th>
+										<th>Post Test</th>
+										<th>Total Attempt</th>
+										<th>Score</th>
+										<th>Status</th>
+										<th>Time</th>
+										<th>Location</th>
+										<th>Org Name</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>130200467</td>
+										<td>Contoh filter Company</td>
+										<td>Post Test Cara Penggunaan APAR</td>
+										<td>8</td>
+										<td>65</td>
+										<td>
+											<div
+												class="badge rounded-pill text-danger bg-light-danger p-2 text-uppercase px-3">
+												Tidak Lulus</div>
+										</td>
+										<td>2020-10-11 11:36:06</td>
+										<td>EPM - Malang</td>
+										<td>EPM - Transportation Malang</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>876538920</td>
+										<td>Abdi Suteji</td>
+										<td>Post Test Cara Penggunaan APAR</td>
+										<td>7</td>
+										<td>90</td>
+										<td>
+											<div
+												class="badge rounded-pill text-success bg-light-success p-2 text-uppercase px-3">
+												Lulus</div>
+										</td>
+										<td>2022-12-09 11:36:06</td>
+										<td>EPM - Cirebon</td>
+										<td>EPM - Sekertaris</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>130200467</td>
+										<td>Nanda Raditya</td>
+										<td>Post Test Cara Penggunaan APAR</td>
+										<td>2</td>
+										<td>90</td>
+										<td>
+											<div
+												class="badge rounded-pill text-success bg-light-success p-2 text-uppercase px-3">
+												Lulus</div>
+										</td>
+										<td>2022-12-09 11:36:06</td>
+										<td>EPM - Pusat</td>
+										<td>EPM - HRD</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>130200467</td>
+										<td>Noval Thaher</td>
+										<td>Post Test Cara Penggunaan APAR</td>
+										<td>1</td>
+										<td>90</td>
+										<td>
+											<div
+												class="badge rounded-pill text-success bg-light-success p-2 text-uppercase px-3">
+												Lulus</div>
+										</td>
+										<td>2022-12-09 11:36:06</td>
+										<td>EPM - Pusat</td>
+										<td>EPM - HRD</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>130200467</td>
+										<td>Rifky Rachmadillah</td>
+										<td>Post Test Cara Penggunaan APAR</td>
+										<td>5</td>
+										<td>80</td>
+										<td>
+											<div
+												class="badge rounded-pill text-success bg-light-success p-2 text-uppercase px-3">
+												Lulus</div>
+										</td>
+										<td>2022-12-09 11:36:06</td>
+										<td>EPM - Pusat</td>
+										<td>EPM - HRD</td>
+									</tr>
+									<tr>
+										<td>6</td>
+										<td>130200467</td>
+										<td>Akram Lutfhi Muhammad Soleh</td>
+										<td>Post Test Cara Penggunaan APAR</td>
+										<td>4</td>
+										<td>70</td>
+										<td>
+											<div
+												class="badge rounded-pill text-danger bg-light-danger p-2 text-uppercase px-3">
+												Tidak Lulus</div>
+										</td>
+										<td>2022-12-09 11:36:06</td>
+										<td>EPM - Tangerang</td>
+										<td>EPM - Finance Tangerang</td>
+									</tr>
+									<tr>
+										<td>7</td>
+										<td>674930284</td>
+										<td>Wahidin Pria Utama</td>
+										<td>Post Test Cara Penggunaan APAR</td>
+										<td>4</td>
+										<td>70</td>
+										<td>
+											<div
+												class="badge rounded-pill text-danger bg-light-danger p-2 text-uppercase px-3">
+												Tidak Lulus</div>
+										</td>
+										<td>2022-12-09 11:36:06</td>
+										<td>EPM - Jambi</td>
+										<td>EPM - KND Jambi</td>
+									</tr>
+									<tr>
+										<td>8</td>
+										<td>435634267</td>
+										<td>Daryono</td>
+										<td>Post Test Cara Penggunaan APAR</td>
+										<td>7</td>
+										<td>80</td>
+										<td>
+											<div
+												class="badge rounded-pill text-success bg-light-success p-2 text-uppercase px-3">
+												Lulus</div>
+										</td>
+										<td>2022-12-09 11:36:06</td>
+										<td>EPM - Bandung 2</td>
+										<td>EPM - Warehouse Bandung 2</td>
+									</tr>
+									<tr>
+										<td>9</td>
+										<td>435634267</td>
+										<td>Yeny Meitri</td>
+										<td>Post Test Cara Penggunaan APAR</td>
+										<td>7</td>
+										<td>80</td>
+										<td>
+											<div
+												class="badge rounded-pill text-success bg-light-success p-2 text-uppercase px-3">
+												Lulus</div>
+										</td>
+										<td>2022-12-09 11:36:06</td>
+										<td>EPM - Pusat</td>
+										<td>EPM - Call Center</td>
+									</tr>
+									<tr>
+										<td>10</td>
+										<td>546367345</td>
+										<td>Rayan Fadillah</td>
+										<td>Post Test Cara Penggunaan APAR</td>
+										<td>7</td>
+										<td>80</td>
+										<td>
+											<div
+												class="badge rounded-pill text-success bg-light-success p-2 text-uppercase px-3">
+												Lulus</div>
+										</td>
+										<td>2022-12-09 11:36:06</td>
+										<td>EPM - Pusat</td>
+										<td>EPM - Call Center</td>
+									</tr>
+									<tr>
+										<td>11</td>
+										<td>456324567</td>
+										<td>Nadia Nathalie</td>
+										<td>Post Test Cara Penggunaan APAR</td>
+										<td>7</td>
+										<td>80</td>
+										<td>
+											<div
+												class="badge rounded-pill text-success bg-light-success p-2 text-uppercase px-3">
+												Lulus</div>
+										</td>
+										<td>2022-12-09 11:36:06</td>
+										<td>EPM - Pusat</td>
+										<td>EPM - Call Center</td>
+									</tr>
+									<tr>
+										<td>12</td>
+										<td>423423424</td>
+										<td>Dewi Irwan</td>
+										<td>Post Test Cara Penggunaan APAR</td>
+										<td>5</td>
+										<td>70</td>
+										<td>
+											<div
+												class="badge rounded-pill text-danger bg-light-danger p-2 text-uppercase px-3">
+												Tidak Lulus</div>
+										</td>
+										<td>2022-12-09 11:36:06</td>
+										<td>EPM - Pusat</td>
+										<td>EPM - Call Center</td>
+									</tr>
+
+								</tbody>
+								<tfoot class="table-light">
+									<tr>
+										<th>No</th>
+										<th>NIK</th>
+										<th>Nama</th>
+										<th>Post Test</th>
+										<th>Total Attempt</th>
+										<th>Score</th>
+										<th>Status</th>
+										<th>Time</th>
+										<th>Location</th>
+										<th>Org Name</th>
+									</tr>
+								</tfoot>
+							</table>
+							<table id="tableOrganization" class="table align-middle table-assign" style="width:100%">
+
+								<thead class="table-light">
+									<tr>
+										<th>No</th>
+										<th>NIK</th>
+										<th>Nama</th>
+										<th>Post Test</th>
+										<th>Total Attempt</th>
+										<th>Score</th>
+										<th>Status</th>
+										<th>Time</th>
+										<th>Location</th>
+										<th>Org Name</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>130200467</td>
+										<td>Contoh filter Organization</td>
+										<td>Post Test Cara Penggunaan APAR</td>
+										<td>8</td>
+										<td>65</td>
+										<td>
+											<div
+												class="badge rounded-pill text-danger bg-light-danger p-2 text-uppercase px-3">
+												Tidak Lulus</div>
+										</td>
+										<td>2020-10-11 11:36:06</td>
+										<td>EPM - Malang</td>
+										<td>EPM - Transportation Malang</td>
+									</tr>
+								</tbody>
+								<tfoot class="table-light">
+									<tr>
+										<th>No</th>
+										<th>NIK</th>
+										<th>Nama</th>
+										<th>Post Test</th>
+										<th>Total Attempt</th>
+										<th>Score</th>
+										<th>Status</th>
+										<th>Time</th>
+										<th>Location</th>
+										<th>Org Name</th>
+									</tr>
+								</tfoot>
+							</table>
+							<table id="tableLocation" class="table align-middle table-assign" style="width:100%">
+
+								<thead class="table-light">
+									<tr>
+										<th>No</th>
+										<th>NIK</th>
+										<th>Nama</th>
+										<th>Post Test</th>
+										<th>Total Attempt</th>
+										<th>Score</th>
+										<th>Status</th>
+										<th>Time</th>
+										<th>Location</th>
+										<th>Org Name</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>130200467</td>
+										<td>Contoh filter Location</td>
+										<td>Post Test Cara Penggunaan APAR</td>
+										<td>8</td>
+										<td>65</td>
+										<td>
+											<div
+												class="badge rounded-pill text-danger bg-light-danger p-2 text-uppercase px-3">
+												Tidak Lulus</div>
+										</td>
+										<td>2020-10-11 11:36:06</td>
+										<td>EPM - Malang</td>
+										<td>EPM - Transportation Malang</td>
+									</tr>
+								</tbody>
+								<tfoot class="table-light">
+									<tr>
+										<th>No</th>
+										<th>NIK</th>
+										<th>Nama</th>
+										<th>Post Test</th>
+										<th>Total Attempt</th>
+										<th>Score</th>
+										<th>Status</th>
+										<th>Time</th>
+										<th>Location</th>
+										<th>Org Name</th>
+									</tr>
+								</tfoot>
+							</table>
+							<table id="tableJobtitle" class="table align-middle table-assign" style="width:100%">
+
+								<thead class="table-light">
+									<tr>
+										<th>No</th>
+										<th>NIK</th>
+										<th>Nama</th>
+										<th>Post Test</th>
+										<th>Total Attempt</th>
+										<th>Score</th>
+										<th>Status</th>
+										<th>Time</th>
+										<th>Location</th>
+										<th>Org Name</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>130200467</td>
+										<td>Contoh filter Job Title</td>
+										<td>Post Test Cara Penggunaan APAR</td>
+										<td>8</td>
+										<td>65</td>
+										<td>
+											<div
+												class="badge rounded-pill text-danger bg-light-danger p-2 text-uppercase px-3">
+												Tidak Lulus</div>
+										</td>
+										<td>2020-10-11 11:36:06</td>
+										<td>EPM - Malang</td>
+										<td>EPM - Transportation Malang</td>
+									</tr>
+								</tbody>
+								<tfoot class="table-light">
+									<tr>
+										<th>No</th>
+										<th>NIK</th>
+										<th>Nama</th>
+										<th>Post Test</th>
+										<th>Total Attempt</th>
+										<th>Score</th>
+										<th>Status</th>
+										<th>Time</th>
+										<th>Location</th>
+										<th>Org Name</th>
+									</tr>
+								</tfoot>
+							</table>
 						</div>
 					</div>
 				</div>
@@ -879,6 +1279,7 @@
 	<script src="assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
 	<script src="assets/plugins/datatable/js/dataTables.bootstrap5.min.js"></script>
 	<script src="assets/js/index3.js"></script>
+	<script src="assets/js/datailCourseUser.js"></script>
 	<script src="assets/libraries/gijgo/js/gijgo.min.js"></script>
 	<script>
 		$(document).ready(function () {
@@ -900,13 +1301,13 @@
 	</script>
 	<script>
 		$(document).ready(function () {
-			var table = $('#detailCourse').DataTable({
+			var table = $('#tableUser').DataTable({
 				dom: '<"row top"<"col-lg-4 col-md-4 col-sm-12 mb-2"B><"col-lg-4 col-md-4 col-sm-12 mb-2"l><"col-lg-4 col-md-4 col-sm-12 mb-2"f>>rtip',
 				buttons: ['csv', 'excel', 'pdf', 'print']
 			});
 
 			table.buttons().container()
-				.appendTo('#detailCourse_wrapper .col-md-6:eq(0)');
+				.appendTo('#tableUser_wrapper .col-md-6:eq(0)');
 		});
 	</script>
 

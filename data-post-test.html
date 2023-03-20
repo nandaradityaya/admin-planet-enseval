@@ -509,9 +509,33 @@
 					</div>
 				</div>
 				<hr />
+				<div class="d-flex justify-content-end">
+					<div class="me-2">
+						<nav aria-label="Page navigation example">
+							<ul class="pagination round-pagination">
+								<li class="page-item"><a class="page-link" href="javascript:;">Previous</a>
+								</li>
+								<li class="page-item"><a class="page-link" href="javascript:;javascript:;">1</a>
+								</li>
+								<li class="page-item active"><a class="page-link" href="javascript:;">2</a>
+								</li>
+								<li class="page-item"><a class="page-link" href="javascript:;">3</a>
+								</li>
+								<li class="page-item"><a class="page-link" href="javascript:;">Next</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="position-relative">
+						<input type="text" class="form-control ps-5 radius-30" placeholder="Search..."> <span
+							class="position-absolute product-show-custom translate-middle-y"><i
+								class="bx bx-search"></i></span>
+					</div>
+				</div>
 				<div class="card">
 					<div class="card-body">
 						<h5 class="font-weight-bold mb-0 text-center">Data Post Test</h5>
+
 						<div class="table-responsive">
 							<div id="printbar" style="float:right"></div>
 							<br>
@@ -947,7 +971,6 @@
 	<script src="assets/libraries/gijgo/js/gijgo.min.js"></script>
 	<script>
 		$(document).ready(function () {
-			$('#example').DataTable();
 
 			$(".datepickerawal").datepicker({
 				uiLibrary: "bootstrap4",
@@ -968,7 +991,7 @@
 		$(document).ready(function () {
 			var table = $('#dataPostTest').DataTable({
 				dom: '<"row top"<"col-lg-4 col-md-4 col-sm-12 mb-2"B><"col-lg-4 col-md-4 col-sm-12 mb-2"l><"col-lg-4 col-md-4 col-sm-12 mb-2"f>>rtip',
-				buttons: ['csv', 'excel', 'pdf', 'print']
+				buttons: ['csv', 'excel', 'pdf', 'print'],
 			});
 
 			table.buttons().container()

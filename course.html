@@ -607,7 +607,7 @@
 				<!-- Modal Box Add New -->
 				<div class="modal fade" id="modalAddNewCourse" tabindex="-1" aria-labelledby="modalAddNewCourseLabel"
 					aria-hidden="true">
-					<div class="modal-dialog">
+					<div class="modal-dialog modal-xl modal-dialog-scrollable">
 						<div class="modal-content">
 							<div class="modal-header">
 								<h5 class="modal-title" id="modalAddNewCourseLabel">Add New Course</h5>
@@ -615,72 +615,67 @@
 									aria-label="Close"></button>
 							</div>
 							<div class="modal-body">
-								<div class="col-12 mb-3">
-									<label for="inputCourse" class="form-label">Judul Course</label>
-									<input type="text" class="form-control" id="inputCourse"
-										placeholder="Input Title Course">
-								</div>
-								<div class="col-12 mb-3">
-									<label class="form-label">Course Category</label>
-									<select class="form-select" id="selectCategoryAddNew">
-										<option value="" selected>Select Category</option>
-										<option value="general">General</option>
-										<option value="qasecurity">QA & Security</option>
-										<option value="technical">Technical</option>
-										<option value="softskill">Soft Skill</option>
-									</select>
-								</div>
-								<div class="col-12 mb-3">
-									<label class="form-label" for="select">Choose Access</label>
-									<!-- <select class="form-select" id="test" name="form_select"
-										onchange="showDiv('hidden_spesific', this)">
-										<option value="0">All</option>
-										<option value="1">Spesific</option>
-									</select> -->
-									<select class="form-select" id="selectSpesific" name="form_select">
-										<option value="all">All</option>
-										<option value="byOrganization">Spesific by Organization</option>
-										<option value="byName">Spesific by User</option>
-									</select>
-								</div>
-								<div id="orgName" class="col-12 mb-3" style="display:none;">
-									<div class="mb-3">
-										<label class="form-label">Choose Organization</label>
-										<select class="checkbox-spesific" data-placeholder="Choose anything"
-											multiple="multiple">
-											<option value="hrd">Human Resource Development</option>
-											<option value="it">Information Technology</option>
-											<option value="finance">Finance</option>
-											<option value="marketing">Marketing</option>
-											<option value="operation">Operation</option>
-											<option value="production">Production</option>
-											<option value="quality">Quality</option>
-											<option value="sales">Sales</option>
-											<option value="supplychain">Supply Chain</option>
+								<div class="row">
+									<div class="col-lg-4 col-md-12 col-sm-12 mb-3">
+										<label for="inputCourse" class="form-label">Judul Course</label>
+										<input type="text" class="form-control" id="inputCourse"
+											placeholder="Input Title Course">
+									</div>
+									<div class="col-lg-4 col-md-12 col-sm-12 mb-3">
+										<label class="form-label">Course Category</label>
+										<select class="form-select" id="selectCategoryAddNew">
+											<option value="" selected>Select Category</option>
+											<option value="general">General</option>
+											<option value="qasecurity">QA & Security</option>
+											<option value="technical">Technical</option>
+											<option value="softskill">Soft Skill</option>
 										</select>
 									</div>
+									<div class="col-lg-4 col-md-12 col-sm-12 mb-3">
+										<label class="form-label" for="select">Choose Access</label>
+										<!-- <select class="form-select" id="test" name="form_select"
+											onchange="showDiv('hidden_spesific', this)">
+											<option value="0">All</option>
+											<option value="1">Spesific</option>
+										</select> -->
+										<select class="form-select" id="selectSpesific" name="form_select">
+											<option value="all">All</option>
+											<option value="spesificBy">Spesific</option>
+										</select>
+									</div>
+								</div>
+								<div class="row" id="spesificChoose" style="display: none;">
+									<div id="orgName" class="col-lg-4 col-md-12 col-sm-12">
+										<div class="mb-3">
+											<label class="form-label">Choose Company</label>
+											<select class="checkbox-spesific" data-placeholder="Choose anything"
+												multiple="multiple">
+												<option value="epm">EPM</option>
+												<option value="tsj">TSJ</option>
+												<option value="egd">EGD</option>
+											</select>
+										</div>
 
-								</div>
-								<div id="userName" class="col-12 mb-3" style="display:none;">
-									<div class="mb-3">
-										<label class="form-label">Choose User</label>
-										<select class="checkbox-spesific" data-placeholder="Choose anything"
-											multiple="multiple">
-											<option value="nanda">Nanda Raditya</option>
-											<option value="dwi">Dwi Prasetyo</option>
-											<option value="dewi">Dewi Sartika</option>
-											<option value="siti">Siti Nuraini</option>
-											<option value="susi">Susi Susanti</option>
-											<option value="sari">Sari Sari</option>
-											<option value="siti">Siti Nuraini</option>
-											<option value="susi">Susi Susanti</option>
-											<option value="sari">Sari Sari</option>
-											<option value="siti">Siti Nuraini</option>
-										</select>
 									</div>
-								</div>
-								<!-- <div class="col-12 mb-3" id="hidden_spesific">
-									<div class="card store-metrics p-3">
+									<div id="userName" class="col-lg-4 col-md-12 col-sm-12">
+										<div class="mb-3">
+											<label class="form-label">Choose User</label>
+											<select class="checkbox-spesific" data-placeholder="Choose anything"
+												multiple="multiple">
+												<option value="nanda">Nanda Raditya</option>
+												<option value="dwi">Dwi Prasetyo</option>
+												<option value="dewi">Dewi Sartika</option>
+												<option value="siti">Siti Nuraini</option>
+												<option value="susi">Susi Susanti</option>
+												<option value="sari">Sari Sari</option>
+												<option value="siti">Siti Nuraini</option>
+												<option value="susi">Susi Susanti</option>
+												<option value="sari">Sari Sari</option>
+												<option value="siti">Siti Nuraini</option>
+											</select>
+										</div>
+									</div>
+									<div id="departmentName" class="col-lg-4 col-md-12 col-sm-12">
 										<div class="mb-3">
 											<label class="form-label">Choose Organization</label>
 											<select class="checkbox-spesific" data-placeholder="Choose anything"
@@ -697,7 +692,34 @@
 											</select>
 										</div>
 									</div>
-								</div> -->
+									<div id="locationName" class="col-lg-6 col-md-12 col-sm-12">
+										<div class="mb-3">
+											<label class="form-label">Choose Location</label>
+											<select class="checkbox-spesific" data-placeholder="Choose anything"
+												multiple="multiple">
+												<option value="pusat">Pusat</option>
+												<option value="jakarta1">Jakarta 1</option>
+												<option value="jakarta2">Jakarta 2</option>
+												<option value="bali">Bali</option>
+												<option value="surabaya">Surabaya</option>
+												<option value="bandung">Bandung</option>
+											</select>
+										</div>
+									</div>
+									<div id="jobTitle" class="col-lg-6 col-md-12 col-sm-12">
+										<div class="mb-3">
+											<label class="form-label">Choose Job Title</label>
+											<select class="checkbox-spesific" data-placeholder="Choose anything"
+												multiple="multiple">
+												<option value="sekertaris">Sekertaris</option>
+												<option value="staff">Staff</option>
+												<option value="manager">Manager</option>
+												<option value="director">Director</option>
+												<option value="assman">Assistant Manager</option>
+											</select>
+										</div>
+									</div>
+								</div>
 								<div class="col-12 mb-3">
 									<label for="" class="form-label">Image Poster</label>
 									<div class="card">
@@ -937,7 +959,7 @@
 			maxfilesize: 1000000
 		});
 	</script>
-	<script>
+	<!-- <script>
 		$(document).ready(function () {
 			$('#image-uploadify').imageuploadify();
 		})
@@ -954,6 +976,21 @@
 			} else if (selectedOption === "byName") {
 				document.getElementById("orgName").style.display = "none";
 				document.getElementById("userName").style.display = "block";
+			}
+		});
+	</script> -->
+	<script>
+		// Get references to the select element and the spesificChoose div
+		const select = document.getElementById('selectSpesific');
+		const spesificChoose = document.getElementById('spesificChoose');
+
+		// Add an event listener to the select element
+		select.addEventListener('change', () => {
+			// If the selected value is 'spesificBy', show the spesificChoose div, otherwise hide it
+			if (select.value === 'spesificBy') {
+				spesificChoose.style.display = 'flex';
+			} else {
+				spesificChoose.style.display = 'none';
 			}
 		});
 	</script>
