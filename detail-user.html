@@ -901,6 +901,13 @@
 									aria-label="Close"></button>
 							</div>
 							<div class="modal-body">
+								<div class="d-flex justify-content-end mb-3">
+									<div>
+										<button type="button" class="btn btn-danger radius-10" data-bs-toggle="modal"
+											data-bs-target="#modalResetCourse"><i
+												class="bx bxs-trash"></i>Reset</button>
+									</div>
+								</div>
 								<div class="table-responsive mt-3">
 									<table class="table align-middle mb-0">
 										<thead class="table-light">
@@ -935,7 +942,11 @@
 												<td class="text-center order-actions-single"><a href="javascript:;"
 														class="text-primary bg-light-primary border-0 me-2"
 														data-bs-toggle="modal" data-bs-target="#modalActionCourse"><i
-															class="bx bxs-edit"></i></a></td>
+															class="bx bxs-edit"></i></a>
+													<a href="javascript:;" class="text-danger bg-light-danger border-0"
+														data-bs-toggle="modal" data-bs-target="#modalResetHistory"><i
+															class="bx bxs-trash"></i></a>
+												</td>
 											</tr>
 											<tr>
 												<td>Contoh no need action</td>
@@ -948,7 +959,11 @@
 												<td class="text-center order-actions-single"><a href="javascript:;"
 														class="text-primary text-center bg-light-primary border-0 me-2"
 														data-bs-toggle="modal" data-bs-target="#modalNoNeedAction"><i
-															class="bx bxs-edit"></i></a></td>
+															class="bx bxs-edit"></i></a> <a href="javascript:;"
+														class="text-danger bg-light-danger border-0"
+														data-bs-toggle="modal" data-bs-target="#modalResetHistory"><i
+															class="bx bxs-trash"></i></a></td>
+
 											</tr>
 										</tbody>
 									</table>
@@ -1096,11 +1111,53 @@
 									aria-label="Close"></button>
 							</div>
 							<div class="modal-body">
-								<h6>Are you sure want to delete this course?</h6>
+								<h6>Are you sure want to delete this course for Teguh Widodo?</h6>
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
 								<button type="button" class="btn btn-danger">Delete</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Modal Reset History -->
+				<div class="modal fade" id="modalResetHistory" tabindex="-1" aria-labelledby="modalResetHistoryLabel"
+					aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="modalResetHistoryLabel">Reset Post Test</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal"
+									aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<h6>Are you sure want to reset this post test?</h6>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-danger">Confirm</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Modal Reset Course -->
+				<div class="modal fade" id="modalResetCourse" tabindex="-1" aria-labelledby="modalResetCourseLabel"
+					aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="modalResetCourseLabel">Reset Course</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal"
+									aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<h6>Are you sure want to reset this course?</h6>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-danger">Confirm</button>
 							</div>
 						</div>
 					</div>

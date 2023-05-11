@@ -662,44 +662,46 @@
 							<label for="selectSpesific" class="form-label">Given To</label>
 							<select class="form-select" aria-label="Default select example" id="selectSpesific">
 								<option value="all" selected>All</option>
+								<option value="spesificBy">Spesific</option>
 								<option value="byOrganization">Spesific by Organization</option>
 								<option value="byName">Spesific by User</option>
 							</select>
 						</div>
-						<div id="orgName" class="col-12 mb-3" style="display:none;">
-							<div class="mb-3">
-								<label class="form-label">Choose Organization</label>
-								<select class="checkbox-spesific" data-placeholder="Choose anything"
-									multiple="multiple">
-									<option value="hrd">Human Resource Development</option>
-									<option value="it">Information Technology</option>
-									<option value="finance">Finance</option>
-									<option value="marketing">Marketing</option>
-									<option value="operation">Operation</option>
-									<option value="production">Production</option>
-									<option value="quality">Quality</option>
-									<option value="sales">Sales</option>
-									<option value="supplychain">Supply Chain</option>
-								</select>
+						<div class="row" id="spesificChoose" style="display: none;">
+							<div id="orgName" class="col-12 mb-3">
+								<div class="">
+									<label class="form-label">Choose Organization</label>
+									<select class="checkbox-spesific" data-placeholder="Choose anything"
+										multiple="multiple">
+										<option value="hrd">Human Resource Development</option>
+										<option value="it">Information Technology</option>
+										<option value="finance">Finance</option>
+										<option value="marketing">Marketing</option>
+										<option value="operation">Operation</option>
+										<option value="production">Production</option>
+										<option value="quality">Quality</option>
+										<option value="sales">Sales</option>
+										<option value="supplychain">Supply Chain</option>
+									</select>
+								</div>
 							</div>
-
-						</div>
-						<div id="userName" class="col-12 mb-3" style="display:none;">
-							<div class="mb-3">
-								<label class="form-label">Choose User</label>
-								<select class="checkbox-spesific" data-placeholder="Choose anything"
-									multiple="multiple">
-									<option value="nanda">Nanda Raditya</option>
-									<option value="dwi">Dwi Prasetyo</option>
-									<option value="dewi">Dewi Sartika</option>
-									<option value="siti">Siti Nuraini</option>
-									<option value="susi">Susi Susanti</option>
-									<option value="sari">Sari Sari</option>
-									<option value="siti">Siti Nuraini</option>
-									<option value="susi">Susi Susanti</option>
-									<option value="sari">Sari Sari</option>
-									<option value="siti">Siti Nuraini</option>
-								</select>
+							<div id="userName" class="col-12 mb-3">
+								<div class="">
+									<label class="form-label">Choose User</label>
+									<select class="checkbox-spesific" data-placeholder="Choose anything"
+										multiple="multiple">
+										<option value="nanda">Nanda Raditya</option>
+										<option value="dwi">Dwi Prasetyo</option>
+										<option value="dewi">Dewi Sartika</option>
+										<option value="siti">Siti Nuraini</option>
+										<option value="susi">Susi Susanti</option>
+										<option value="sari">Sari Sari</option>
+										<option value="siti">Siti Nuraini</option>
+										<option value="susi">Susi Susanti</option>
+										<option value="sari">Sari Sari</option>
+										<option value="siti">Siti Nuraini</option>
+									</select>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -732,40 +734,42 @@
 								<option value="byName">Spesific by User</option>
 							</select>
 						</div>
-						<div id="orgName" class="col-12 mb-3" style="display:none;">
-							<div class="mb-3">
-								<label class="form-label">Choose Organization</label>
-								<select class="checkbox-spesific" data-placeholder="Choose anything"
-									multiple="multiple">
-									<option value="hrd">Human Resource Development</option>
-									<option value="it">Information Technology</option>
-									<option value="finance">Finance</option>
-									<option value="marketing">Marketing</option>
-									<option value="operation">Operation</option>
-									<option value="production">Production</option>
-									<option value="quality">Quality</option>
-									<option value="sales">Sales</option>
-									<option value="supplychain">Supply Chain</option>
-								</select>
-							</div>
+						<div class="row" id="spesificChoose" style="display: none;">
+							<div id="orgName" class="col-12 mb-3">
+								<div class="mb-3">
+									<label class="form-label">Choose Organization</label>
+									<select class="checkbox-spesific" data-placeholder="Choose anything"
+										multiple="multiple">
+										<option value="hrd">Human Resource Development</option>
+										<option value="it">Information Technology</option>
+										<option value="finance">Finance</option>
+										<option value="marketing">Marketing</option>
+										<option value="operation">Operation</option>
+										<option value="production">Production</option>
+										<option value="quality">Quality</option>
+										<option value="sales">Sales</option>
+										<option value="supplychain">Supply Chain</option>
+									</select>
+								</div>
 
-						</div>
-						<div id="userName" class="col-12 mb-3" style="display:none;">
-							<div class="mb-3">
-								<label class="form-label">Choose User</label>
-								<select class="checkbox-spesific" data-placeholder="Choose anything"
-									multiple="multiple">
-									<option value="nanda">Nanda Raditya</option>
-									<option value="dwi">Dwi Prasetyo</option>
-									<option value="dewi">Dewi Sartika</option>
-									<option value="siti">Siti Nuraini</option>
-									<option value="susi">Susi Susanti</option>
-									<option value="sari">Sari Sari</option>
-									<option value="siti">Siti Nuraini</option>
-									<option value="susi">Susi Susanti</option>
-									<option value="sari">Sari Sari</option>
-									<option value="siti">Siti Nuraini</option>
-								</select>
+							</div>
+							<div id="userName" class="col-12 mb-3">
+								<div class="mb-3">
+									<label class="form-label">Choose User</label>
+									<select class="checkbox-spesific" data-placeholder="Choose anything"
+										multiple="multiple">
+										<option value="nanda">Nanda Raditya</option>
+										<option value="dwi">Dwi Prasetyo</option>
+										<option value="dewi">Dewi Sartika</option>
+										<option value="siti">Siti Nuraini</option>
+										<option value="susi">Susi Susanti</option>
+										<option value="sari">Sari Sari</option>
+										<option value="siti">Siti Nuraini</option>
+										<option value="susi">Susi Susanti</option>
+										<option value="sari">Sari Sari</option>
+										<option value="siti">Siti Nuraini</option>
+									</select>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -986,6 +990,21 @@
 			allowClear: Boolean($(this).data('allow-clear')),
 		});
 
+	</script>
+	<script>
+		// Get references to the select element and the spesificChoose div
+		const select = document.getElementById('selectSpesific');
+		const spesificChoose = document.getElementById('spesificChoose');
+
+		// Add an event listener to the select element
+		select.addEventListener('change', () => {
+			// If the selected value is 'spesificBy', show the spesificChoose div, otherwise hide it
+			if (select.value === 'spesificBy') {
+				spesificChoose.style.display = 'flex';
+			} else {
+				spesificChoose.style.display = 'none';
+			}
+		});
 	</script>
 
 

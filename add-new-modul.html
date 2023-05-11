@@ -545,9 +545,9 @@
 										<a href="javascript:;" class="text-danger bg-light-danger border-0 ms-2"
 											data-bs-toggle="modal" data-bs-target="#modalDeleteLesson"
 											style="float: right; margin-top: -27px;"><i class="bx bxs-trash"></i></a>
-										<a href="javascript:;" class="text-primary bg-light-primary border-0 ms-2"
-											style="float: right; margin-top: -27px;" data-bs-toggle="modal"
-											data-bs-target="#modalEditByImport"><i class="bx bxs-edit"></i></a>
+										<a href="edit-post-test.html"
+											class="text-primary bg-light-primary border-0 ms-2"
+											style="float: right; margin-top: -27px;"><i class="bx bxs-edit"></i></a>
 										<a href="javascript:;" class="text-success bg-light-success border-0"
 											style="float: right; margin-top: -27px;"><i
 												class="lni lni-download"></i></a>
@@ -618,7 +618,7 @@
 				<!-- Modal Box Edit Course -->
 				<div class="modal fade" id="modalEditCourse" tabindex="-1" aria-labelledby="modalEditCourseLabel"
 					aria-hidden="true">
-					<div class="modal-dialog">
+					<div class="modal-dialog modal-xl modal-dialog-scrollable">
 						<div class="modal-content">
 							<div class="modal-header">
 								<h5 class="modal-title" id="modalEditCourseLabel">Edit Course</h5>
@@ -626,72 +626,67 @@
 									aria-label="Close"></button>
 							</div>
 							<div class="modal-body">
-								<div class="col-12 mb-3">
-									<label for="inputCourse" class="form-label">Judul Course</label>
-									<input type="text" class="form-control" id="inputCourse"
-										placeholder="Input Title Course">
-								</div>
-								<div class="col-12 mb-3">
-									<label class="form-label">Course Category</label>
-									<select class="form-select" id="selectCategoryAddNew">
-										<option value="" selected>Select Category</option>
-										<option value="general">General</option>
-										<option value="qasecurity">QA & Security</option>
-										<option value="technical">Technical</option>
-										<option value="softskill">Soft Skill</option>
-									</select>
-								</div>
-								<div class="col-12 mb-3">
-									<label class="form-label" for="select">Choose Access</label>
-									<!-- <select class="form-select" id="test" name="form_select"
-										onchange="showDiv('hidden_spesific', this)">
-										<option value="0">All</option>
-										<option value="1">Spesific</option>
-									</select> -->
-									<select class="form-select" id="selectSpesific" name="form_select">
-										<option value="all">All</option>
-										<option value="byOrganization">Spesific by Organization</option>
-										<option value="byName">Spesific by User</option>
-									</select>
-								</div>
-								<div id="orgName" class="col-12 mb-3" style="display:none;">
-									<div class="mb-3">
-										<label class="form-label">Choose Organization</label>
-										<select class="checkbox-spesific" data-placeholder="Choose anything"
-											multiple="multiple">
-											<option value="hrd">Human Resource Development</option>
-											<option value="it">Information Technology</option>
-											<option value="finance">Finance</option>
-											<option value="marketing">Marketing</option>
-											<option value="operation">Operation</option>
-											<option value="production">Production</option>
-											<option value="quality">Quality</option>
-											<option value="sales">Sales</option>
-											<option value="supplychain">Supply Chain</option>
+								<div class="row">
+									<div class="col-lg-4 col-md-12 col-sm-12 mb-3">
+										<label for="inputCourse" class="form-label">Judul Course</label>
+										<input type="text" class="form-control" id="inputCourse"
+											placeholder="Input Title Course">
+									</div>
+									<div class="col-lg-4 col-md-12 col-sm-12 mb-3">
+										<label class="form-label">Course Category</label>
+										<select class="form-select" id="selectCategoryAddNew">
+											<option value="" selected>Select Category</option>
+											<option value="general">General</option>
+											<option value="qasecurity">QA & Security</option>
+											<option value="technical">Technical</option>
+											<option value="softskill">Soft Skill</option>
 										</select>
 									</div>
+									<div class="col-lg-4 col-md-12 col-sm-12 mb-3">
+										<label class="form-label" for="select">Choose Access</label>
+										<!-- <select class="form-select" id="test" name="form_select"
+											onchange="showDiv('hidden_spesific', this)">
+											<option value="0">All</option>
+											<option value="1">Spesific</option>
+										</select> -->
+										<select class="form-select" id="selectSpesific" name="form_select">
+											<option value="all">All</option>
+											<option value="spesificBy">Spesific</option>
+										</select>
+									</div>
+								</div>
+								<div class="row" id="spesificChoose" style="display: none;">
+									<div id="orgName" class="col-lg-4 col-md-12 col-sm-12">
+										<div class="mb-3">
+											<label class="form-label">Choose Company</label>
+											<select class="checkbox-spesific" data-placeholder="Choose anything"
+												multiple="multiple">
+												<option value="epm">EPM</option>
+												<option value="tsj">TSJ</option>
+												<option value="egd">EGD</option>
+											</select>
+										</div>
 
-								</div>
-								<div id="userName" class="col-12 mb-3" style="display:none;">
-									<div class="mb-3">
-										<label class="form-label">Choose User</label>
-										<select class="checkbox-spesific" data-placeholder="Choose anything"
-											multiple="multiple">
-											<option value="nanda">Nanda Raditya</option>
-											<option value="dwi">Dwi Prasetyo</option>
-											<option value="dewi">Dewi Sartika</option>
-											<option value="siti">Siti Nuraini</option>
-											<option value="susi">Susi Susanti</option>
-											<option value="sari">Sari Sari</option>
-											<option value="siti">Siti Nuraini</option>
-											<option value="susi">Susi Susanti</option>
-											<option value="sari">Sari Sari</option>
-											<option value="siti">Siti Nuraini</option>
-										</select>
 									</div>
-								</div>
-								<!-- <div class="col-12 mb-3" id="hidden_spesific">
-									<div class="card store-metrics p-3">
+									<div id="userName" class="col-lg-4 col-md-12 col-sm-12">
+										<div class="mb-3">
+											<label class="form-label">Choose User</label>
+											<select class="checkbox-spesific" data-placeholder="Choose anything"
+												multiple="multiple">
+												<option value="nanda">Nanda Raditya</option>
+												<option value="dwi">Dwi Prasetyo</option>
+												<option value="dewi">Dewi Sartika</option>
+												<option value="siti">Siti Nuraini</option>
+												<option value="susi">Susi Susanti</option>
+												<option value="sari">Sari Sari</option>
+												<option value="siti">Siti Nuraini</option>
+												<option value="susi">Susi Susanti</option>
+												<option value="sari">Sari Sari</option>
+												<option value="siti">Siti Nuraini</option>
+											</select>
+										</div>
+									</div>
+									<div id="departmentName" class="col-lg-4 col-md-12 col-sm-12">
 										<div class="mb-3">
 											<label class="form-label">Choose Organization</label>
 											<select class="checkbox-spesific" data-placeholder="Choose anything"
@@ -708,7 +703,295 @@
 											</select>
 										</div>
 									</div>
-								</div> -->
+									<div id="locationName" class="col-lg-6 col-md-12 col-sm-12">
+										<div class="mb-3">
+											<label class="form-label">Choose Location</label>
+											<select class="checkbox-spesific" data-placeholder="Choose anything"
+												multiple="multiple">
+												<option value="pusat">Pusat</option>
+												<option value="jakarta1">Jakarta 1</option>
+												<option value="jakarta2">Jakarta 2</option>
+												<option value="bali">Bali</option>
+												<option value="surabaya">Surabaya</option>
+												<option value="bandung">Bandung</option>
+											</select>
+										</div>
+									</div>
+									<div id="jobTitle" class="col-lg-6 col-md-12 col-sm-12">
+										<div class="mb-3">
+											<label class="form-label">Choose Job Title</label>
+											<select class="checkbox-spesific" data-placeholder="Choose anything"
+												multiple="multiple">
+												<option value="sekertaris">Sekertaris</option>
+												<option value="staff">Staff</option>
+												<option value="manager">Manager</option>
+												<option value="director">Director</option>
+												<option value="assman">Assistant Manager</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 mb-4 mt-4">
+									<div class="d-lg-flex align-items-center">
+										<div>
+											<h6 class="font-weight-bold mb-2 mb-lg-0">Akses Course</h6>
+										</div>
+										<div class="ms-lg-auto mb-2 mb-lg-0">
+											<div class="btn-group-round">
+												<div class="btn-group">
+													<button type="button" class="btn btn-white tablinks"
+														onclick="filterBtn(event, 'tableCompany')">Company</button>
+													<button type="button" class="btn btn-white tablinks"
+														onclick="filterBtn(event, 'tableOrganization')">Organization</button>
+													<button type="button" class="btn btn-white tablinks"
+														onclick="filterBtn(event, 'tableLocation')">Location</button>
+													<button type="button" class="btn btn-white tablinks selected"
+														onclick="filterBtn(event, 'tableUser')">User</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="table-responsive table-edit-course" style="margin-top: -10px;"
+										id="tableUser">
+										<br>
+										<table id="tableAksesUser" class="table align-middle" style="width:100%">
+
+											<thead class="table-light">
+												<tr>
+													<th>No</th>
+													<th>Nama</th>
+													<th>Status</th>
+													<th>Action</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>1</td>
+													<td><a href="detail-course.html" class="text-black">Nanda
+															Raditya</a></td>
+
+													<td class="">
+														<div
+															class="badge rounded-pill text-white bg-success p-2 text-uppercase px-3">
+															Completed</div>
+													</td>
+													<td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;"
+																class="text-danger bg-light-danger border-0"
+																data-bs-toggle="modal"
+																data-bs-target="#modalDeleteCourse"><i
+																	class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+												</tr>
+
+												<tr>
+													<td>2</td>
+													<td><a href="detail-course.html" class="text-black">Mathew
+															Judianto</a></td>
+
+													<td class="">
+														<div
+															class="badge rounded-pill text-black bg-warning p-2 text-uppercase px-3">
+															On Progress</div>
+													</td>
+													<td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;"
+																class="text-danger bg-light-danger border-0"
+																data-bs-toggle="modal"
+																data-bs-target="#modalDeleteCourse"><i
+																	class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+												</tr>
+
+
+											</tbody>
+											<tfoot class="table-light">
+												<tr>
+													<th>No</th>
+													<th>Nama</th>
+													<th>Status</th>
+													<th>Action</th>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+
+									<!-- END TABLE USER -->
+
+									<div class="table-responsive table-edit-course" style="margin-top: -10px;"
+										id="tableCompany">
+										<br>
+										<table id="tableAksesCompany" class="table align-middle" style="width:100%">
+
+											<thead class="table-light">
+												<tr>
+													<th>No</th>
+													<th>Company</th>
+													<th>Action</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>1</td>
+													<td><a href="detail-course.html" class="text-black">EPM</a></td>
+													<td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;"
+																class="text-danger bg-light-danger border-0"
+																data-bs-toggle="modal"
+																data-bs-target="#modalDeleteCourse"><i
+																	class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+												</tr>
+
+												<tr>
+													<td>2</td>
+													<td><a href="detail-course.html" class="text-black">TSJ</a></td>
+													<td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;"
+																class="text-danger bg-light-danger border-0"
+																data-bs-toggle="modal"
+																data-bs-target="#modalDeleteCourse"><i
+																	class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+												</tr>
+
+
+											</tbody>
+											<tfoot class="table-light">
+												<tr>
+													<th>No</th>
+													<th>Company</th>
+													<th>Action</th>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+
+									<!-- END TABLE COMPANY -->
+
+									<div class="table-responsive table-edit-course" style="margin-top: -10px;"
+										id="tableOrganization">
+										<br>
+										<table id="tableAksesOrganization" class="table align-middle"
+											style="width:100%">
+
+											<thead class="table-light">
+												<tr>
+													<th>No</th>
+													<th>Organization</th>
+													<th>Action</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>1</td>
+													<td><a href="detail-course.html" class="text-black">HRD</a></td>
+													<td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;"
+																class="text-danger bg-light-danger border-0"
+																data-bs-toggle="modal"
+																data-bs-target="#modalDeleteCourse"><i
+																	class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+												</tr>
+
+												<tr>
+													<td>2</td>
+													<td><a href="detail-course.html" class="text-black">IT</a></td>
+													<td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;"
+																class="text-danger bg-light-danger border-0"
+																data-bs-toggle="modal"
+																data-bs-target="#modalDeleteCourse"><i
+																	class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+												</tr>
+
+
+											</tbody>
+											<tfoot class="table-light">
+												<tr>
+													<th>No</th>
+													<th>Organization</th>
+													<th>Action</th>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+
+									<!-- END TABLE ORGANIZATION -->
+
+									<div class="table-responsive table-edit-course" style="margin-top: -10px;"
+										id="tableLocation">
+										<br>
+										<table id="tableAksesLocation" class="table align-middle" style="width:100%">
+
+											<thead class="table-light">
+												<tr>
+													<th>No</th>
+													<th>Location</th>
+													<th>Action</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>1</td>
+													<td><a href="detail-course.html" class="text-black">Pusat</a></td>
+
+
+													<td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;"
+																class="text-danger bg-light-danger border-0"
+																data-bs-toggle="modal"
+																data-bs-target="#modalDeleteCourse"><i
+																	class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+												</tr>
+
+												<tr>
+													<td>2</td>
+													<td><a href="detail-course.html" class="text-black">Bandung</a></td>
+
+
+													<td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;"
+																class="text-danger bg-light-danger border-0"
+																data-bs-toggle="modal"
+																data-bs-target="#modalDeleteCourse"><i
+																	class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+												</tr>
+
+
+											</tbody>
+											<tfoot class="table-light">
+												<tr>
+													<th>No</th>
+													<th>Location</th>
+													<th>Action</th>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+
+									<!-- END TABLE LOCATION -->
+								</div>
 								<div class="col-12 mb-3">
 									<label for="" class="form-label">Image Poster</label>
 									<div class="card">
@@ -1056,17 +1339,19 @@
 		});
 	</script>
 	<script>
-		$(document).ready(function () {
-			var table = $('#example2').DataTable({
-				lengthChange: false,
-				buttons: ['csv', 'excel', 'pdf', 'print']
-			});
+		// Get references to the select element and the spesificChoose div
+		const select = document.getElementById('selectSpesific');
+		const spesificChoose = document.getElementById('spesificChoose');
 
-			table.buttons().container()
-				.appendTo('#example2_wrapper .col-md-6:eq(0)');
+		// Add an event listener to the select element
+		select.addEventListener('change', () => {
+			// If the selected value is 'spesificBy', show the spesificChoose div, otherwise hide it
+			if (select.value === 'spesificBy') {
+				spesificChoose.style.display = 'flex';
+			} else {
+				spesificChoose.style.display = 'none';
+			}
 		});
-	</script>
-	<script>
 		$('#selectCategoryAddNew').select2({
 			dropdownParent: $('#modalEditCourse'),
 			theme: 'bootstrap4',
@@ -1080,6 +1365,19 @@
 			width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
 			placeholder: $(this).data('placeholder'),
 			allowClear: Boolean($(this).data('allow-clear')),
+		});
+
+		$(document).ready(function () {
+			var table = $('#tableAksesUser').DataTable({});
+		});
+		$(document).ready(function () {
+			var table = $('#tableAksesCompany').DataTable({});
+		});
+		$(document).ready(function () {
+			var table = $('#tableAksesLocation').DataTable({});
+		});
+		$(document).ready(function () {
+			var table = $('#tableAksesOrganization').DataTable({});
 		});
 	</script>
 	<script>
@@ -1096,6 +1394,7 @@
 		})
 	</script>
 	<script src="assets/js/app.js"></script>
+	<script src="assets/js/filterEditCourse.js"></script>
 </body>
 
 </html>
