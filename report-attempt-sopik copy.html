@@ -11,7 +11,7 @@
 	<link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
 	<link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
 	<link href="assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
-	<link href="assets/plugins/highcharts/css/highcharts.css" rel="stylesheet" />
+	<link href="assets/plugins/datatable/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
 	<!-- loader-->
 	<link href="assets/css/pace.min.css" rel="stylesheet" />
 	<script src="assets/js/pace.min.js"></script>
@@ -509,87 +509,28 @@
 		<!--start page wrapper -->
 		<div class="page-wrapper">
 			<div class="page-content">
-				<!-- <div class="row row-cols-1 row-cols-lg-4">
-					<div class="col">
-						<div class="card radius-10 overflow-hidden bg-gradient-cosmic card-dashboard">
-							<div class="card-body">
-								<div class="d-flex align-items-center">
-									<div>
-										<h6 class="mb-0 text-white">Visitor</h6>
-									</div>
-									<div class="ms-auto text-white"><i class="bx bx-smile font-30"></i>
-									</div>
-								</div>
-								<div class="d-flex justify-content-end mt-4">
-									<a href="" style="color: white;">More</a>
-									<i class="bx bx-right-arrow-circle ms-1" style="color: white;"></i>
-								</div>
-							</div>
-						</div>
+				<!--breadcrumb-->
+				<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+					<div class="breadcrumb-title pe-3">Report SOP IK</div>
+					<div class="ps-3">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb mb-0 p-0">
+								<li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+								</li>
+								<li class="breadcrumb-item active" aria-current="page">Report Attempt</li>
+							</ol>
+						</nav>
 					</div>
-					<div class="col">
-						<div class="card radius-10 overflow-hidden bg-gradient-Ohhappiness card-dashboard">
-							<div class="card-body">
-								<div class="d-flex align-items-center">
-									<div>
 
-										<h6 class="mb-0 text-white">Modul E-Learning</h6>
+				</div>
+				<!--end breadcrumb-->
 
-									</div>
-									<div class="ms-auto text-white"><i class="bx bx-book font-30"></i>
-									</div>
-								</div>
-								<div class="d-flex justify-content-end mt-4">
-									<a href="" style="color: white;">More</a>
-									<i class="bx bx-right-arrow-circle ms-1" style="color: white;"></i>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="card radius-10 overflow-hidden bg-gradient-moonlit card-dashboard">
-							<div class="card-body">
-								<div class="d-flex align-items-center">
-									<div>
 
-										<h6 class="mb-0 text-white">User Registrations</h6>
 
-									</div>
-									<div class="ms-auto text-white"><i class="bx bx-user-plus font-30"></i>
-									</div>
-								</div>
-								<div class="d-flex justify-content-end mt-4">
-									<a href="" style="color: white;">More</a>
-									<i class="bx bx-right-arrow-circle ms-1" style="color: white;"></i>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="card radius-10 overflow-hidden bg-gradient-burning card-dashboard">
-							<div class="card-body">
-								<div class="d-flex align-items-center">
-									<div>
-
-										<h6 class="mb-0 text-white">Kategori Modul</h6>
-
-									</div>
-									<div class="ms-auto text-white"><i class="bx bx-layer font-30"></i>
-									</div>
-								</div>
-								<div class="d-flex justify-content-end mt-4">
-									<a href="" style="color: white;">More</a>
-									<i class="bx bx-right-arrow-circle ms-1" style="color: white;"></i>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div> -->
-				<!--end row-->
 
 				<div class="row">
 					<div class="col-lg-4 mt-lg-4 mb-3">
-						<h6 class="mb-0 text-uppercase">Activity</h6>
+						<h6 class="mb-0 text-uppercase">Total Attempt</h6>
 					</div>
 					<div class="col-lg-8 d-flex justify-content-end">
 						<!-- Date Picker -->
@@ -616,281 +557,221 @@
 					</div>
 				</div>
 				<hr />
-				<div class="row row-cols-1 row-cols-md-2 row-cols-xl-4">
-					<div class="col">
-						<a data-bs-toggle="modal" data-bs-target="#modalSeeMoreWidget">
-							<div class="card radius-10 card-dashboard">
-								<div class="card-body">
-									<div class="d-flex align-items-center">
-										<div>
-											<p class="mb-0 text-secondary">Visitor</p>
-											<h4 class="my-1">1,2K</h4>
-											<p class="mb-0 font-13 text-success"><i
-													class="bx bxs-up-arrow align-middle"></i> 52 from last week</p>
-										</div>
-										<div class="widgets-icons bg-light-success text-success ms-auto"><i
-												class="bx bx-smile"></i>
-										</div>
-									</div>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class="col">
-						<a href="#">
-							<div class="card radius-10 card-dashboard">
-								<div class="card-body">
-									<div class="d-flex align-items-center">
-										<div>
-											<p class="mb-0 text-secondary">New User</p>
-											<h4 class="my-1">182</h4>
-											<p class="mb-0 font-13 text-success"><i
-													class='bx bxs-up-arrow align-middle'></i> 24 from last week</p>
-										</div>
-										<div class="widgets-icons bg-light-info text-info ms-auto"><i
-												class='bx bxs-group'></i>
-										</div>
-									</div>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class="col">
-						<a href="#">
-							<div class="card radius-10 card-dashboard">
-								<div class="card-body">
-									<div class="d-flex align-items-center">
-										<div>
-											<p class="mb-0 text-secondary">E-Learning Visitor</p>
-											<h4 class="my-1">652</h4>
-											<p class="mb-0 font-13 text-danger"><i
-													class='bx bxs-down-arrow align-middle'></i> 34 from last week</p>
-										</div>
-										<div class="widgets-icons bg-light-danger text-danger ms-auto"><i
-												class='bx bx-book'></i>
-										</div>
-									</div>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class="col">
-						<a href="#">
-							<div class="card radius-10 card-dashboard">
-								<div class="card-body">
-									<div class="d-flex align-items-center">
-										<div>
-											<p class="mb-0 text-secondary">Podtret Visitor</p>
-											<h4 class="my-1">982</h4>
-											<p class="mb-0 font-13 text-danger"><i
-													class='bx bxs-down-arrow align-middle'></i> 24 from last week</p>
-										</div>
-										<div class="widgets-icons bg-light-warning text-warning ms-auto"><i
-												class='bx bx-video'></i>
-										</div>
-									</div>
-								</div>
-							</div>
-						</a>
-					</div>
-
-				</div>
-				<!-- END ROW -->
-
-				<div class="card radius-10">
-					<div class="card-header border-bottom-0 bg-transparent">
-						<div class="d-lg-flex align-items-center">
-							<div>
-								<h6 class="font-weight-bold mb-2 mb-lg-0">Visitor</h6>
-							</div>
-							<div class="ms-lg-auto mb-2 mb-lg-0">
-								<div class="btn-group-round">
-									<div class="btn-group">
-										<button type="button" class="btn btn-white tablinks"
-											onclick="toggleBtn(event, 'chartDay')">Day</button>
-										<button type="button" class="btn btn-white tablinks"
-											onclick="toggleBtn(event, 'chartWeek')">Week</button>
-										<button type="button" class="btn btn-white tablinks selected"
-											onclick="toggleBtn(event, 'chartMonth')">Month</button>
-									</div>
-								</div>
-							</div>
-							<div>
-								<button type="button" class="btn btn-primary radius-10 ms-lg-3">Download CSV</button>
-							</div>
-						</div>
-					</div>
+				<div class="card">
 					<div class="card-body">
-						<div class="chart-dashboard" id="chartMonth"></div>
-					</div>
-					<div class="card-body">
-						<div class="chart-dashboard" id="chartWeek"></div>
-					</div>
-					<div class="card-body">
-						<div class="chart-dashboard" id="chartDay"></div>
+						<h5 class="font-weight-bold mb-0 text-center">Report Attempt</h5>
+						<div class="table-responsive">
+							<div id="printbar" style="float:right"></div>
+							<br>
+							<table id="reportAttempt" class="table align-middle" style="width:100%">
+
+								<thead class="table-light">
+									<tr>
+										<th>No</th>
+										<th>NIK</th>
+										<th>Nama</th>
+										<th>Lesson</th>
+										<th>Attempt</th>
+										<th>Time</th>
+										<th>Location</th>
+										<th>Org Name</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>130200467</td>
+										<td>TEGUH WIDODO</td>
+										<td>Lesson SOP IK</td>
+										<td>3</td>
+										<td>2020-10-11 11:36:06</td>
+										<td>EPM - Malang</td>
+										<td>EPM - Transportation Malang</td>
+
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>130200467</td>
+										<td>TEGUH WIDODO</td>
+										<td>Lesson SOP IK</td>
+										<td>3</td>
+										<td>2022-12-09 11:36:06</td>
+										<td>EPM - Malang</td>
+										<td>EPM - Transportation Malang</td>
+
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>130200467</td>
+										<td>NANDA RADITYA</td>
+										<td>Lesson SOP IK</td>
+										<td>3</td>
+										<td>2022-12-09 11:36:06</td>
+										<td>EPM - Pusat</td>
+										<td>EPM - UI/UX Designer</td>
+
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>130200467</td>
+										<td>TEGUH WIDODO</td>
+										<td>Lesson SOP IK</td>
+										<td>3</td>
+										<td>2022-12-09 11:36:06</td>
+										<td>EPM - Malang</td>
+										<td>EPM - Transportation Malang</td>
+
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>130200467</td>
+										<td>TEGUH WIDODO</td>
+										<td>Lesson SOP IK</td>
+										<td>3</td>
+										<td>2022-12-09 11:36:06</td>
+										<td>EPM - Malang</td>
+										<td>EPM - Transportation Malang</td>
+
+									</tr>
+									<tr>
+										<td>6</td>
+										<td>130200467</td>
+										<td>TEGUH WIDODO</td>
+										<td>Lesson SOP IK</td>
+										<td>3</td>
+										<td>2022-12-09 11:36:06</td>
+										<td>EPM - Malang</td>
+										<td>EPM - Transportation Malang</td>
+
+									</tr>
+									<tr>
+										<td>7</td>
+										<td>130200467</td>
+										<td>TEGUH WIDODO</td>
+										<td>Lesson SOP IK</td>
+										<td>3</td>
+										<td>2022-12-09 11:36:06</td>
+										<td>EPM - Malang</td>
+										<td>EPM - Transportation Malang</td>
+
+									</tr>
+									<tr>
+										<td>8</td>
+										<td>130200467</td>
+										<td>TEGUH WIDODO</td>
+										<td>Lesson SOP IK</td>
+										<td>3</td>
+										<td>2022-12-09 11:36:06</td>
+										<td>EPM - Malang</td>
+										<td>EPM - Transportation Malang</td>
+
+									</tr>
+									<tr>
+										<td>9</td>
+										<td>130200467</td>
+										<td>TEGUH WIDODO</td>
+										<td>Lesson SOP IK</td>
+										<td>3</td>
+										<td>2022-12-09 11:36:06</td>
+										<td>EPM - Malang</td>
+										<td>EPM - Transportation Malang</td>
+
+									</tr>
+									<tr>
+										<td>10</td>
+										<td>130200467</td>
+										<td>TEGUH WIDODO</td>
+										<td>Lesson SOP IK</td>
+										<td>3</td>
+										<td>2022-12-09 11:36:06</td>
+										<td>EPM - Malang</td>
+										<td>EPM - Transportation Malang</td>
+
+									</tr>
+									<tr>
+										<td>11</td>
+										<td>130200467</td>
+										<td>TEGUH WIDODO</td>
+										<td>Lesson SOP IK</td>
+										<td>3</td>
+										<td>2022-12-09 11:36:06</td>
+										<td>EPM - Malang</td>
+										<td>EPM - Transportation Malang</td>
+
+									</tr>
+									<tr>
+										<td>12</td>
+										<td>130200467</td>
+										<td>TEGUH WIDODO</td>
+										<td>Lesson SOP IK</td>
+										<td>3</td>
+										<td>2022-12-09 11:36:06</td>
+										<td>EPM - Malang</td>
+										<td>EPM - Transportation Malang</td>
+
+									</tr>
+									<tr>
+										<td>13</td>
+										<td>130200467</td>
+										<td>TEGUH WIDODO</td>
+										<td>Lesson SOP IK</td>
+										<td>3</td>
+										<td>2022-12-09 11:36:06</td>
+										<td>EPM - Malang</td>
+										<td>EPM - Transportation Malang</td>
+
+									</tr>
+									<tr>
+										<td>14</td>
+										<td>130200467</td>
+										<td>TEGUH WIDODO</td>
+										<td>Lesson SOP IK</td>
+										<td>3</td>
+										<td>2022-12-09 11:36:06</td>
+										<td>EPM - Malang</td>
+										<td>EPM - Transportation Malang</td>
+
+									</tr>
+									<tr>
+										<td>15</td>
+										<td>130200467</td>
+										<td>TEGUH WIDODO</td>
+										<td>Lesson SOP IK</td>
+										<td>3</td>
+										<td>2022-12-09 11:36:06</td>
+										<td>EPM - Malang</td>
+										<td>EPM - Transportation Malang</td>
+
+									</tr>
+									<tr>
+										<td>16</td>
+										<td>130200467</td>
+										<td>TEGUH WIDODO</td>
+										<td>Lesson SOP IK</td>
+										<td>3</td>
+										<td>2022-12-09 11:36:06</td>
+										<td>EPM - Malang</td>
+										<td>EPM - Transportation Malang</td>
+
+									</tr>
+								</tbody>
+								<tfoot class="table-light">
+									<tr>
+										<th>No</th>
+										<th>NIK</th>
+										<th>Nama</th>
+										<th>Post Test</th>
+										<th>Attempt</th>
+										<th>Time</th>
+										<th>Location</th>
+										<th>Org Name</th>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
 					</div>
 				</div>
 
-				<!-- End Row -->
-
-				<div class="row">
-					<div class="col-12 col-lg-12">
-						<div class="card radius-10">
-							<div class="card-body">
-								<div id="piechart"></div>
-							</div>
-						</div>
-					</div>
-					<div class="col-12 col-lg-12">
-						<div class="card radius-10">
-							<div class="card-header border-bottom-0 bg-transparent">
-								<div class="d-lg-flex align-items-center">
-									<div>
-										<h6 class="font-weight-bold mb-2 mb-lg-0">E-Learning</h6>
-									</div>
-									<div class="ms-lg-auto mb-2 mb-lg-0">
-										<div class="btn-group-round">
-											<div class="btn-group">
-												<button type="button" class="btn btn-white tablinks selected"
-													onclick="triggerBtn(event, 'chartGeneral')">General</button>
-												<button type="button" class="btn btn-white tablinks"
-													onclick="triggerBtn(event, 'chartQASecurity')">QA &
-													Security</button>
-												<button type="button" class="btn btn-white tablinks"
-													onclick="triggerBtn(event, 'chartTechnical')">Technical</button>
-												<button type="button" class="btn btn-white tablinks"
-													onclick="triggerBtn(event, 'chartSoftSkill')">Soft Skill</button>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="card-body">
-								<div class="chart-elearning" id="chartGeneral"></div>
-							</div>
-							<div class="card-body">
-								<div class="chart-elearning" id="chartQASecurity"></div>
-							</div>
-							<div class="card-body">
-								<div class="chart-elearning" id="chartTechnical"></div>
-							</div>
-							<div class="card-body">
-								<div class="chart-elearning" id="chartSoftSkill"></div>
-							</div>
-						</div>
-					</div>
-					<div class="col-12 col-lg-12">
-						<div class="card radius-10">
-							<div class="card-body">
-								<div id="chartViewsPodtret"></div>
-							</div>
-						</div>
-					</div>
-					<div class="col-12 col-lg-12">
-						<div class="card radius-10">
-							<div class="card-body">
-								<div id="chartPodtretLike"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- Modal Box Widget -->
-				<div class="modal fade" id="modalSeeMoreWidget" tabindex="-1" aria-labelledby="modalSeeMoreWidgetLabel"
-					aria-hidden="true">
-					<div class="modal-dialog modal-xl modal-dialog-scrollable">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title" id="modalSeeMoreWidgetLabel">Add New Course</h5>
-								<button type="button" class="btn-close" data-bs-dismiss="modal"
-									aria-label="Close"></button>
-							</div>
-							<div class="modal-body">
-								<div class="table-responsive">
-									<table id="tableSeeMoreWidget" class="table align-middle" style="width:100%">
-										<thead class="table-light">
-											<tr>
-												<th style="padding-left: 17px;">No</th>
-												<th>NIK</th>
-												<th>Nama</th>
-												<th>Company</th>
-												<th>Total Lesson Access</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>
-													<div
-														class="badge rounded-pill text-white bg-gold p-2 text-uppercase px-3">
-														1</div>
-												</td>
-												<td>230100022</td>
-												<td>Nanda Raditya</td>
-												<td>EPM - Pusat</td>
-												<td>24x</td>
-											</tr>
-											<tr>
-												<td>
-													<div
-														class="badge rounded-pill text-white bg-silver p-2 text-uppercase px-3">
-														2</div>
-												</td>
-												<td>230100023</td>
-												<td>Mathew Judianto</td>
-												<td>EPM - Pusat</td>
-												<td>22x</td>
-											</tr>
-											<tr>
-												<td>
-													<div
-														class="badge rounded-pill text-white bg-bronze p-2 text-uppercase px-3">
-														3</div>
-												</td>
-												<td>22100823</td>
-												<td>Rifky Rachmadilla</td>
-												<td>EPM - Pusat</td>
-												<td>22x</td>
-											</tr>
-											<tr>
-												<td>
-													<div
-														class="badge rounded-pill text-black bg-white p-2 text-uppercase px-3">
-														4</div>
-												</td>
-												<td>22100823</td>
-												<td>Rifky Rachmadilla</td>
-												<td>EPM - Pusat</td>
-												<td>22x</td>
-											</tr>
-											<tr>
-												<td>
-													<div
-														class="badge rounded-pill text-black bg-white p-2 text-uppercase px-3">
-														5</div>
-												</td>
-												<td>22100823</td>
-												<td>Rifky Rachmadilla</td>
-												<td>EPM - Pusat</td>
-												<td>22x</td>
-											</tr>
-										</tbody>
-										<tfoot class="table-light">
-											<tr>
-												<th style="padding-left: 17px;">No</th>
-												<th>NIK</th>
-												<th>Nama</th>
-												<th>Company</th>
-												<th>Total Lesson Access</th>
-											</tr>
-										</tfoot>
-									</table>
-								</div>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-							</div>
-						</div>
-					</div>
-				</div>
 			</div>
 		</div>
 		<!--end page wrapper -->
@@ -901,7 +782,7 @@
 				class='bx bxs-up-arrow-alt'></i></a>
 		<!--End Back To Top Button-->
 		<footer class="page-footer">
-			<p class="mb-0">Copyright © 2023. All right reserved.</p>
+			<p class="mb-0">Copyright © 2021. All right reserved.</p>
 		</footer>
 	</div>
 	<!--end wrapper-->
@@ -1008,23 +889,13 @@
 	<script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
 	<script src="assets/plugins/metismenu/js/metisMenu.min.js"></script>
 	<script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
-	<script src="assets/plugins/apexcharts-bundle/js/apexcharts.min.js"></script>
-	<!-- highcharts js -->
-	<script src="assets/plugins/highcharts/js/highcharts.js"></script>
-	<script src="assets/plugins/highcharts/js/highcharts-more.js"></script>
-	<script src="assets/plugins/highcharts/js/variable-pie.js"></script>
-	<script src="assets/plugins/highcharts/js/solid-gauge.js"></script>
-	<script src="assets/plugins/highcharts/js/highcharts-3d.js"></script>
-	<script src="assets/plugins/highcharts/js/cylinder.js"></script>
-	<script src="assets/plugins/highcharts/js/funnel3d.js"></script>
-	<script src="assets/plugins/highcharts/js/exporting.js"></script>
-	<script src="assets/plugins/highcharts/js/export-data.js"></script>
-	<script src="assets/plugins/highcharts/js/accessibility.js"></script>
+	<script src="assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
+	<script src="assets/plugins/datatable/js/dataTables.bootstrap5.min.js"></script>
 	<script src="assets/js/index3.js"></script>
 	<script src="assets/libraries/gijgo/js/gijgo.min.js"></script>
 	<script>
 		$(document).ready(function () {
-
+			$('#example').DataTable();
 
 			$(".datepickerawal").datepicker({
 				uiLibrary: "bootstrap4",
@@ -1042,104 +913,19 @@
 		});
 	</script>
 	<script>
-		new PerfectScrollbar('.best-selling-products');
-		new PerfectScrollbar('.recent-reviews');
-		new PerfectScrollbar('.support-list');
-	</script>
-	<!--app JS-->
-	<script src="assets/js/app.js"></script>
-	<script>
-		$(function () {
-			"use strict";
-			// pie chart
-			Highcharts.chart("piechart", {
-				chart: {
-					height: 350,
-					plotBackgroundColor: null,
-					plotBorderWidth: null,
-					plotShadow: false,
-					type: "pie",
-					styledMode: true,
-				},
-				credits: {
-					enabled: false,
-				},
-				title: {
-					text: "Podtret",
-				},
-				subtitle: {
-					text: "Total of podtret views by users",
-				},
-				tooltip: {
-					pointFormat: "{series.name}: <b>{point.y}</b>",
-				},
-				plotOptions: {
-					pie: {
-						allowPointSelect: true,
-						cursor: "pointer",
-						innerSize: 120,
-						dataLabels: {
-							enabled: true,
-							format: "<b>{point.name}</b>: {point.y}",
-						},
-						showInLegend: true,
-					},
-				},
-				//colors: ['#ff9ad5', '#50b5ff', '#5a65dc'],
-				series: [
-					{
-						name: "Views",
-						colorByPoint: true,
-						data: [
-							{
-								name: "Segment Ngobrol Santai",
-								y: 9.032,
-							},
-							{
-								name: "Segment Kumis",
-								y: 7.423,
-							},
-							{
-								name: "Segment Sapa Mantan",
-								y: 5.342,
-							},
-						],
-					},
-				],
-				responsive: {
-					rules: [
-						{
-							condition: {
-								maxWidth: 500,
-							},
-							chartOptions: {
-								plotOptions: {
-									pie: {
-										innerSize: 140,
-										dataLabels: {
-											enabled: false,
-										},
-									},
-								},
-							},
-						},
-					],
-				},
-			});
-		});
-	</script>
-
-	<script>
 		$(document).ready(function () {
-			var table = $('#tableSeeMoreWidget').DataTable({
+			var table = $('#reportAttempt').DataTable({
 				dom: '<"row top"<"col-lg-4 col-md-4 col-sm-12 mb-2"B><"col-lg-4 col-md-4 col-sm-12 mb-2"l><"col-lg-4 col-md-4 col-sm-12 mb-2"f>>rtip',
 				buttons: ['csv', 'excel', 'pdf', 'print']
 			});
 
 			table.buttons().container()
-				.appendTo('#tableSeeMoreWidget_wrapper .col-md-6:eq(0)');
+				.appendTo('#reportAttempt_wrapper .col-md-6:eq(0)');
 		});
 	</script>
+
+	<!--app JS-->
+	<script src="assets/js/app.js"></script>
 </body>
 
 </html>
